@@ -1,0 +1,37 @@
+[
+  {
+    "test": "Glucose",
+    "result": "112",
+    "unit": "mg/dL",
+    "range": "70 - 99",
+    "flag": "H"
+  },
+  {
+    "test": "HbA1c",
+    "result": "6.2",
+    "unit": "%",
+    "range": "4.0 - 5.6",
+    "flag": "High"
+  },
+  {
+    "test": "Creatinine",
+    "result": "0.95",
+    "unit": "mg/dL",
+    "range": "0.50 - 1.20",
+    "flag": "Normal"
+  },
+  {
+    "test": "Total Cholesterol",
+    "result": "220",
+    "unit": "mg/dL",
+    "range": "< 200",
+    "flag": "H"
+  },
+  {
+    "test": "Triglycerides",
+    "result": "165",
+    "unit": "mg/dL",
+    "range": "< 150",
+    "flag": "High"
+  }
+]

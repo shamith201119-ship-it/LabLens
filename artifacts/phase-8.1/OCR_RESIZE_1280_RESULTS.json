@@ -1,0 +1,1739 @@
+{
+  "generated_at": "2026-11-12T14:41:52.940779+00:00",
+  "description": "Phase 9.6.1 controlled OCR detector-resize experiment. One real pipeline run per fixture with an in-process PaddleOCR instance configured with text_det_limit_side_len=1280 and text_det_limit_type=max.",
+  "isolated_data_dir": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase961-resize1280",
+  "environment": {
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "opencv_python": "4.12.0.88",
+    "opencv_contrib_python": "4.10.0.84",
+    "numpy": "2.2.6",
+    "pillow": "13.0.0"
+  },
+  "baseline_configuration": {
+    "installed_yaml_text_detection": {
+      "limit_side_len": 64,
+      "limit_type": "min",
+      "max_side_limit": 4000
+    },
+    "production_constructor_args": {
+      "text_det_limit_side_len": null,
+      "text_det_limit_type": null
+    },
+    "live_baseline_verified_separately": {
+      "pipeline_limit_side_len": 64,
+      "pipeline_limit_type": "min",
+      "pipeline_max_side_limit": 4000,
+      "live_resize_limit_side_len": 64,
+      "live_resize_limit_type": "min",
+      "live_resize_max_side_limit": 4000
+    }
+  },
+  "experimental_configuration": {
+    "params": {
+      "text_det_limit_side_len": 1280,
+      "text_det_limit_type": "max"
+    },
+    "pipeline": {
+      "limit_side_len": 1280,
+      "limit_type": "max",
+      "max_side_limit": 4000
+    },
+    "live_resize": {
+      "class": "DetResizeForTest",
+      "resize_type": 0,
+      "limit_side_len": 1280,
+      "limit_type": "max",
+      "max_side_limit": 4000,
+      "resize_long": null
+    }
+  },
+  "experimental_model_init_seconds": 10.274239,
+  "fixtures": {
+    "cbc_report.png": {
+      "filename": "cbc_report.png",
+      "media_type": "image/png",
+      "expected_pages": 1,
+      "upload_seconds": 0.371119,
+      "extraction_seconds": 13.768587,
+      "structuring_seconds": 0.202462,
+      "total_pipeline_seconds": 14.342167,
+      "page_count": 1,
+      "processed_pages": 1,
+      "status": "review_required",
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 900,
+          "height": 360,
+          "quality": {
+            "width": 900,
+            "height": 360,
+            "brightness": 253.28,
+            "blur_variance": 2376.53,
+            "low_resolution": true,
+            "possibly_blurry": false,
+            "low_contrast": true
+          },
+          "variant": "original",
+          "variants_tried": [
+            "original"
+          ],
+          "ocr_item_count": 11,
+          "raw_text_lines": 6,
+          "warnings": [
+            "Low resolution; consider a higher-quality photo."
+          ]
+        }
+      ],
+      "measurement_count": 5,
+      "ocr_call_count": 1,
+      "detector_resize_count": 1,
+      "repeated_ocr_calls": 0,
+      "ocr_calls": [
+        {
+          "call_id": 1,
+          "path": "31fee172-6ef8-4d6e-b1aa-9add7f892d36.png",
+          "item_count": 11,
+          "seconds": 13.461439,
+          "detector_input_shapes": [
+            [
+              [
+                900,
+                360
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                896,
+                352
+              ]
+            ]
+          ]
+        }
+      ],
+      "detector_resize_events": [
+        {
+          "fixture": "cbc_report.png",
+          "stage": "detector_resize",
+          "seconds": 0.003822,
+          "ocr_call": 1,
+          "input_shapes": [
+            [
+              900,
+              360
+            ]
+          ],
+          "output_shapes": [
+            [
+              896,
+              352
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        }
+      ],
+      "stage_totals": {
+        "pdf_open_seconds": 0,
+        "page_classification_seconds": 0,
+        "pdf_page_render_seconds": 0,
+        "image_load_seconds": 0.018574,
+        "quality_assessment_seconds": 0.030237,
+        "ocr_total_seconds": 13.461439,
+        "detector_resize_seconds": 0.003822,
+        "ocr_line_assembly_seconds": 0.000271,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "remaining_extraction_overhead_seconds": 0.258066
+      },
+      "accuracy": {
+        "field_totals": {
+          "scored": 22,
+          "correct": 22,
+          "incorrect": 0,
+          "not_scored": 13
+        },
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 2,
+            "correct": 2,
+            "incorrect": 0,
+            "not_scored": 3
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "mismatches": [],
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 2,
+        "range_match_count": 5,
+        "flag_match_count": 0,
+        "page_attribution": {
+          "scored": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "not_scored": 5,
+          "details": [
+            {
+              "test": "Hemoglobin",
+              "status": "not_scored",
+              "expected_page": null,
+              "extracted_page": 1,
+              "reason": "no ground-truth page"
+            },
+            {
+              "test": "White Blood Cell Count",
+              "status": "not_scored",
+              "expected_page": null,
+              "extracted_page": 1,
+              "reason": "no ground-truth page"
+            },
+            {
+              "test": "Platelet Count",
+              "status": "not_scored",
+              "expected_page": null,
+              "extracted_page": 1,
+              "reason": "no ground-truth page"
+            },
+            {
+              "test": "Red Blood Cell Count",
+              "status": "not_scored",
+              "expected_page": null,
+              "extracted_page": 1,
+              "reason": "no ground-truth page"
+            },
+            {
+              "test": "Hematocrit",
+              "status": "not_scored",
+              "expected_page": null,
+              "extracted_page": 1,
+              "reason": "no ground-truth page"
+            }
+          ]
+        }
+      },
+      "measurements": [
+        {
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "result_original": "14.2",
+          "result_numeric": 14.2,
+          "unit_original": "g/dL",
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            37.0,
+            69.0,
+            244.0,
+            83.0
+          ],
+          "ocr_confidence": 0.9956127405166626
+        },
+        {
+          "test_name_original": "White Blood Cell Count",
+          "test_name_normalized": "White Blood Cell Count",
+          "result_original": "8.5",
+          "result_numeric": 8.5,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            38.0,
+            108.0,
+            274.0,
+            122.0
+          ],
+          "ocr_confidence": 0.977943480014801
+        },
+        {
+          "test_name_original": "PlateletCount",
+          "test_name_normalized": "Platelet Count",
+          "result_original": "240",
+          "result_numeric": 240.0,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            37.0,
+            147.0,
+            255.0,
+            163.0
+          ],
+          "ocr_confidence": 0.9538043737411499
+        },
+        {
+          "test_name_original": "Red Blood Cell Count",
+          "test_name_normalized": "Red Blood Cell Count",
+          "result_original": "4.65",
+          "result_numeric": 4.65,
+          "unit_original": "mil/uL",
+          "reference_range_original": "4.20 -5.40",
+          "reference_low": 4.2,
+          "reference_high": 5.4,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            38.0,
+            189.0,
+            268.0,
+            202.0
+          ],
+          "ocr_confidence": 0.9697830080986023
+        },
+        {
+          "test_name_original": "Hematocrit",
+          "test_name_normalized": "Hematocrit",
+          "result_original": "42.0",
+          "result_numeric": 42.0,
+          "unit_original": "%",
+          "reference_range_original": "37.0 - 48.0",
+          "reference_low": 37.0,
+          "reference_high": 48.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            38.0,
+            228.0,
+            229.0,
+            242.0
+          ],
+          "ocr_confidence": 0.9807246327400208
+        }
+      ],
+      "bbox_checks": [
+        {
+          "test": "Hemoglobin",
+          "page_number": 1,
+          "bbox": [
+            37.0,
+            69.0,
+            244.0,
+            83.0
+          ],
+          "page_width": 900,
+          "page_height": 360,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 274.0,
+          "baseline_bbox": [
+            289.0,
+            632.0,
+            1162.0,
+            696.0
+          ],
+          "delta_from_baseline_bbox": [
+            -252.0,
+            -563.0,
+            -918.0,
+            -613.0
+          ]
+        },
+        {
+          "test": "White Blood Cell Count",
+          "page_number": 1,
+          "bbox": [
+            38.0,
+            108.0,
+            274.0,
+            122.0
+          ],
+          "page_width": 900,
+          "page_height": 360,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 274.0,
+          "baseline_bbox": null,
+          "delta_from_baseline_bbox": null
+        },
+        {
+          "test": "PlateletCount",
+          "page_number": 1,
+          "bbox": [
+            37.0,
+            147.0,
+            255.0,
+            163.0
+          ],
+          "page_width": 900,
+          "page_height": 360,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 274.0,
+          "baseline_bbox": null,
+          "delta_from_baseline_bbox": null
+        },
+        {
+          "test": "Red Blood Cell Count",
+          "page_number": 1,
+          "bbox": [
+            38.0,
+            189.0,
+            268.0,
+            202.0
+          ],
+          "page_width": 900,
+          "page_height": 360,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 274.0,
+          "baseline_bbox": null,
+          "delta_from_baseline_bbox": null
+        },
+        {
+          "test": "Hematocrit",
+          "page_number": 1,
+          "bbox": [
+            38.0,
+            228.0,
+            229.0,
+            242.0
+          ],
+          "page_width": 900,
+          "page_height": 360,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 274.0,
+          "baseline_bbox": null,
+          "delta_from_baseline_bbox": null
+        }
+      ],
+      "events": [
+        {
+          "fixture": "cbc_report.png",
+          "stage": "image_load",
+          "seconds": 0.018574,
+          "path": "31fee172-6ef8-4d6e-b1aa-9add7f892d36.png",
+          "shape": [
+            900,
+            360
+          ]
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "quality_assessment",
+          "seconds": 0.030237
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "detector_resize",
+          "seconds": 0.003822,
+          "ocr_call": 1,
+          "input_shapes": [
+            [
+              900,
+              360
+            ]
+          ],
+          "output_shapes": [
+            [
+              896,
+              352
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "ocr_image",
+          "seconds": 13.461439,
+          "call_id": 1,
+          "path": "31fee172-6ef8-4d6e-b1aa-9add7f892d36.png",
+          "item_count": 11
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000271
+        }
+      ]
+    },
+    "multipage_scanned_report.pdf": {
+      "filename": "multipage_scanned_report.pdf",
+      "media_type": "application/pdf",
+      "expected_pages": 2,
+      "upload_seconds": 0.112369,
+      "extraction_seconds": 58.457164,
+      "structuring_seconds": 0.20681,
+      "total_pipeline_seconds": 58.776343,
+      "page_count": 2,
+      "processed_pages": 2,
+      "status": "completed",
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 250.74,
+            "blur_variance": 827.08,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 19,
+          "raw_text_lines": 7,
+          "warnings": []
+        },
+        {
+          "page_number": 2,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 251.63,
+            "blur_variance": 594.09,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 6,
+          "raw_text_lines": 6,
+          "warnings": []
+        }
+      ],
+      "measurement_count": 5,
+      "ocr_call_count": 2,
+      "detector_resize_count": 2,
+      "repeated_ocr_calls": 0,
+      "ocr_calls": [
+        {
+          "call_id": 2,
+          "path": "page_0.png",
+          "item_count": 19,
+          "seconds": 31.539313,
+          "detector_input_shapes": [
+            [
+              [
+                1700,
+                2200
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                992,
+                1280
+              ]
+            ]
+          ]
+        },
+        {
+          "call_id": 3,
+          "path": "page_1.png",
+          "item_count": 6,
+          "seconds": 26.047135,
+          "detector_input_shapes": [
+            [
+              [
+                1700,
+                2200
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                992,
+                1280
+              ]
+            ]
+          ]
+        }
+      ],
+      "detector_resize_events": [
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.005469,
+          "ocr_call": 2,
+          "input_shapes": [
+            [
+              1700,
+              2200
+            ]
+          ],
+          "output_shapes": [
+            [
+              992,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.004745,
+          "ocr_call": 3,
+          "input_shapes": [
+            [
+              1700,
+              2200
+            ]
+          ],
+          "output_shapes": [
+            [
+              992,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        }
+      ],
+      "stage_totals": {
+        "pdf_open_seconds": 0.021306,
+        "page_classification_seconds": 0.009708,
+        "pdf_page_render_seconds": 0.217523,
+        "image_load_seconds": 0.040097,
+        "quality_assessment_seconds": 0.143817,
+        "ocr_total_seconds": 57.586448,
+        "detector_resize_seconds": 0.010214,
+        "ocr_line_assembly_seconds": 0.000465,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "remaining_extraction_overhead_seconds": 0.4378
+      },
+      "accuracy": {
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "mismatches": [],
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "page_attribution": {
+          "scored": 5,
+          "correct": 5,
+          "incorrect": 0,
+          "not_scored": 0,
+          "details": [
+            {
+              "test": "Hemoglobin",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "WBC",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Platelet Count",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Glucose",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "Creatinine",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            }
+          ]
+        }
+      },
+      "measurements": [
+        {
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "result_original": "14.2",
+          "result_numeric": 14.2,
+          "unit_original": "g/dL",
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            144.0,
+            526.0,
+            1501.0,
+            581.0
+          ],
+          "ocr_confidence": 0.9446267485618591
+        },
+        {
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "result_original": "8.5",
+          "result_numeric": 8.5,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            142.0,
+            677.0,
+            1479.0,
+            725.0
+          ],
+          "ocr_confidence": 0.9643247723579407
+        },
+        {
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "result_original": "240",
+          "result_numeric": 240.0,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            147.0,
+            828.0,
+            1479.0,
+            877.0
+          ],
+          "ocr_confidence": 0.972564160823822
+        },
+        {
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "result_original": "128",
+          "result_numeric": 128.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "derived_flag": "above_range",
+          "page_number": 2,
+          "source_bbox": [
+            147.0,
+            431.0,
+            660.0,
+            560.0
+          ],
+          "ocr_confidence": 0.9819627404212952
+        },
+        {
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "derived_flag": "within_range",
+          "page_number": 2,
+          "source_bbox": [
+            149.0,
+            730.0,
+            1095.0,
+            777.0
+          ],
+          "ocr_confidence": 0.9917195439338684
+        }
+      ],
+      "bbox_checks": [
+        {
+          "test": "Hemoglobin",
+          "page_number": 1,
+          "bbox": [
+            144.0,
+            526.0,
+            1501.0,
+            581.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 2099.0,
+          "baseline_bbox": [
+            289.0,
+            632.0,
+            1162.0,
+            696.0
+          ],
+          "delta_from_baseline_bbox": [
+            -145.0,
+            -106.0,
+            339.0,
+            -115.0
+          ]
+        },
+        {
+          "test": "WBC",
+          "page_number": 1,
+          "bbox": [
+            142.0,
+            677.0,
+            1479.0,
+            725.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 2099.0,
+          "baseline_bbox": [
+            286.0,
+            779.0,
+            1079.0,
+            840.0
+          ],
+          "delta_from_baseline_bbox": [
+            -144.0,
+            -102.0,
+            400.0,
+            -115.0
+          ]
+        },
+        {
+          "test": "Platelet Count",
+          "page_number": 1,
+          "bbox": [
+            147.0,
+            828.0,
+            1479.0,
+            877.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": null,
+          "max_ocr_item_coordinate_on_page": 2099.0,
+          "baseline_bbox": [
+            282.0,
+            929.0,
+            1249.0,
+            994.0
+          ],
+          "delta_from_baseline_bbox": [
+            -135.0,
+            -101.0,
+            230.0,
+            -117.0
+          ]
+        },
+        {
+          "test": "Glucose",
+          "page_number": 2,
+          "bbox": [
+            147.0,
+            431.0,
+            660.0,
+            560.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": [
+            147.0,
+            431.0,
+            540.0,
+            478.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2099.0,
+          "baseline_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1142.0
+          ],
+          "delta_from_baseline_bbox": [
+            -129.0,
+            -647.0,
+            -361.0,
+            -582.0
+          ]
+        },
+        {
+          "test": "Creatinine",
+          "page_number": 2,
+          "bbox": [
+            149.0,
+            730.0,
+            1095.0,
+            777.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": true,
+          "source_ocr_item_bbox": [
+            149.0,
+            730.0,
+            1095.0,
+            777.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2099.0,
+          "baseline_bbox": [
+            272.0,
+            1228.0,
+            1091.0,
+            1295.0
+          ],
+          "delta_from_baseline_bbox": [
+            -123.0,
+            -498.0,
+            4.0,
+            -518.0
+          ]
+        }
+      ],
+      "events": [
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_open",
+          "seconds": 0.021306,
+          "pages": 2
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.009065
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.108048
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.020269,
+          "path": "page_0.png",
+          "shape": [
+            1700,
+            2200
+          ]
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.077328
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.005469,
+          "ocr_call": 2,
+          "input_shapes": [
+            [
+              1700,
+              2200
+            ]
+          ],
+          "output_shapes": [
+            [
+              992,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 31.539313,
+          "call_id": 2,
+          "path": "page_0.png",
+          "item_count": 19
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000325
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.000643
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.109475
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.019828,
+          "path": "page_1.png",
+          "shape": [
+            1700,
+            2200
+          ]
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.066489
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.004745,
+          "ocr_call": 3,
+          "input_shapes": [
+            [
+              1700,
+              2200
+            ]
+          ],
+          "output_shapes": [
+            [
+              992,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 26.047135,
+          "call_id": 3,
+          "path": "page_1.png",
+          "item_count": 6
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.00014
+        }
+      ]
+    },
+    "photographed_report.jpg": {
+      "filename": "photographed_report.jpg",
+      "media_type": "image/jpeg",
+      "expected_pages": 1,
+      "upload_seconds": 0.096114,
+      "extraction_seconds": 60.744871,
+      "structuring_seconds": 0.210826,
+      "total_pipeline_seconds": 61.051811,
+      "page_count": 1,
+      "processed_pages": 1,
+      "status": "completed",
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 2034,
+          "height": 2527,
+          "quality": {
+            "width": 2034,
+            "height": 2527,
+            "brightness": 184.06,
+            "blur_variance": 196.0,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": "original",
+          "variants_tried": [
+            "original"
+          ],
+          "ocr_item_count": 15,
+          "raw_text_lines": 11,
+          "warnings": []
+        }
+      ],
+      "measurement_count": 5,
+      "ocr_call_count": 1,
+      "detector_resize_count": 1,
+      "repeated_ocr_calls": 0,
+      "ocr_calls": [
+        {
+          "call_id": 4,
+          "path": "615aba99-2348-4991-afc0-4c23c5a9fbed.jpg",
+          "item_count": 15,
+          "seconds": 60.347535,
+          "detector_input_shapes": [
+            [
+              [
+                2034,
+                2527
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                1024,
+                1280
+              ]
+            ]
+          ]
+        }
+      ],
+      "detector_resize_events": [
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "detector_resize",
+          "seconds": 0.002384,
+          "ocr_call": 4,
+          "input_shapes": [
+            [
+              2034,
+              2527
+            ]
+          ],
+          "output_shapes": [
+            [
+              1024,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        }
+      ],
+      "stage_totals": {
+        "pdf_open_seconds": 0,
+        "page_classification_seconds": 0,
+        "pdf_page_render_seconds": 0,
+        "image_load_seconds": 0.045884,
+        "quality_assessment_seconds": 0.090125,
+        "ocr_total_seconds": 60.347535,
+        "detector_resize_seconds": 0.002384,
+        "ocr_line_assembly_seconds": 0.000254,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "remaining_extraction_overhead_seconds": 0.261073
+      },
+      "accuracy": {
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "mismatches": [],
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "page_attribution": {
+          "scored": 5,
+          "correct": 5,
+          "incorrect": 0,
+          "not_scored": 0,
+          "details": [
+            {
+              "test": "Hemoglobin",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "WBC",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Platelet Count",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Glucose",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Creatinine",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            }
+          ]
+        }
+      },
+      "measurements": [
+        {
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "result_original": "13.8",
+          "result_numeric": 13.8,
+          "unit_original": "g/dL",
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "ocr_confidence": 0.9965973496437073
+        },
+        {
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "result_original": "7.2",
+          "result_numeric": 7.2,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "ocr_confidence": 0.971664547920227
+        },
+        {
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "result_original": "265",
+          "result_numeric": 265.0,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "ocr_confidence": 0.988516628742218
+        },
+        {
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "result_original": "98",
+          "result_numeric": 98.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "ocr_confidence": 0.9941369295120239
+        },
+        {
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1295.0
+          ],
+          "ocr_confidence": 0.9893218278884888
+        }
+      ],
+      "bbox_checks": [
+        {
+          "test": "Hemoglobin",
+          "page_number": 1,
+          "bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "page_width": 2034,
+          "page_height": 2527,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": true,
+          "source_ocr_item_bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2281.0,
+          "baseline_bbox": [
+            289.0,
+            632.0,
+            1162.0,
+            696.0
+          ],
+          "delta_from_baseline_bbox": [
+            -1.0,
+            -1.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "test": "WBC",
+          "page_number": 1,
+          "bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "page_width": 2034,
+          "page_height": 2527,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": true,
+          "source_ocr_item_bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2281.0,
+          "baseline_bbox": [
+            286.0,
+            779.0,
+            1079.0,
+            840.0
+          ],
+          "delta_from_baseline_bbox": [
+            -2.0,
+            0.0,
+            -2.0,
+            -1.0
+          ]
+        },
+        {
+          "test": "Platelet Count",
+          "page_number": 1,
+          "bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "page_width": 2034,
+          "page_height": 2527,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": false,
+          "source_ocr_item_bbox": [
+            280.0,
+            928.0,
+            850.0,
+            983.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2281.0,
+          "baseline_bbox": [
+            282.0,
+            929.0,
+            1249.0,
+            994.0
+          ],
+          "delta_from_baseline_bbox": [
+            -2.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "test": "Glucose",
+          "page_number": 1,
+          "bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "page_width": 2034,
+          "page_height": 2527,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": true,
+          "source_ocr_item_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2281.0,
+          "baseline_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1142.0
+          ],
+          "delta_from_baseline_bbox": [
+            0.0,
+            0.0,
+            0.0,
+            -3.0
+          ]
+        },
+        {
+          "test": "Creatinine",
+          "page_number": 1,
+          "bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1295.0
+          ],
+          "page_width": 2034,
+          "page_height": 2527,
+          "valid_list": true,
+          "inside_original_dimensions": true,
+          "matches_source_ocr_item": true,
+          "source_ocr_item_bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1295.0
+          ],
+          "max_ocr_item_coordinate_on_page": 2281.0,
+          "baseline_bbox": [
+            272.0,
+            1228.0,
+            1091.0,
+            1295.0
+          ],
+          "delta_from_baseline_bbox": [
+            -2.0,
+            0.0,
+            -2.0,
+            0.0
+          ]
+        }
+      ],
+      "events": [
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "image_load",
+          "seconds": 0.045884,
+          "path": "615aba99-2348-4991-afc0-4c23c5a9fbed.jpg",
+          "shape": [
+            2034,
+            2527
+          ]
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "quality_assessment",
+          "seconds": 0.090125
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "detector_resize",
+          "seconds": 0.002384,
+          "ocr_call": 4,
+          "input_shapes": [
+            [
+              2034,
+              2527
+            ]
+          ],
+          "output_shapes": [
+            [
+              1024,
+              1280
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "ocr_image",
+          "seconds": 60.347535,
+          "call_id": 4,
+          "path": "615aba99-2348-4991-afc0-4c23c5a9fbed.jpg",
+          "item_count": 15
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000254
+        }
+      ]
+    }
+  },
+  "summary": {
+    "baseline_ocr_execution_seconds": 310.071197,
+    "experimental_ocr_execution_seconds": 131.395422,
+    "ocr_execution_speedup": 2.3598,
+    "baseline_extraction_seconds": 339.83892,
+    "experimental_extraction_seconds": 132.970622,
+    "experimental_total_including_model_init_seconds": 143.244861,
+    "total_ocr_calls": 4,
+    "total_detector_resize_calls": 4,
+    "total_page_attribution_scored": 10,
+    "total_page_attribution_correct": 10
+  },
+  "baseline_reference": {
+    "cbc_report.png": {
+      "ocr_execution_seconds": 16.79509,
+      "ocr_calls": [
+        {
+          "call_id": 1,
+          "path": "8b909b21-30b9-4d48-bfd4-8b095cbdd0be.png",
+          "item_count": 11,
+          "ocr_image_seconds": 44.429334,
+          "model_init_seconds": 27.634244,
+          "ocr_execution_excluding_init_seconds": 16.79509
+        }
+      ],
+      "extraction_seconds": 44.685442
+    },
+    "multipage_scanned_report.pdf": {
+      "ocr_execution_seconds": 175.881025,
+      "ocr_calls": [
+        {
+          "call_id": 2,
+          "path": "page_0.png",
+          "item_count": 19,
+          "ocr_image_seconds": 99.824909,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 99.824909
+        },
+        {
+          "call_id": 3,
+          "path": "page_1.png",
+          "item_count": 6,
+          "ocr_image_seconds": 76.056116,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 76.056116
+        }
+      ],
+      "extraction_seconds": 177.22206
+    },
+    "photographed_report.jpg": {
+      "ocr_execution_seconds": 117.395082,
+      "ocr_calls": [
+        {
+          "call_id": 4,
+          "path": "cfb760e4-7940-4abb-889e-be1f95679d85.jpg",
+          "item_count": 12,
+          "ocr_image_seconds": 117.395082,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 117.395082
+        }
+      ],
+      "extraction_seconds": 117.931418
+    }
+  }
+}

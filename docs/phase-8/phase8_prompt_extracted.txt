@@ -1,0 +1,1480 @@
+<USER_REQUEST>
+# LABLENS — PHASE 8 MASTER EXECUTION
+# COMPLETE USER EXPERIENCE REDESIGN
+## STRONG MODEL INITIAL BUILD → MEDIUM MODEL CONTINUATION
+
+You are the lead product designer, senior frontend architect, motion designer, full-stack engineer and technical project lead for LabLens.
+
+Your assignment is to transform the existing LabLens application into a coherent, premium, extremely simple, guided laboratory-report experience.
+
+This assignment has two special requirements:
+
+1. The STRONG MODEL starts the milestone and must prioritize creating the product direction, persistent implementation plan, visual system and most important animated UI components.
+2. A MEDIUM MODEL will continue the implementation when the strong model runs out of available tokens or execution capacity.
+
+Therefore, you must design your work so that it survives an abrupt model handoff.
+
+A future model must be able to open the project, read the saved documentation, inspect the existing code and continue immediately without needing the previous conversation.
+
+**Do not make the next model depend on your hidden reasoning or conversation memory. Save all critical context inside the project.**
+
+---
+
+# PART 0 — PROJECT CONTEXT
+
+Project:
+
+`C:\Users\sureshr\Documents\Default Project\LabLens`
+
+Product:
+LabLens
+
+Current tagline:
+
+"Your lab report. Finally, in plain language."
+
+LabLens is a local-first laboratory-report understanding application.
+
+Previously completed phases:
+
+### Phase 1 — Frontend foundation
+React, Vite, TypeScript, routing, application shell, report management and custom design system.
+
+### Phase 1.5 — Visual refinement
+GSAP, ScrollTrigger, Lenis on marketing pages, Motion microinteractions and reduced-motion support.
+
+### Phase 2 — Report ingestion
+FastAPI, SQLite, private file storage, validation, consent, uploads, downloads and deletion.
+
+### Phase 3A — Document extraction
+Digital PDFs, image processing, PaddleOCR and extraction jobs.
+
+### Phase 3B — Structured measurements
+Biomarker normalization, test dictionary, measurement review, correction and verification.
+
+### Phase 4 — Health Intelligence
+Reference-range assessment, supported unit conversion, deterministic findings and historical comparisons.
+
+### Phase 5 — Medical explanations
+26 biomarker explanations, 26 pattern explanations, source catalogue, explanation API and frontend.
+
+### Phase 6 — Care navigation
+Clinician summary, print-to-PDF, Find Care, NMC resources and eSanjeevani.
+
+### Phase 7 — Lab history
+Chronological timeline, report comparison and biomarker trend exploration.
+
+The existing product has repeatedly passed substantial automated tests, including a reported 126-test backend suite and frontend typecheck, lint and build.
+
+A product-wide Playwright audit was also performed, with reported screenshots and synthetic user journeys.
+
+However, the user has manually tried the actual website and considers the existing experience extremely confusing, slow, clumsy and insufficiently accurate.
+
+**Treat user experience quality and the actual end-to-end workflow as the primary problems to solve.**
+
+Do not merely add more features.
+
+Do not build another dashboard full of cards.
+
+Do not recreate Phases 1–7.
+
+Reorganize and simplify how the existing capabilities are experienced.
+
+---
+
+# PART 1 — THE ACTUAL PRODUCT VISION
+
+The new LabLens should feel like one simple application.
+
+A user should not have to understand:
+- OCR.
+- Measurement normalization.
+- Analysis runs.
+- Biomarker identifiers.
+- Pattern rules.
+- API calls.
+- Extraction jobs.
+- Backend processing stages.
+
+Those are implementation details.
+
+The user's journey should be:
+
+WELCOME
+→ UPLOAD
+→ CONSENT
+→ START ANALYSIS
+→ BEAUTIFUL PROCESSING EXPERIENCE
+→ REVIEW EXTRACTED MEASUREMENTS
+→ CONFIRM RESULTS
+→ UNDERSTAND THE REPORT
+→ UNDERSTAND NEXT STEPS
+→ FIND CARE IF APPROPRIATE
+→ SAVE AND FINISH
+
+The entire interface should guide the user naturally from one step to the next.
+
+A new user should not have to explore navigation to discover what to do.
+
+The application must explain everything in ordinary language.
+
+**Core principle: hide technical complexity without hiding important information.**
+
+---
+
+# PART 2 — MOST IMPORTANT: MODEL HANDOFF ARCHITECTURE
+
+This is a special requirement.
+
+The STRONG MODEL is likely to exhaust its available tokens before completing the entire Phase 8 implementation.
+
+The MEDIUM MODEL must be able to continue directly from the repository.
+
+To accomplish this, create durable project documentation at the very beginning.
+
+Create:
+
+`docs/phase-8/PHASE_8_MASTER_PLAN.md`
+
+`docs/phase-8/PHASE_8_IMPLEMENTATION_STATUS.md`
+
+`docs/phase-8/PHASE_8_DESIGN_SYSTEM.md`
+
+`docs/phase-8/PHASE_8_HANDOFF.md`
+
+If a suitable documentation directory already exists, use it without overwriting unrelated material.
+
+## 2.1 MASTER PLAN
+
+`PHASE_8_MASTER_PLAN.md`
+
+Must contain:
+- Complete product vision.
+- User journey.
+- All screen requirements.
+- Backend integration requirements.
+- Medical accuracy requirements.
+- Existing features to preserve.
+- Visual standards.
+- Acceptance criteria.
+- Implementation stages.
+- Dependencies between stages.
+- Testing expectations.
+
+## 2.2 IMPLEMENTATION STATUS
+
+`PHASE_8_IMPLEMENTATION_STATUS.md`
+
+Maintain a real checklist of tasks.
+
+For every item use:
+- NOT STARTED
+- IN PROGRESS
+- IMPLEMENTED
+- VERIFIED
+- BLOCKED
+
+Record actual progress.
+
+Do not mark a task VERIFIED merely because code was written.
+
+## 2.3 DESIGN SYSTEM
+
+`PHASE_8_DESIGN_SYSTEM.md`
+
+Describe:
+- Color tokens.
+- Typography.
+- Spacing.
+- Component patterns.
+- Motion principles.
+- Screen transitions.
+- Mobile layouts.
+- Accessibility.
+- Processing animation design.
+
+## 2.4 HANDOFF FILE
+
+`PHASE_8_HANDOFF.md`
+
+This file is critical.
+
+It must always provide:
+
+1. Project path.
+2. Phase 8 objective.
+3. Current implementation state.
+4. Files created.
+5. Files modified.
+6. Existing functionality preserved.
+7. Exact routes implemented.
+8. Actual backend API contracts discovered.
+9. Known issues.
+10. Commands already run.
+11. Exact test results.
+12. What remains to be implemented.
+13. The precise next task for the next model.
+14. Any important technical decisions.
+15. Any incomplete or risky code paths.
+
+Update this file after every major implementation milestone.
+
+At any point, a medium-capability model opening this file should understand the project and know exactly what to do next.
+
+## 2.5 HANDOFF RELIABILITY
+
+Do not leave:
+- Half-written components.
+- Broken imports.
+- Untracked architectural decisions.
+- Undocumented API changes.
+- Half-applied migrations.
+- Duplicate components.
+- Temporary mock implementations.
+
+When execution capacity becomes low:
+1. Finish the current safe code change.
+2. Run a focused check.
+3. Update implementation status.
+4. Update handoff documentation.
+5. Record the next exact task.
+6. Leave the project in a coherent state.
+
+Never spend the remaining context generating a long conversational summary while leaving the project undocumented.
+
+---
+
+# PART 3 — STRONG MODEL PRIORITIES
+
+The strong model must front-load the visual foundation.
+
+Do not spend most of the initial budget performing an exhaustive source-code audit.
+
+Do not delay the animation until the end.
+
+## FIRST PRIORITY
+
+Within the first portion of the available execution budget, complete:
+
+1. A concise architectural inspection.
+2. The Phase 8 master plan.
+3. The phase handoff and design-system documents.
+4. The visual shell for the new guided experience.
+5. A beautifully designed document-processing animation.
+6. The welcome and upload screens.
+7. A persistent implementation checklist identifying remaining work.
+
+The primary initial coding deliverable is the real working UI for:
+
+- Welcome.
+- Upload.
+- Consent.
+- Start analysis.
+- Processing animation.
+- Stage transitions.
+- Responsive behavior.
+
+This must be integrated into the actual LabLens application, not placed in an isolated demo component.
+
+The STRONG MODEL should produce visible, high-quality implementation before attempting large backend refactors.
+
+Once this high-value visual foundation exists, it may continue with additional integrations while resources allow.
+
+The MEDIUM MODEL will continue everything else using the saved handoff documents.
+
+**Do not intentionally stop after creating the plan. Actually implement the priority UI.**
+
+---
+
+# PART 4 — STAGE ZERO: FAST BUT ACCURATE ARCHITECTURE INSPECTION
+
+Inspect the existing project.
+
+Do not rebuild it.
+
+Relevant frontend:
+- `src/App.tsx`
+- Existing route definitions.
+- Landing page.
+- DashboardPage.
+- ReportsPage.
+- NewReportPage.
+- ReportViewerPage.
+- ExplanationsPanel.
+- ClinicianSummarySection.
+- FindCareSection.
+- HistoryPage.
+- Existing navigation.
+- API client.
+- Existing styles and design tokens.
+
+Relevant backend:
+- `app/main.py`
+- `app/routes/reports.py`
+- Report service.
+- Extraction service.
+- Measurement service.
+- Analysis service.
+- Explanation service.
+- History service.
+- Schemas and response models.
+
+Inspect the current QA changes too.
+
+The recent full-product QA run modified:
+- `ReportsPage.tsx`
+- `NewReportPage.tsx`
+
+Preserve those improvements unless they are independently found to be defective.
+
+Determine actual route names, API contracts and status transitions.
+
+Do not guess.
+
+Do not spend excessive time reading every line of every file.
+
+Read the relevant functions and data structures needed for each integration.
+
+After this targeted inspection, start implementation.
+
+---
+
+# PART 5 — NEW WELCOME PAGE
+
+When a user opens the root route `/`, they should see an extremely simple welcome experience.
+
+The welcome screen is not a marketing website full of sections.
+
+It is the starting point of the actual product.
+
+## Desired presentation
+
+Headline:
+
+"Your lab report. Finally, in plain language."
+
+Supporting copy:
+
+"Upload your laboratory report. We'll organise your results and help you understand what they mean."
+
+Primary CTA:
+
+**Analyse a report**
+
+Secondary CTA:
+
+**Open dashboard**
+
+There should be very little else.
+
+Do not include:
+- A large statistics dashboard.
+- Multiple feature grids.
+- Long marketing copy.
+- Excessive illustrations.
+- Numerous CTA buttons.
+- A cluttered navigation system.
+- Multiple nested cards.
+
+## Visual design
+
+Create a sophisticated composition.
+
+Design direction:
+- Warm off-white background.
+- Forest-green typography.
+- Beautiful whitespace.
+- One subtle visual representation of a laboratory report transforming into an understandable summary.
+- A small amount of tasteful motion.
+- Excellent typography and proportion.
+
+The welcome screen should communicate product purpose within seconds.
+
+It must work beautifully at 360px mobile width.
+
+Use premium visual restraint rather than adding more elements.
+
+---
+
+# PART 6 — UPLOAD SCREEN
+
+The primary CTA opens a clean upload experience.
+
+The upload component itself from the existing application may be reused if it works correctly.
+
+Do not unnecessarily replace a functioning file-validation service.
+
+## Interaction
+
+1. Drag and drop a supported report.
+2. Or choose a file.
+3. Display the selected file name.
+4. Display file size and type.
+5. Show a required consent checkbox after file selection.
+6. Show the primary CTA.
+
+Primary CTA:
+
+**Start analysis**
+
+No upload or processing occurs before required consent is supplied.
+
+The user must know that the report is being uploaded to the local LabLens backend.
+
+The screen must clearly communicate supported file types and configured size restrictions.
+
+Do not create multiple competing actions.
+
+## Selected state
+
+When a file is selected:
+- Show its name.
+- Show its size.
+- Show a document icon or simple preview.
+- Provide a remove/change action.
+- Reveal the consent checkbox.
+- Enable Start analysis only when requirements are satisfied.
+
+Do not change existing consent semantics.
+
+---
+
+# PART 7 — HIGHEST VISUAL PRIORITY
+# THE DOCUMENT PROCESSING AND EXTRACTION ANIMATION
+
+This is the most important visual feature of Phase 8.
+
+The user should see a beautiful, carefully designed sequence while the report is processed.
+
+The animation must feel polished, reassuring, sophisticated and alive.
+
+It must not look like a generic spinner or a basic progress bar.
+
+## 7.1 Visual concept
+
+Create a distinctive animation of a laboratory document being transformed into structured information.
+
+The visual metaphor:
+
+**A document enters LabLens. It is scanned, read, analysed for structure, and its individual measurements become organised rows.**
+
+A possible visual composition:
+
+- Centered document preview.
+- A thin animated scanner line moving down the document.
+- Text lines appearing progressively.
+- Individual measurement rows emerging from the page.
+- Numeric values settling into aligned columns.
+- Small connecting visual cues.
+- A final transformation into a clean structured-results preview.
+
+The animation should feel like a real document-understanding process.
+
+Avoid:
+- Robot illustrations.
+- AI brain graphics.
+- Generic glowing gradients.
+- Excessive floating orbs.
+- Giant spinning loaders.
+- Heavy 3D scenes.
+- Artificial confetti.
+- Excessive motion.
+
+## 7.2 Required processing stages
+
+Build a state-driven processing experience.
+
+### STAGE 1 — UPLOADING
+
+Title:
+
+"Sending your report securely"
+
+Description:
+
+"Preparing your document for processing."
+
+Animation:
+- Document card.
+- Small upload movement.
+- Progress feedback if actual upload progress is available.
+
+### STAGE 2 — READING
+
+Title:
+
+"Reading your report"
+
+Description:
+
+"Finding text, tables and laboratory results."
+
+Animation:
+- Scanner line.
+- Page reveal.
+- Text lines highlighted.
+- Extracted snippets appearing.
+
+### STAGE 3 — ORGANISING
+
+Title:
+
+"Organising your results"
+
+Description:
+
+"Identifying test names, values, units and laboratory reference ranges."
+
+Animation:
+- Text becomes structured rows.
+- Test names settle into a column.
+- Numeric values appear.
+- Units align.
+- Reference intervals appear.
+- Individual rows transition into a clean data layout.
+
+### STAGE 4 — PREPARING FOR REVIEW
+
+Title:
+
+"Your results are ready to review"
+
+Description:
+
+"We've organised the information. Let's make sure it matches the original report."
+
+Animation:
+- Structured document settles.
+- Final confirmation visual.
+- Smooth transition to verification.
+
+## 7.3 Animation details
+
+The processing animation should have:
+
+- Document movement.
+- Scanner effect.
+- Text-line reveal.
+- Row extraction.
+- Staggered row entrance.
+- Column alignment.
+- Gentle opacity and transform transitions.
+- Smooth transition between stages.
+- Consistent layout so the whole screen does not jump.
+- Excellent mobile behavior.
+
+Prefer CSS transforms, SVG and the existing Motion library.
+
+GSAP may be used where already installed and appropriate.
+
+Do not introduce Three.js.
+
+Do not introduce heavy animation dependencies.
+
+Aim for smooth 60fps behavior on ordinary integrated-graphics laptops, without requiring high-end GPU hardware.
+
+## 7.4 CRITICAL: ANIMATION MUST REPRESENT REAL WORK
+
+Never invent fake progress.
+
+Do not show 65% completion because three seconds passed.
+
+Do not automatically mark extraction complete after an animation duration.
+
+The animation is a visual representation of actual application states.
+
+Implement an explicit state machine based on the real API lifecycle.
+
+For example:
+
+`idle`
+→ `validating`
+→ `uploading`
+→ `upload_complete`
+→ `extracting`
+→ `structuring`
+→ `ready_for_review`
+→ `failed`
+
+Adapt this to the actual backend contracts.
+
+Use real upload progress if the upload client supports it.
+
+If exact upload progress is unavailable, show an indeterminate but accurate upload state.
+
+Map extraction state to actual extraction job status.
+
+Map structuring state to the actual structure operation.
+
+Only move to ready-for-review when the data is actually available.
+
+When a background OCR job is still running:
+- Keep the user informed.
+- Poll using the existing job API.
+- Show that processing is still happening.
+- Do not run duplicate extraction jobs.
+- Do not restart completed operations unnecessarily.
+
+Handle:
+- Upload errors.
+- Extraction errors.
+- OCR failure.
+- API timeout.
+- Structuring errors.
+- Invalid report.
+- User navigation away and back where appropriate.
+
+The user must not be trapped in an endless animation.
+
+Provide an honest retry or recovery action where supported.
+
+## 7.5 Component separation
+
+Create a reusable component such as:
+
+`ProcessingExperience.tsx`
+
+Adapt the name to existing conventions.
+
+Keep the visual animation separate from the business logic.
+
+The component should receive real state, stage and progress information from the actual workflow.
+
+It must not independently fake API completion.
+
+---
+
+# PART 8 — EXTRACTION VERIFICATION SCREEN
+
+After processing, the user reaches:
+
+**"Let's make sure your results are correct."**
+
+Subtitle:
+
+"We've organised the values from your report. Check them against the original before continuing."
+
+This screen is critical.
+
+It should be clear and reassuring.
+
+## 8.1 Desktop layout
+
+Use a split-view interface:
+
+LEFT:
+- Original PDF/image preview.
+- Page navigation.
+- Zoom where practical.
+- Relevant original document content.
+
+RIGHT:
+- Extracted laboratory measurements.
+- Original test name.
+- Extracted value.
+- Unit.
+- Original laboratory reference range.
+- Existing laboratory flag.
+- Review status.
+- Edit action.
+
+The user should be able to compare an extracted row with its corresponding source.
+
+Use page numbers, bounding boxes or source snippets if the extraction service provides them.
+
+Do not invent source locations.
+
+## 8.2 Mobile layout
+
+Use a simple view selector:
+- Original report.
+- Extracted results.
+
+Avoid forcing users to view two cramped columns.
+
+## 8.3 Review workflow
+
+Each measurement must allow:
+- Reviewing the extracted value.
+- Correcting a wrong value.
+- Correcting supported units/names where the existing schema allows it.
+- Viewing the original source.
+- Confirming it was reviewed.
+
+Keep the original raw extraction and correction history.
+
+Do not destroy the original OCR data.
+
+Uncertain extraction must be clearly highlighted.
+
+Critical original lab flags must remain visible.
+
+Do not mark measurements verified merely because they were successfully extracted.
+
+## 8.4 Continue
+
+Display:
+
+**Confirm results & continue**
+
+Explain that the next step will interpret the verified/existing eligible results.
+
+Allow the user to proceed with partial review where appropriate only if the existing clinical-safety constraints support it.
+
+Unverified measurements must remain excluded from personalized interpretation.
+
+---
+
+# PART 9 — THE SIMPLIFIED RESULTS EXPERIENCE
+
+Create a single main experience:
+
+**"Your report, explained."**
+
+This should replace the current confusing experience of multiple technical sections and disconnected panels.
+
+Do not show every technical feature simultaneously.
+
+Use a simple overview and progressively reveal supporting detail.
+
+## 9.1 Top overview
+
+Display:
+
+- Measurements within their laboratory ranges.
+- Measurements outside their laboratory ranges.
+- Values needing review.
+- Original critical laboratory warnings.
+
+All counts must come from actual data.
+
+Example layout:
+
+"Your report has 17 reviewed measurements."
+
+"12 are within their laboratory reference ranges."
+
+"3 are outside their respective ranges."
+
+"2 need additional review."
+
+These are illustrative examples only.
+
+Do not create:
+- Overall health score.
+- Arbitrary percentages.
+- Fake confidence.
+- Unsupported risk grades.
+
+## 9.2 Three result categories
+
+### WITHIN LABORATORY RANGE
+
+Display results within the specific laboratory range.
+
+Use neutral language.
+
+Never claim that in-range results prove someone is perfectly healthy.
+
+### OUTSIDE LABORATORY RANGE
+
+Show results above or below the specific laboratory interval.
+
+Explain the measurement and relevant uncertainty.
+
+Do not automatically claim disease or serious illness.
+
+### NEEDS REVIEW
+
+Show:
+- Low extraction confidence.
+- Missing unit.
+- Missing reference interval.
+- Unsupported measurement.
+- Incompatible or uncertain data.
+- Unverified measurements.
+
+Explain exactly why the measurement cannot yet receive a reliable interpretation.
+
+Critical flags must be displayed prominently and independently of normal/outside categories.
+
+## 9.3 Simple result cards
+
+A user should understand each measurement quickly.
+
+Each card displays:
+
+1. Test name.
+2. Actual reported result.
+3. Unit.
+4. Laboratory reference interval.
+5. Status.
+6. One-sentence explanation.
+7. Expandable "Understand this result" section.
+
+Avoid giant nested medical cards.
+
+Use a compact, visually consistent result list.
+
+---
+
+# PART 10 — EXPLANATIONS AND MEDICAL CONTEXT
+
+The application should explain:
+
+- What the test measures.
+- Why it is useful.
+- What the particular result shows relative to the laboratory range.
+- Possible influencing factors.
+- Relevant context.
+- What cannot be established.
+- What to discuss with a healthcare professional.
+- Supporting medical sources.
+
+Use the existing Phase 5 explanation catalogue.
+
+Do not replace the curated medical content with generative AI.
+
+## 10.1 Separate facts and possibilities
+
+Clearly distinguish:
+
+FACT:
+"The result is above the reference interval printed by this laboratory."
+
+POSSIBLE CONTEXT:
+"Several factors can influence this measurement."
+
+NOT ESTABLISHED:
+"This result alone cannot determine the cause."
+
+Never phrase a possible cause as a confirmed diagnosis.
+
+## 10.2 Symptoms and personal context
+
+The user wants to understand which symptoms may be relevant.
+
+This must be handled carefully.
+
+Only show symptom/context information supported by the relevant medical source.
+
+Use wording like:
+
+"Your doctor may want to know whether you've experienced any of the following..."
+
+Do not assume the user has these symptoms.
+
+Do not generate a diagnosis based on symptom selection.
+
+If adding a personal context form:
+- Make every field optional.
+- Explain why the information may be useful.
+- Keep it local to the report/consultation workflow where possible.
+- Do not store it in unrelated backend tables.
+- Never send it to external search providers.
+- Do not infer symptoms automatically from laboratory values.
+
+## 10.3 Safe next steps
+
+The product should provide useful actions without pretending to be a doctor.
+
+Appropriate guidance includes:
+- Confirm the original value.
+- Consider whether relevant test context such as fasting status is known.
+- Discuss out-of-range findings with a healthcare professional where appropriate.
+- Bring related results to the consultation.
+- Follow existing critical laboratory instructions.
+- Do not independently change medication or start supplements because of a report.
+
+Do not issue prescriptions or treatment plans.
+
+---
+
+# PART 11 — CLINICIAN FOLLOW-UP GUIDANCE
+
+At the end of the results, include:
+
+**"What should you do next?"**
+
+Use a simple, transparent presentation.
+
+Possible outcomes:
+
+### Critical laboratory warning
+Preserve the laboratory's actual warning and its instructions.
+
+Advise the user to contact the laboratory or healthcare professional promptly according to those instructions.
+
+Do not create a separate emergency classification system.
+
+### Results worth discussing
+Explain which supported findings would be useful to discuss with a healthcare professional.
+
+Provide the reasoning based on actual values and Phase 4/5 information.
+
+### No clear follow-up guidance available
+Do not force a recommendation.
+
+Explain that the application cannot determine personal next steps without clinical context.
+
+## Doctor selection
+
+The previous implementation has a Find Care feature.
+
+Reuse it.
+
+Default general starting point:
+- General Physician.
+- Family Medicine.
+- Internal Medicine.
+
+Specialty guidance must only be displayed when a curated, clinically supported rule explicitly justifies mentioning it.
+
+Do not infer that a single abnormal result requires a particular specialist.
+
+Do not claim to know the exact doctor someone needs.
+
+Allow users to explore other specialties themselves.
+
+---
+
+# PART 12 — COMPLETION AND FINISH
+
+At the end, show a clear completion screen or panel:
+
+**"Your report is ready."**
+
+Summarize:
+- Review completed.
+- Measurements available.
+- Explanations available.
+- Follow-up resources, if applicable.
+- Report saved in Lab History.
+
+Provide clear actions:
+
+- Prepare for an appointment.
+- Find care.
+- View this report.
+- Go to dashboard.
+
+Do not automatically redirect the user before they have a chance to view the result.
+
+---
+
+# PART 13 — SIMPLE DASHBOARD REDESIGN
+
+The new dashboard is for returning users.
+
+It should be simple and useful.
+
+Headline:
+
+"Welcome back."
+
+Supporting text:
+
+"Your laboratory reports, all in one place."
+
+Four clear destinations:
+
+1. Continue with your latest report.
+2. My reports.
+3. My lab history.
+4. Find care.
+
+Do not display:
+- Excessive statistics.
+- Giant charts without purpose.
+- Many competing cards.
+- Technical backend statuses.
+- Unnecessary feature grids.
+- Duplicate information.
+
+Hide complexity without destroying capability.
+
+Existing advanced features should remain accessible where useful.
+
+---
+
+# PART 14 — VISUAL DESIGN REQUIREMENTS
+
+Preserve the LabLens design identity.
+
+Palette:
+
+- Background: `#F7F8F3`
+- Forest green: `#12251F`
+- White: `#FFFFFF`
+- Lime: `#C9F277`
+- Mint: `#78CFC0`
+- Muted: `#78837C`
+- Border: `#E4EAE3`
+- Warning: `#E8AB58`
+- Critical: `#D85D5D`
+
+Typography:
+- Manrope headings.
+- Inter body.
+- Tabular figures for laboratory values.
+
+Design direction:
+
+Premium.
+Minimal.
+Calm.
+Editorial.
+Elegant.
+Human.
+Extremely clear.
+
+The visual quality should feel like a carefully art-directed premium healthcare product.
+
+Do not use generic AI dashboard templates.
+
+Avoid:
+- Too many rounded cards.
+- Excessive shadows.
+- Excessive gradients.
+- Excessive badges.
+- Three-dimensional graphics.
+- Unnecessary charts.
+- Huge amounts of explanatory text on the first screen.
+
+Whitespace and typography should do most of the visual work.
+
+---
+
+# PART 15 — MOTION AND PERFORMANCE
+
+The processing animation is the signature feature.
+
+Other animations must support the guided journey.
+
+Use existing:
+- Motion.
+- GSAP.
+- CSS.
+- SVG.
+
+Avoid new heavy dependencies unless absolutely necessary.
+
+Motion principles:
+
+- Short, smooth transitions.
+- Staggered elements.
+- Meaningful state changes.
+- Gentle document transformations.
+- No unnecessary bouncing.
+- No excessive parallax.
+- No animation blocking user input.
+- Reduced-motion support.
+
+Performance principles:
+
+- No Three.js.
+- No large 3D assets.
+- No unnecessary background video.
+- Lazy-load secondary content.
+- Keep the dashboard lightweight.
+- Avoid repeating OCR.
+- Avoid repeating successful structuring.
+- Avoid rerunning analysis unnecessarily.
+- Do not block the main thread.
+- Keep mobile rendering smooth.
+
+Remember the user's computer may have an older CPU and integrated graphics.
+
+Prefer CSS/SVG animation that uses compositing-friendly transforms and opacity.
+
+---
+
+# PART 16 — FULL BACKEND INTEGRATION
+
+This is mandatory after the initial visual foundation.
+
+Use actual existing APIs.
+
+Do not mock the primary journey.
+
+The interface must connect:
+
+Upload API
+→ Extraction job
+→ Extraction result
+→ Measurement structuring
+→ Measurement corrections and verification
+→ Phase 4 analysis
+→ Phase 5 explanations
+→ Phase 6 care navigation
+→ Phase 7 history
+
+Inspect actual API contracts.
+
+Do not invent new response fields.
+
+Add only the minimum backend changes necessary.
+
+Prefer reusing existing endpoints and services.
+
+Never show successful completion before the backend operation actually succeeds.
+
+Use proper:
+- Loading states.
+- Error states.
+- Retry behavior.
+- Duplicate-operation protection.
+- Request cancellation where safe.
+- Recovery on page refresh.
+- Report ID persistence through the route.
+
+Do not lose a report just because the user refreshes during processing.
+
+---
+
+# PART 17 — DATA ACCURACY IS NON-NEGOTIABLE
+
+The user specifically reported that the current product is inaccurate.
+
+You must treat this as a core problem.
+
+## Extraction
+
+Preserve:
+- Original text.
+- Source page.
+- Source bounding box when available.
+- OCR confidence when available.
+- Original extracted value.
+
+Do not silently guess missing values.
+
+## Structuring
+
+Preserve:
+- Canonical test.
+- Original test name.
+- Original numerical value.
+- Qualifier.
+- Unit.
+- Reference range.
+- Lab flag.
+- Review status.
+
+## Corrections
+
+When a user edits an extracted value:
+- Preserve the original extraction.
+- Record the corrected value.
+- Maintain audit information.
+- Require explicit confirmation.
+
+## Numerical integrity
+
+- Check units.
+- Preserve ranges.
+- Preserve `>` and `<`.
+- Preserve qualitative values.
+- Avoid invalid percentage calculations.
+- Never interpret unverified values as confirmed.
+- Never compare incompatible measurements.
+
+## Medical integrity
+
+- No diagnosis.
+- No prescriptions.
+- No dosage advice.
+- No invented causes.
+- No false reassurance.
+- No unsupported urgency.
+- No fabricated citations.
+
+---
+
+# PART 18 — AUTOMATED ACCEPTANCE TESTING
+
+After implementing the new experience, use the existing test framework.
+
+Required backend tests:
+
+- Upload with valid consent.
+- Upload without consent.
+- Valid PDF extraction.
+- Valid image OCR.
+- Extraction error.
+- Structured measurements.
+- Corrected measurement.
+- Review/verification status.
+- Phase 4 assessment.
+- Phase 5 explanation.
+- Critical flags.
+- Incompatible units.
+- Historical report data.
+- Care-related data isolation.
+
+Frontend tests:
+
+- Welcome CTA.
+- Dashboard CTA.
+- File selection.
+- Consent checkbox.
+- Start analysis enable/disable.
+- Upload state.
+- Processing animation stages.
+- Processing API state binding.
+- Extraction completion.
+- Extraction error.
+- Measurement verification.
+- Correction.
+- Continue action.
+- Results overview.
+- Expanded explanation.
+- Discussion context.
+- Follow-up section.
+- Finish navigation.
+- Dashboard links.
+- Responsive rendering.
+
+Run:
+- Backend focused tests.
+- Existing Phase 4–7 regression tests.
+- Full backend test suite once after focused checks.
+- TypeScript typecheck.
+- ESLint.
+- Production build.
+
+A command is successful only when it finishes with exit code zero.
+
+Do not weaken tests.
+
+Do not report mocked UI transitions as real API integration.
+
+---
+
+# PART 19 — TWO-MODEL EXECUTION STRATEGY
+
+This section must be followed precisely.
+
+## STRONG MODEL — INITIAL IMPLEMENTATION
+
+Your first responsibilities:
+
+1. Inspect the core frontend architecture quickly.
+2. Create all four Phase 8 documentation files.
+3. Establish the full screen and workflow architecture.
+4. Define the design system and animation concept.
+5. Implement the welcome experience.
+6. Implement the upload/consent interaction.
+7. Build the central ProcessingExperience component.
+8. Implement the four genuine processing-stage animations.
+9. Make the component responsive and accessible.
+10. Integrate the initial flow into the real application.
+11. Run focused frontend checks.
+12. Update the implementation status and handoff documents.
+
+If capacity remains, continue into the verification screen.
+
+Do not spend the entire strong-model budget writing an enormous report.
+
+**The highest-value first output must be working, polished visual UI and the document-processing animation.**
+
+Before exhausting capacity:
+- Finish the current safe code change.
+- Record what works.
+- Record what doesn't.
+- Update the handoff file.
+- Write the exact next implementation task for the medium model.
+
+The handoff must explain which components are already implemented and how to extend them.
+
+## MEDIUM MODEL — CONTINUATION
+
+When a medium model continues:
+
+FIRST:
+Read:
+- `docs/phase-8/PHASE_8_MASTER_PLAN.md`
+- `docs/phase-8/PHASE_8_IMPLEMENTATION_STATUS.md`
+- `docs/phase-8/PHASE_8_DESIGN_SYSTEM.md`
+- `docs/phase-8/PHASE_8_HANDOFF.md`
+
+Then inspect the actual working code.
+
+Do not recreate the welcome page or processing animation if they already exist.
+
+Do not repeat completed inspections.
+
+Do not replace working components because you prefer a different style.
+
+Continue with the next NOT STARTED or IN PROGRESS item.
+
+Maintain the existing design decisions.
+
+Update the status and handoff documentation after every major milestone.
+
+Do not interpret missing conversation history as missing implementation.
+
+The repository and handoff files are the source of truth.
+
+---
+
+# PART 20 — IMPORTANT TASK ORDER
+
+Complete the milestone in the following order.
+
+| Priority | Implementation |
+|---|---|
+| P0 | Persisted Phase 8 plan and handoff |
+| P0 | New visual welcome experience |
+| P0 | Upload and consent flow |
+| P0 | Signature document-processing animation |
+| P1 | Real upload/extraction/structuring integration |
+| P1 | Extracted-results verification interface |
+| P1 | Results overview and simple explanation experience |
+| P1 | Safe clinician guidance |
+| P2 | Appointment and Find Care integration |
+| P2 | Dashboard simplification |
+| P2 | History integration |
+| P3 | Accessibility and performance refinement |
+| P3 | Automated regression and E2E tests |
+
+Do not defer the processing animation.
+
+Do not sacrifice visual quality for unnecessary backend refactoring.
+
+Do not stop after the animation while leaving the remaining requirements undocumented.
+
+---
+
+# PART 21 — DEFINITION OF DONE
+
+Phase 8 can only be completed when:
+
+[ ] New welcome experience works.
+
+[ ] Welcome contains only the essential main actions.
+
+[ ] Dashboard secondary CTA works.
+
+[ ] Report upload works.
+
+[ ] Consent is enforced.
+
+[ ] Start analysis works.
+
+[ ] Processing animation is genuinely integrated with backend state.
+
+[ ] All processing stages have polished transitions.
+
+[ ] Animation is lightweight and responsive.
+
+[ ] Extraction results are shown.
+
+[ ] Original source document is accessible during verification.
+
+[ ] Incorrect measurements can be corrected.
+
+[ ] Verification status is preserved.
+
+[ ] Phase 4 is reused for analysis.
+
+[ ] Results are presented in a clear overview.
+
+[ ] Within-range, outside-range and review-required values are separated.
+
+[ ] Critical flags are prominent.
+
+[ ] Individual explanations are simple and expandable.
+
+[ ] Medical uncertainty is explained.
+
+[ ] Safe next steps are provided.
+
+[ ] Symptoms/context are not turned into unsupported diagnoses.
+
+[ ] Appropriate clinician follow-up guidance exists where supported.
+
+[ ] Existing Find Care works.
+
+[ ] Existing clinician summary works.
+
+[ ] Existing Lab History works.
+
+[ ] Dashboard is simplified.
+
+[ ] Desktop and mobile layouts work.
+
+[ ] Reduced-motion behavior works.
+
+[ ] No unnecessary backend regressions.
+
+[ ] Accuracy safeguards work.
+
+[ ] Automated regression suite passes.
+
+[ ] Frontend typecheck, lint and build pass.
+
+If anything is incomplete, clearly state that Phase 8 is incomplete.
+
+---
+
+# PART 22 — FINAL REPORT
+
+When the complete phase is finished, provide:
+
+1. What changed in the user experience.
+2. New welcome and upload design.
+3. Processing animation behavior.
+4. Actual backend integration.
+5. Measurement verification experience.
+6. Results and explanations experience.
+7. Doctor guidance and final actions.
+8. Dashboard changes.
+9. Files created and modified.
+10. Performance improvements.
+11. Accessibility improvements.
+12. Automated test results.
+13. Known limitations.
+14. Actual screenshots of the new experience, where browser tools are available.
+15. Location of all Phase 8 documentation.
+16. Remaining tasks, if any.
+
+Conclude with:
+- PHASE 8 COMPLETE
+- PHASE 8 COMPLETE WITH MINOR LIMITATIONS
+- PHASE 8 INCOMPLETE
+
+Do not claim clinical validation or production readiness.
+
+Do not start Phase 9.
+
+---
+
+# FINAL DIRECTIVE
+
+Build a coherent, beautiful and genuinely useful LabLens experience.
+
+The strongest early deliverable must be the new visual identity, simplified welcome, upload flow and signature document-processing animation.
+
+The next model must be able to continue without rebuilding your work.
+
+The finished product must not feel like seven separate technical phases.
+
+It must feel like one intelligent, calm and polished application:
+
+A user arrives.
+They upload a report.
+They watch it being processed.
+They verify the extracted information.
+They understand their results.
+They learn what to discuss next.
+They save their report and continue with confidence.
+
+**Prioritize the user experience, visual excellence, data accuracy and reliable model handoff above adding more features.**
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-10T20:30:56+05:30.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 3.8 Flash (Medium) to Claude Sonnet 4.6 (Thinking). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

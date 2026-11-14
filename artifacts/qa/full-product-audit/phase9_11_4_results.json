@@ -1,0 +1,358 @@
+{
+  "generated_at": "2026-11-14T17:01:18.049Z",
+  "frontend_url": "http://127.0.0.1:5174",
+  "api_url": "http://127.0.0.1:8001",
+  "checks": [
+    {
+      "name": "fully verified → completion headline shown",
+      "status": "passed",
+      "detail": "Your report review is complete."
+    },
+    {
+      "name": "completion shows “What happens next”",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion shows total/confirmed/corrected counters",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion does not claim medical approval",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "single obvious primary action to continue",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "fully verified proceeds to results; analysis is current",
+      "status": "passed",
+      "detail": "freshness=current"
+    },
+    {
+      "name": "analysis contains assessments after full review",
+      "status": "passed",
+      "detail": "assessments=5"
+    },
+    {
+      "name": "partial review → completion headline shown",
+      "status": "passed",
+      "detail": "You've reviewed what you could."
+    },
+    {
+      "name": "partial state explains unverified exclusion",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "partial state lists confirmed/corrected/unverified counts",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "partial state does NOT claim everything was reviewed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "finish is disabled before acknowledgement",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "acknowledgement enables finish",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "acknowledgement wrote no verification changes",
+      "status": "passed",
+      "detail": "unverified=4"
+    },
+    {
+      "name": "returning to remaining measurements works",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "remaining measurements still visible & unverified",
+      "status": "passed",
+      "detail": "unverifiedRows=4"
+    },
+    {
+      "name": "finishing for now did not verify any measurement",
+      "status": "passed",
+      "detail": "unverified=4"
+    },
+    {
+      "name": "unverified measurements remain excluded from analysis",
+      "status": "passed",
+      "detail": "assessments=1"
+    },
+    {
+      "name": "corrected result returns to Needs review",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected result carries Edited marker",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected result is not auto-verified",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "re-verified report produces current analysis",
+      "status": "passed",
+      "detail": "freshness=current"
+    },
+    {
+      "name": "360px: no horizontal overflow on load",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: segmented control visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: measurements tab active by default",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: Document tab switches panel",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: document panel visible in Document tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: workspace hidden in Document tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: Measurements tab switches back",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: inspection bottom sheet opens",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: sheet opens over the Measurements tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no horizontal overflow with sheet open",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: sheet closes",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow on load",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: segmented control visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: measurements tab active by default",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: Document tab switches panel",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: document panel visible in Document tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: workspace hidden in Document tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: Measurements tab switches back",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: inspection bottom sheet opens",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: sheet opens over the Measurements tab",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow with sheet open",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: sheet closes",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: completion renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no horizontal overflow (completion)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: completion ring visible",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "reduced motion disables ring transition",
+      "status": "passed",
+      "detail": "transition-property=none"
+    },
+    {
+      "name": "reduced motion disables entrance animation",
+      "status": "passed",
+      "detail": "animation=none"
+    },
+    {
+      "name": "keyboard activation of primary CTA works",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "photograph fixture uploads and reaches verification",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no uncaught console errors",
+      "status": "passed",
+      "detail": "clean"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\01-full-review-completion.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\02-full-review-results.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\03-partial-review-gate.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\03b-partial-review-acknowledged.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\04-correction-invalidation.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\05-mobile-360.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\05-mobile-390.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\06-completion-360.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\06-completion-1280.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\06-completion-1920.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_4\\07-photo-verification.png"
+  ],
+  "console_errors": [],
+  "passed": 67,
+  "failed": 0
+}

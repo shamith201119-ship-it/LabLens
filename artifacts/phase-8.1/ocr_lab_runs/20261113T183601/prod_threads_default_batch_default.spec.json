@@ -1,0 +1,25 @@
+{
+  "run_id": "20261113T183601__prod_threads_default_batch_default",
+  "label": "prod_threads_default_batch_default",
+  "temp_root": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101",
+  "cpu_threads": null,
+  "text_recognition_batch_size": null,
+  "fixtures": [
+    {
+      "key": "cbc_png_cold",
+      "category": "image_png",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.png",
+      "filename": "cbc_report.png",
+      "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.json"
+    },
+    {
+      "key": "cbc_png_warm",
+      "category": "image_png",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.png",
+      "filename": "cbc_report.png",
+      "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.json"
+    }
+  ],
+  "min_available_bytes": 262144000,
+  "created_at": "2026-11-13T13:06:14.325944+00:00"
+}

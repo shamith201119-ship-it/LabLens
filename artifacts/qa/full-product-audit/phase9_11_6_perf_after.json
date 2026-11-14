@@ -1,0 +1,308 @@
+{
+  "mode": "after",
+  "base": "http://127.0.0.1:5174",
+  "generated_at": "2026-11-14T17:13:46.020Z",
+  "landing": {
+    "runs": [
+      {
+        "ttfb": 20.9,
+        "domContentLoaded": 179.6,
+        "loadEventEnd": 725.1,
+        "firstPaint": 92,
+        "firstContentfulPaint": 684,
+        "lcp": 684,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 3,
+        "tbtMs": 367,
+        "longTaskEntries": [
+          {
+            "start": 129,
+            "duration": 50
+          },
+          {
+            "start": 191,
+            "duration": 369
+          },
+          {
+            "start": 628,
+            "duration": 98
+          }
+        ],
+        "jsBytes": 638979,
+        "frameStats": {
+          "frames": 39,
+          "p50": 16.7,
+          "p95": 166.6,
+          "max": 400,
+          "overBudget": 7
+        }
+      },
+      {
+        "ttfb": 6.2,
+        "domContentLoaded": 122.4,
+        "loadEventEnd": 625.8,
+        "firstPaint": 64,
+        "firstContentfulPaint": 592,
+        "lcp": 592,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 2,
+        "tbtMs": 341,
+        "longTaskEntries": [
+          {
+            "start": 135,
+            "duration": 354
+          },
+          {
+            "start": 539,
+            "duration": 87
+          }
+        ],
+        "jsBytes": 638979,
+        "frameStats": {
+          "frames": 35,
+          "p50": 16.7,
+          "p95": 149.9,
+          "max": 383.3,
+          "overBudget": 8
+        }
+      },
+      {
+        "ttfb": 8.3,
+        "domContentLoaded": 143.7,
+        "loadEventEnd": 813.4,
+        "firstPaint": 88,
+        "firstContentfulPaint": 744,
+        "lcp": 744,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 2,
+        "tbtMs": 476,
+        "longTaskEntries": [
+          {
+            "start": 161,
+            "duration": 436
+          },
+          {
+            "start": 674,
+            "duration": 140
+          }
+        ],
+        "jsBytes": 638979,
+        "frameStats": {
+          "frames": 32,
+          "p50": 25,
+          "p95": 216.7,
+          "max": 483.2,
+          "overBudget": 11
+        }
+      }
+    ],
+    "median": {
+      "ttfb": 8.3,
+      "domContentLoaded": 143.7,
+      "loadEventEnd": 725.1,
+      "firstPaint": 88,
+      "firstContentfulPaint": 684,
+      "lcp": 684,
+      "cls": 0,
+      "longTasks": 2,
+      "tbtMs": 367,
+      "jsBytes": 638979,
+      "frameStats": {
+        "frames": 39,
+        "p50": 16.7,
+        "p95": 166.6,
+        "max": 400,
+        "overBudget": 7
+      }
+    }
+  },
+  "welcome": {
+    "runs": [
+      {
+        "ttfb": 8.9,
+        "domContentLoaded": 169.4,
+        "loadEventEnd": 297.2,
+        "firstPaint": 80,
+        "firstContentfulPaint": 304,
+        "lcp": 304,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 2,
+        "tbtMs": 148,
+        "longTaskEntries": [
+          {
+            "start": 108,
+            "duration": 62
+          },
+          {
+            "start": 534,
+            "duration": 186
+          }
+        ],
+        "jsBytes": 644076
+      },
+      {
+        "ttfb": 7.6,
+        "domContentLoaded": 159.2,
+        "loadEventEnd": 281.7,
+        "firstPaint": 72,
+        "firstContentfulPaint": 288,
+        "lcp": 288,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 2,
+        "tbtMs": 56,
+        "longTaskEntries": [
+          {
+            "start": 98,
+            "duration": 61
+          },
+          {
+            "start": 515,
+            "duration": 95
+          }
+        ],
+        "jsBytes": 644076
+      },
+      {
+        "ttfb": 9.4,
+        "domContentLoaded": 205.9,
+        "loadEventEnd": 313.9,
+        "firstPaint": 80,
+        "firstContentfulPaint": 352,
+        "lcp": 352,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 3,
+        "tbtMs": 63,
+        "longTaskEntries": [
+          {
+            "start": 117,
+            "duration": 89
+          },
+          {
+            "start": 257,
+            "duration": 57
+          },
+          {
+            "start": 569,
+            "duration": 67
+          }
+        ],
+        "jsBytes": 644076
+      }
+    ],
+    "median": {
+      "ttfb": 8.9,
+      "domContentLoaded": 169.4,
+      "loadEventEnd": 297.2,
+      "firstPaint": 80,
+      "firstContentfulPaint": 304,
+      "lcp": 304,
+      "cls": 0,
+      "longTasks": 2,
+      "tbtMs": 63,
+      "jsBytes": 644076
+    }
+  },
+  "landingThrottled": {
+    "runs": [
+      {
+        "ttfb": 405,
+        "domContentLoaded": 3640.4,
+        "loadEventEnd": 3643.3,
+        "firstPaint": 1836,
+        "firstContentfulPaint": null,
+        "lcp": null,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 3,
+        "tbtMs": 3750,
+        "longTaskEntries": [
+          {
+            "start": 3326,
+            "duration": 319
+          },
+          {
+            "start": 3714,
+            "duration": 3301
+          },
+          {
+            "start": 7016,
+            "duration": 280
+          }
+        ],
+        "jsBytes": 638979
+      },
+      {
+        "ttfb": 405,
+        "domContentLoaded": 3704.6,
+        "loadEventEnd": 3706.1,
+        "firstPaint": 1836,
+        "firstContentfulPaint": null,
+        "lcp": null,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 3,
+        "tbtMs": 4057,
+        "longTaskEntries": [
+          {
+            "start": 3412,
+            "duration": 294
+          },
+          {
+            "start": 3783,
+            "duration": 3607
+          },
+          {
+            "start": 7391,
+            "duration": 306
+          }
+        ],
+        "jsBytes": 638979
+      },
+      {
+        "ttfb": 402.6,
+        "domContentLoaded": 3636.8,
+        "loadEventEnd": 3639,
+        "firstPaint": 1808,
+        "firstContentfulPaint": null,
+        "lcp": null,
+        "cls": 0,
+        "clsShifts": 0,
+        "longTasks": 3,
+        "tbtMs": 3910,
+        "longTaskEntries": [
+          {
+            "start": 3330,
+            "duration": 310
+          },
+          {
+            "start": 3733,
+            "duration": 3431
+          },
+          {
+            "start": 7167,
+            "duration": 319
+          }
+        ],
+        "jsBytes": 638979
+      }
+    ],
+    "median": {
+      "ttfb": 405,
+      "domContentLoaded": 3640.4,
+      "loadEventEnd": 3643.3,
+      "firstPaint": 1836,
+      "firstContentfulPaint": 0,
+      "lcp": 0,
+      "cls": 0,
+      "longTasks": 3,
+      "tbtMs": 3910,
+      "jsBytes": 638979
+    }
+  }
+}

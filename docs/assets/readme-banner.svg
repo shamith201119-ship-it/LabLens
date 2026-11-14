@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-label="LabLens — Your lab report, in plain language">
+  <defs>
+    <radialGradient id="glowTop" cx="50%" cy="-20%" r="75%">
+      <stop offset="0" stop-color="#7ED7C4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7ED7C4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBottom" cx="50%" cy="120%" r="80%">
+      <stop offset="0" stop-color="#C9F277" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#C9F277" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#78CFC0"/>
+      <stop offset="0.5" stop-color="#C9F277"/>
+      <stop offset="1" stop-color="#78CFC0"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#12251F" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- stage -->
+  <rect width="1280" height="420" fill="#F7F8F3"/>
+  <rect width="1280" height="420" fill="url(#glowTop)"/>
+  <rect width="1280" height="420" fill="url(#glowBottom)"/>
+
+  <!-- hairline frame -->
+  <rect x="26" y="26" width="1228" height="368" rx="22" fill="none" stroke="#DDE5DE" stroke-width="1.5"/>
+
+  <!-- ghost ghost word -->
+  <text x="640" y="330" text-anchor="middle" font-family="Manrope,'Segoe UI',Helvetica,Arial,sans-serif" font-size="255" font-weight="800" letter-spacing="-6" fill="none" stroke="#12251F" stroke-opacity="0.09" stroke-width="2">LabLens</text>
+
+  <!-- mark -->
+  <g transform="translate(80,72)" filter="url(#soft)">
+    <rect width="132" height="132" rx="34" fill="#12251F"/>
+    <circle cx="66" cy="66" r="29" fill="none" stroke="#C9F277" stroke-width="10"/>
+    <circle cx="88" cy="45" r="9.5" fill="#78CFC0"/>
+  </g>
+
+  <!-- eyebrow -->
+  <g transform="translate(248,84)">
+    <rect x="0" y="0" width="212" height="30" rx="15" fill="#FFFFFF" stroke="#CCD8CF"/>
+    <circle cx="16" cy="15" r="5.5" fill="#78CFC0"/>
+    <text x="30" y="20" font-family="'Cascadia Mono','SFMono-Regular',Consolas,monospace" font-size="12.5" letter-spacing="2.5" font-weight="600" fill="#21382F">LOCAL &amp; PRIVATE</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="248" y="248" font-family="Manrope,'Segoe UI',Helvetica,Arial,sans-serif" font-size="124" font-weight="800" letter-spacing="-5" fill="#12251F">Lab<tspan fill="#2F4A3D">Lens</tspan></text>
+
+  <!-- tagline -->
+  <text x="248" y="300" font-family="Inter,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22.5" font-weight="500" fill="#5B675F">Your lab report, in <tspan font-weight="700" fill="#12251F">plain language</tspan>.</text>
+
+  <!-- baseline rule + meta -->
+  <rect x="80" y="352" width="480" height="2.5" fill="url(#traceGrad)"/>
+  <text x="588" y="362" font-family="'Cascadia Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="2.6" fill="#78837C">LAB-LENS / 0.1</text>
+
+  <text x="1200" y="96" text-anchor="end" font-family="'Cascadia Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="2.4" fill="#78837C">OFFLINE OCR</text>
+  <text x="1200" y="122" text-anchor="end" font-family="'Cascadia Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="2.4" fill="#78837C">DETERMINISTIC</text>
+  <text x="1200" y="148" text-anchor="end" font-family="'Cascadia Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="2.4" fill="#78837C">NO CLOUD</text>
+</svg>

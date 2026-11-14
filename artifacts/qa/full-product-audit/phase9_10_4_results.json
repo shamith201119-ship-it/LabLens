@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-11-13T14:20:25.739Z",
+  "frontend_url": "http://127.0.0.1:5174",
+  "api_url": "http://127.0.0.1:8001",
+  "simulation_notice": "Passes B-D rewrite OCR runtime metadata in the GET extraction response. No NVIDIA GPU, no CUDA-enabled Paddle build and no real GPU inference exist on this machine; simulated GPU results are UI fixtures, not measured GPU performance.",
+  "checks": [
+    {
+      "name": "scanner beam animation is running",
+      "status": "passed",
+      "detail": "proc-scan"
+    },
+    {
+      "name": "elapsed timer advances during OCR",
+      "status": "passed",
+      "detail": "00:06 → 00:12"
+    },
+    {
+      "name": "real CPU OCR displays CPU execution mode",
+      "status": "passed",
+      "detail": "Local processing · CPU"
+    },
+    {
+      "name": "CPU mode shows the informational CPU message",
+      "status": "passed",
+      "detail": "This computer is using CPU processing. Reading your report may take longer depending on your hardware."
+    },
+    {
+      "name": "GPU mode is not fabricated in CPU mode",
+      "status": "passed",
+      "detail": "Local processing · CPU"
+    },
+    {
+      "name": "processing completes on CPU path",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "verification handoff remains intact",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "simulated GPU success displays GPU mode (SIMULATED)",
+      "status": "passed",
+      "detail": "Accelerated processing · GPU"
+    },
+    {
+      "name": "simulated GPU banner carries no CPU detail",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "simulated GPU run completes",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "simulated GPU init failure displays CPU fallback (SIMULATED)",
+      "status": "passed",
+      "detail": "GPU unavailable · Continuing with CPU"
+    },
+    {
+      "name": "raw simulated error is not exposed in the UI",
+      "status": "passed",
+      "detail": "card text scanned"
+    },
+    {
+      "name": "fallback headline is not labelled GPU-accelerated",
+      "status": "passed",
+      "detail": "GPU unavailable · Continuing with CPU"
+    },
+    {
+      "name": "simulated inference failure displays CPU fallback (SIMULATED)",
+      "status": "passed",
+      "detail": "GPU unavailable · Continuing with CPU"
+    },
+    {
+      "name": "mixed document shows per-page execution info",
+      "status": "passed",
+      "detail": "Page 1 · GPU OCR · Page 2 · CPU OCR (fallback)"
+    },
+    {
+      "name": "multi-page ticks render during OCR",
+      "status": "passed",
+      "detail": "ticks=2"
+    },
+    {
+      "name": "timer advances on the mixed run",
+      "status": "passed",
+      "detail": "00:00 → 00:02"
+    },
+    {
+      "name": "digital PDF shows direct extraction mode",
+      "status": "passed",
+      "detail": "Direct PDF text extraction · No OCR required"
+    },
+    {
+      "name": "no CPU/GPU OCR label on a digital-only page",
+      "status": "passed",
+      "detail": "card text scanned"
+    },
+    {
+      "name": "mixed document updates to CPU OCR mode after the OCR page",
+      "status": "passed",
+      "detail": "Local processing · CPU"
+    },
+    {
+      "name": "mixed document detail reports the direct-text page",
+      "status": "passed",
+      "detail": "1 page read directly from PDF text; remaining 1 on CPU OCR. This computer is using CPU processing — reading your report may take longer depending on your hardwa"
+    },
+    {
+      "name": "mixed document shows accurate per-page execution info",
+      "status": "passed",
+      "detail": "Page 1 · Direct text · Page 2 · CPU OCR"
+    },
+    {
+      "name": "failure state replaces the running state",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "failure offers the retry action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no uncaught console errors",
+      "status": "passed",
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\01-real-cpu-extracting-live.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\02-real-cpu-mode-banner.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\03-real-cpu-complete.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\04-verification-handoff.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\05-simulated-gpu-mode.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\06-simulated-init-failure-fallback.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\07-simulated-inference-failure-mixed.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\08-digital-direct-text.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\09-mixed-digital-direct-first.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\10-mixed-digital-ocr.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_10_4\\11-failure-unchanged.png"
+  ],
+  "console_errors": [],
+  "passed": 25,
+  "failed": 0
+}

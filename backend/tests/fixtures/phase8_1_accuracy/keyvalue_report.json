@@ -1,0 +1,26 @@
+[
+  {
+    "test": "Glucose",
+    "result": "98",
+    "unit": "mg/dL",
+    "range": "70 - 99"
+  },
+  {
+    "test": "Potassium",
+    "result": "4.2",
+    "unit": "mmol/L",
+    "range": "3.5 - 5.1"
+  },
+  {
+    "test": "Sodium",
+    "result": "140",
+    "unit": "mmol/L",
+    "range": "136 - 145"
+  },
+  {
+    "test": "TSH",
+    "result": "2.45",
+    "unit": "uIU/mL",
+    "range": "0.40 - 4.50"
+  }
+]

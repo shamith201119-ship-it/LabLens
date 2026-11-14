@@ -1,0 +1,154 @@
+{
+  "generated_at": "2026-11-12T16:18:13.880Z",
+  "frontend_url": "http://localhost:5173",
+  "api_url": "http://127.0.0.1:8000",
+  "checks": [
+    {
+      "name": "Backend health is ok",
+      "status": "passed",
+      "detail": "{\"status\":\"ok\",\"database\":\"ok\",\"storage\":\"ok\",\"max_file_size_bytes\":20971520}"
+    },
+    {
+      "name": "Digital PDF uploaded",
+      "status": "passed",
+      "detail": "0176556c-b7e8-46bb-add1-eb42f26feaa1"
+    },
+    {
+      "name": "Digital PDF extracted",
+      "status": "passed",
+      "detail": "completed"
+    },
+    {
+      "name": "Digital measurements with source_bbox exist",
+      "status": "passed",
+      "detail": "5 measurements"
+    },
+    {
+      "name": "A valid page-1 measurement exists",
+      "status": "passed",
+      "detail": "TSH"
+    },
+    {
+      "name": "A valid page-2 measurement exists",
+      "status": "passed",
+      "detail": "Hemoglobin"
+    },
+    {
+      "name": "Stored page dimensions are available",
+      "status": "passed",
+      "detail": "612 x 792"
+    },
+    {
+      "name": "Digital measurement 1: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":8.169934640522875,\"top\":16.184343434343436,\"width\":40.609477124183,\"height\":1.9078282828282809}, actual {\"left\":8.16841465268278,\"top\":16.182377674943034,\"width\":40.60799513603891,\"height\":1.9074017523666345}, max delta 0.0020 pp"
+    },
+    {
+      "name": "Digital measurement 1 source label is digital",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital measurement 1 does not display OCR score",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital measurement 2: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":8.169934640522875,\"top\":20.603535353535353,\"width\":44.60947712418301,\"height\":1.9078282828282809}, actual {\"left\":8.16841465268278,\"top\":20.60322754927063,\"width\":44.60860313117495,\"height\":1.9074017523666345}, max delta 0.0015 pp"
+    },
+    {
+      "name": "Digital measurement 2 source label is digital",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital measurement 2 does not display OCR score",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital measurement 3: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":8.169934640522875,\"top\":25.022727272727273,\"width\":15.084967320261436,\"height\":1.9078282828282809}, actual {\"left\":8.16841465268278,\"top\":25.021728406661815,\"width\":15.0843593251254,\"height\":1.9074017523666345}, max delta 0.0015 pp"
+    },
+    {
+      "name": "Digital measurement 3 source label is digital",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital measurement 3 does not display OCR score",
+      "status": "passed",
+      "detail": "Source: Page 1"
+    },
+    {
+      "name": "Digital second measurement: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":8.169934640522875,\"top\":20.603535353535353,\"width\":44.60947712418301,\"height\":1.9078282828282809}, actual {\"left\":8.16841465268278,\"top\":20.60322754927063,\"width\":44.60860313117495,\"height\":1.9074017523666345}, max delta 0.0015 pp"
+    },
+    {
+      "name": "Highlight moved to the second measurement",
+      "status": "passed",
+      "detail": "previous measurement no longer selected"
+    },
+    {
+      "name": "Digital page-2 measurement: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":8.169934640522875,\"top\":16.184343434343436,\"width\":24.6781045751634,\"height\":1.9078282828282809}, actual {\"left\":8.16841465268278,\"top\":16.182377674943034,\"width\":24.678522571819425,\"height\":1.9074017523666345}, max delta 0.0020 pp"
+    },
+    {
+      "name": "Fallback measurement shows no highlight",
+      "status": "passed",
+      "detail": "0 highlights"
+    },
+    {
+      "name": "Fallback measurement retains iframe preview",
+      "status": "passed",
+      "detail": "iframe preview"
+    },
+    {
+      "name": "Fallback measurement remains selectable",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "Invalid bbox shows no highlight",
+      "status": "passed",
+      "detail": "0 highlights"
+    },
+    {
+      "name": "Invalid bbox retains iframe preview",
+      "status": "passed",
+      "detail": "iframe preview"
+    },
+    {
+      "name": "Image report has a source-guided measurement",
+      "status": "passed",
+      "detail": "Hemoglobin"
+    },
+    {
+      "name": "Image report highlight: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.111111111111112,\"top\":19.166666666666668,\"width\":23,\"height\":3.888888888888889}, actual {\"left\":4.110047119623043,\"top\":19.159446724426203,\"width\":23.000455996352027,\"height\":3.8835689314485484}, max delta 0.0072 pp"
+    },
+    {
+      "name": "No browser console/page errors",
+      "status": "passed",
+      "detail": "none"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_highlight_1.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_highlight_2.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_highlight_3.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_page2_highlight.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_fallback.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_digital_invalid_bbox.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_7_4\\phase9_7_4_image_highlight.png"
+  ],
+  "passed": 27,
+  "failed": 0,
+  "finished_at": "2026-11-12T16:18:43.875Z"
+}

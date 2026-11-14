@@ -1,0 +1,38 @@
+{
+  "clean_digital_report.pdf": {
+    "upload_seconds": 0.1501,
+    "extraction_seconds": 0.2471,
+    "structuring_seconds": 0.1846,
+    "total_pipeline_seconds": 0.5818
+  },
+  "cbc_report.png": {
+    "upload_seconds": 0.0995,
+    "extraction_seconds": 39.688,
+    "structuring_seconds": 0.2012,
+    "total_pipeline_seconds": 39.9887
+  },
+  "keyvalue_report.pdf": {
+    "upload_seconds": 0.0695,
+    "extraction_seconds": 0.2385,
+    "structuring_seconds": 0.1549,
+    "total_pipeline_seconds": 0.4628
+  },
+  "multipage_scanned_report.pdf": {
+    "upload_seconds": 0.2111,
+    "extraction_seconds": 59.1347,
+    "structuring_seconds": 0.2157,
+    "total_pipeline_seconds": 59.5615
+  },
+  "digital_edge_cases.pdf": {
+    "upload_seconds": 0.0728,
+    "extraction_seconds": 0.3196,
+    "structuring_seconds": 0.1837,
+    "total_pipeline_seconds": 0.5761
+  },
+  "photographed_report.jpg": {
+    "upload_seconds": 0.0898,
+    "extraction_seconds": 38.6648,
+    "structuring_seconds": 0.2213,
+    "total_pipeline_seconds": 38.976
+  }
+}

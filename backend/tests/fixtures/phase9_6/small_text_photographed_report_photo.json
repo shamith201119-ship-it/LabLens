@@ -1,0 +1,45 @@
+{
+  "source_page_pixels": {
+    "width": 1700,
+    "height": 2200
+  },
+  "final_image_pixels": {
+    "width": 2026,
+    "height": 2520
+  },
+  "format": "JPEG",
+  "jpeg_quality": 88,
+  "jpeg_subsampling": "4:2:0",
+  "rotation_degrees": -0.6,
+  "perspective_destination_corners": [
+    {
+      "x": 165.0,
+      "y": 130.0
+    },
+    {
+      "x": 1785.0,
+      "y": 145.0
+    },
+    {
+      "x": 1825.0,
+      "y": 2345.0
+    },
+    {
+      "x": 125.0,
+      "y": 2330.0
+    }
+  ],
+  "gaussian_blur_sigma": 0.5,
+  "sensor_noise_sigma": 1.0,
+  "seed": 962,
+  "transformations": [
+    "clean synthetic small-text report render",
+    "perspective warp",
+    "camera roll rotation",
+    "uneven illumination and vignette",
+    "soft shadow",
+    "mild Gaussian blur",
+    "sensor noise",
+    "JPEG compression"
+  ]
+}

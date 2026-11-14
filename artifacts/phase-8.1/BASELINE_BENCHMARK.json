@@ -1,0 +1,127 @@
+{
+  "clean_digital_pdf": {
+    "upload_sec": 0.4271,
+    "extract_sec": 0.4568,
+    "structure_sec": 0.3849,
+    "expected_count": 5,
+    "extracted_count": 5,
+    "measurements": [
+      {
+        "test": "Glucose",
+        "value": "112",
+        "unit": "mg/dL",
+        "range": "70 - 99",
+        "flag": "above_range"
+      },
+      {
+        "test": "HbA1c",
+        "value": "6.2",
+        "unit": "%",
+        "range": "4.0 - 5.6",
+        "flag": "above_range"
+      },
+      {
+        "test": "Creatinine",
+        "value": "0.95",
+        "unit": "mg/dL",
+        "range": "0.50 - 1.20",
+        "flag": "within_range"
+      },
+      {
+        "test": "Total Cholesterol",
+        "value": "220",
+        "unit": "mg/dL",
+        "range": "< 200",
+        "flag": "above_range"
+      },
+      {
+        "test": "Triglycerides",
+        "value": "165",
+        "unit": "mg/dL",
+        "range": "< 150",
+        "flag": "above_range"
+      }
+    ]
+  },
+  "cbc_png_ocr": {
+    "upload_sec": 0.312,
+    "extract_sec": 69.2134,
+    "structure_sec": 0.3225,
+    "expected_count": 5,
+    "extracted_count": 5,
+    "measurements": [
+      {
+        "test": "Hemoglobin",
+        "value": "14.2",
+        "unit": "g/dL",
+        "range": "12.0 - 16.0",
+        "flag": "within_range"
+      },
+      {
+        "test": "White Blood Cell Count",
+        "value": "8.5",
+        "unit": "x10^3/uL",
+        "range": "4.0 - 11.0",
+        "flag": "within_range"
+      },
+      {
+        "test": "Platelet Count",
+        "value": "240",
+        "unit": "x10^3/uL",
+        "range": "150 - 450",
+        "flag": "within_range"
+      },
+      {
+        "test": "Red Blood Cell Count",
+        "value": "4.65",
+        "unit": "mil/uL",
+        "range": "4.20 -5.40",
+        "flag": "within_range"
+      },
+      {
+        "test": "Hematocrit",
+        "value": "42.0",
+        "unit": "%",
+        "range": "37.0 - 48.0",
+        "flag": "within_range"
+      }
+    ]
+  },
+  "keyvalue_pdf": {
+    "upload_sec": 0.1127,
+    "extract_sec": 0.4758,
+    "structure_sec": 0.3243,
+    "expected_count": 4,
+    "extracted_count": 4,
+    "measurements": [
+      {
+        "test": "Glucose",
+        "value": "98",
+        "unit": "mg/dL",
+        "range": "70 - 99",
+        "flag": "within_range"
+      },
+      {
+        "test": "Potassium",
+        "value": "4.2",
+        "unit": "mmol/L",
+        "range": "3.5 - 5.1",
+        "flag": "within_range"
+      },
+      {
+        "test": "Sodium",
+        "value": "140",
+        "unit": "mmol/L",
+        "range": "136 - 145",
+        "flag": "within_range"
+      },
+      {
+        "test": "Thyroid Stimulating Hormone",
+        "value": "2.45",
+        "unit": "uIU/mL",
+        "range": "0.40 - 4.50",
+        "flag": "within_range"
+      }
+    ]
+  }
+}

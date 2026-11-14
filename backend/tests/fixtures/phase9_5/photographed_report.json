@@ -1,0 +1,62 @@
+[
+  {
+    "test": "Hemoglobin",
+    "page": 1,
+    "result": "13.8",
+    "numeric_result": 13.8,
+    "qualifier": null,
+    "unit": "g/dL",
+    "range": "12.0 - 16.0",
+    "reference_low": 12.0,
+    "reference_high": 16.0,
+    "derived_flag": "within_range"
+  },
+  {
+    "test": "WBC",
+    "page": 1,
+    "result": "7.2",
+    "numeric_result": 7.2,
+    "qualifier": null,
+    "unit": "x10^3/uL",
+    "range": "4.0 - 11.0",
+    "reference_low": 4.0,
+    "reference_high": 11.0,
+    "derived_flag": "within_range"
+  },
+  {
+    "test": "Platelet Count",
+    "page": 1,
+    "result": "265",
+    "numeric_result": 265.0,
+    "qualifier": null,
+    "unit": "x10^3/uL",
+    "range": "150 - 450",
+    "reference_low": 150.0,
+    "reference_high": 450.0,
+    "derived_flag": "within_range"
+  },
+  {
+    "test": "Glucose",
+    "page": 1,
+    "result": "98",
+    "numeric_result": 98.0,
+    "qualifier": null,
+    "unit": "mg/dL",
+    "range": "70 - 99",
+    "reference_low": 70.0,
+    "reference_high": 99.0,
+    "derived_flag": "within_range"
+  },
+  {
+    "test": "Creatinine",
+    "page": 1,
+    "result": "1.0",
+    "numeric_result": 1.0,
+    "qualifier": null,
+    "unit": "mg/dL",
+    "range": "0.7 - 1.3",
+    "reference_low": 0.7,
+    "reference_high": 1.3,
+    "derived_flag": "within_range"
+  }
+]

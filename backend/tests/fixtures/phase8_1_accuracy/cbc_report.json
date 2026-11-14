@@ -1,0 +1,29 @@
+[
+  {
+    "test": "Hemoglobin",
+    "result": "14.2",
+    "unit": "g/dL",
+    "range": "12.0 - 16.0"
+  },
+  {
+    "test": "White Blood Cell Count",
+    "result": "8.5",
+    "range": "4.0 - 11.0"
+  },
+  {
+    "test": "Platelet Count",
+    "result": "240",
+    "range": "150 - 450"
+  },
+  {
+    "test": "Red Blood Cell Count",
+    "result": "4.65",
+    "range": "4.20 - 5.40"
+  },
+  {
+    "test": "Hematocrit",
+    "result": "42.0",
+    "unit": "%",
+    "range": "37.0 - 48.0"
+  }
+]

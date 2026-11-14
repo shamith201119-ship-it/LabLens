@@ -1,0 +1,1313 @@
+{
+  "generated_at": "2026-11-12T15:39:48.267973+00:00",
+  "mode": "production",
+  "description": "Phase 9.6.2 small-text stress validation. One real pipeline run per fixture in the requested OCR detector configuration.",
+  "isolated_data_dir": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase963-stress-production",
+  "environment": {
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "opencv_python": "4.12.0.88",
+    "numpy": "2.2.6",
+    "pillow": "13.0.0"
+  },
+  "ocr_configuration": {
+    "mode": "production",
+    "params": {
+      "text_det_limit_side_len": 1280,
+      "text_det_limit_type": "max"
+    },
+    "pipeline": {
+      "limit_side_len": 1280,
+      "limit_type": "max",
+      "max_side_limit": 4000
+    },
+    "live_resize": {
+      "limit_side_len": 1280,
+      "limit_type": "max",
+      "max_side_limit": 4000
+    }
+  },
+  "model_init_seconds": 9.917656,
+  "fixtures": {
+    "dense_small_text_report.pdf": {
+      "filename": "dense_small_text_report.pdf",
+      "media_type": "application/pdf",
+      "expected_pages": 2,
+      "upload_seconds": 0.196922,
+      "extraction_seconds": 75.79842,
+      "structuring_seconds": 0.455416,
+      "total_pipeline_seconds": 76.450757,
+      "page_count": 2,
+      "processed_pages": 2,
+      "status": "completed",
+      "measurement_count": 12,
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 247.47,
+            "blur_variance": 757.61,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": true
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 13,
+          "raw_text_lines": 12,
+          "warnings": []
+        },
+        {
+          "page_number": 2,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 247.54,
+            "blur_variance": 722.29,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": true
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 13,
+          "raw_text_lines": 12,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 2,
+      "detector_resize_count": 2,
+      "repeated_ocr_calls": 0,
+      "ocr_calls": [
+        {
+          "call_id": 1,
+          "path": "page_0.png",
+          "item_count": 13,
+          "seconds": 36.385038,
+          "detector_input_shapes": [
+            [
+              [
+                2200,
+                1700
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                1280,
+                992
+              ]
+            ]
+          ]
+        },
+        {
+          "call_id": 2,
+          "path": "page_1.png",
+          "item_count": 13,
+          "seconds": 38.593868,
+          "detector_input_shapes": [
+            [
+              [
+                2200,
+                1700
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                1280,
+                992
+              ]
+            ]
+          ]
+        }
+      ],
+      "detector_resize_events": [
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.002267,
+          "ocr_call": 1,
+          "input_shapes": [
+            [
+              2200,
+              1700
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              992
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.003425,
+          "ocr_call": 2,
+          "input_shapes": [
+            [
+              2200,
+              1700
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              992
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        }
+      ],
+      "stage_totals": {
+        "pdf_open_seconds": 0.011687,
+        "page_classification_seconds": 0.003853,
+        "pdf_page_render_seconds": 0.272343,
+        "image_load_seconds": 0.041004,
+        "quality_assessment_seconds": 0.136568,
+        "ocr_total_seconds": 74.978906,
+        "detector_resize_seconds": 0.005692,
+        "ocr_line_assembly_seconds": 0.000468,
+        "digital_text_extraction_seconds": 0,
+        "remaining_extraction_overhead_seconds": 0.353591
+      },
+      "accuracy": {
+        "field_totals": {
+          "scored": 72,
+          "correct": 72,
+          "incorrect": 0,
+          "not_scored": 12
+        },
+        "field_accuracy": {
+          "name": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 12,
+            "correct": 12,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 12
+          }
+        },
+        "mismatches": [],
+        "ground_truth_count": 12,
+        "extracted_count": 12,
+        "correctly_identified_tests": 12,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 12,
+        "range_match_count": 12,
+        "flag_match_count": 12,
+        "page_attribution": {
+          "scored": 12,
+          "correct": 12,
+          "incorrect": 0,
+          "not_scored": 0,
+          "details": [
+            {
+              "test": "Hemoglobin",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "WBC",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Platelet Count",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "RBC",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Hematocrit",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "MCV",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "ALT",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "AST",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "Glucose",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "Creatinine",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "BUN",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            },
+            {
+              "test": "Sodium",
+              "status": "correct",
+              "expected_page": 2,
+              "extracted_page": 2
+            }
+          ]
+        }
+      },
+      "measurements": [
+        {
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "result_original": "17.0",
+          "result_numeric": 17.0,
+          "unit_original": "g/dL",
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "derived_flag": "above_range",
+          "page_number": 1,
+          "source_bbox": [
+            91.0,
+            266.0,
+            523.0,
+            292.0
+          ],
+          "ocr_confidence": 0.9883092641830444
+        },
+        {
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "result_original": "3.5",
+          "result_numeric": 3.5,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "derived_flag": "below_range",
+          "page_number": 1,
+          "source_bbox": [
+            93.0,
+            301.0,
+            480.0,
+            323.0
+          ],
+          "ocr_confidence": 0.9897940158843994
+        },
+        {
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "result_original": "150",
+          "result_numeric": 150.0,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            93.0,
+            337.0,
+            564.0,
+            359.0
+          ],
+          "ocr_confidence": 0.9932630062103271
+        },
+        {
+          "test_name_original": "RBC",
+          "test_name_normalized": "Red Blood Cell Count",
+          "result_original": "5.5",
+          "result_numeric": 5.5,
+          "unit_original": "x10^6/uL",
+          "reference_range_original": "4.0 - 5.5",
+          "reference_low": 4.0,
+          "reference_high": 5.5,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            93.0,
+            371.0,
+            464.0,
+            394.0
+          ],
+          "ocr_confidence": 0.9875816702842712
+        },
+        {
+          "test_name_original": "Hematocrit",
+          "test_name_normalized": "Hematocrit",
+          "result_original": "52",
+          "result_numeric": 52.0,
+          "unit_original": "%",
+          "reference_range_original": "38 - 50",
+          "reference_low": 38.0,
+          "reference_high": 50.0,
+          "derived_flag": "above_range",
+          "page_number": 1,
+          "source_bbox": [
+            93.0,
+            406.0,
+            442.0,
+            428.0
+          ],
+          "ocr_confidence": 0.9845682382583618
+        },
+        {
+          "test_name_original": "MCV",
+          "test_name_normalized": "Mean Corpuscular Volume",
+          "result_original": "100",
+          "result_numeric": 100.0,
+          "unit_original": "fL",
+          "reference_range_original": "80 - 100",
+          "reference_low": 80.0,
+          "reference_high": 100.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            91.0,
+            437.0,
+            410.0,
+            462.0
+          ],
+          "ocr_confidence": 0.9954451322555542
+        },
+        {
+          "test_name_original": "ALT",
+          "test_name_normalized": "Alanine Aminotransferase",
+          "result_original": "60",
+          "result_numeric": 60.0,
+          "unit_original": "U/L",
+          "reference_range_original": "7 - 56",
+          "reference_low": 7.0,
+          "reference_high": 56.0,
+          "derived_flag": "above_range",
+          "page_number": 2,
+          "source_bbox": [
+            93.0,
+            266.0,
+            382.0,
+            290.0
+          ],
+          "ocr_confidence": 0.9768428802490234
+        },
+        {
+          "test_name_original": "AST",
+          "test_name_normalized": "Aspartate Aminotransferase",
+          "result_original": "38",
+          "result_numeric": 38.0,
+          "unit_original": "U/L",
+          "reference_range_original": "10 - 40",
+          "reference_low": 10.0,
+          "reference_high": 40.0,
+          "derived_flag": "within_range",
+          "page_number": 2,
+          "source_bbox": [
+            93.0,
+            301.0,
+            394.0,
+            325.0
+          ],
+          "ocr_confidence": 0.9960089921951294
+        },
+        {
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "result_original": "110",
+          "result_numeric": 110.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "derived_flag": "above_range",
+          "page_number": 2,
+          "source_bbox": [
+            91.0,
+            335.0,
+            466.0,
+            361.0
+          ],
+          "ocr_confidence": 0.9957298040390015
+        },
+        {
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "result_original": "1.4",
+          "result_numeric": 1.4,
+          "unit_original": "mg/dL",
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "derived_flag": "above_range",
+          "page_number": 2,
+          "source_bbox": [
+            91.0,
+            369.0,
+            490.0,
+            395.0
+          ],
+          "ocr_confidence": 0.9975806474685669
+        },
+        {
+          "test_name_original": "BUN",
+          "test_name_normalized": "Blood Urea Nitrogen",
+          "result_original": "25",
+          "result_numeric": 25.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "7 - 20",
+          "reference_low": 7.0,
+          "reference_high": 20.0,
+          "derived_flag": "above_range",
+          "page_number": 2,
+          "source_bbox": [
+            93.0,
+            406.0,
+            413.0,
+            428.0
+          ],
+          "ocr_confidence": 0.9943670034408569
+        },
+        {
+          "test_name_original": "Sodium",
+          "test_name_normalized": "Sodium",
+          "result_original": "130",
+          "result_numeric": 130.0,
+          "unit_original": "mEq/L",
+          "reference_range_original": "135 - 145",
+          "reference_low": 135.0,
+          "reference_high": 145.0,
+          "derived_flag": "below_range",
+          "page_number": 2,
+          "source_bbox": [
+            93.0,
+            440.0,
+            483.0,
+            462.0
+          ],
+          "ocr_confidence": 0.9845535755157471
+        }
+      ],
+      "bbox_checks": [
+        {
+          "test": "Hemoglobin",
+          "bbox": [
+            91.0,
+            266.0,
+            523.0,
+            292.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "WBC",
+          "bbox": [
+            93.0,
+            301.0,
+            480.0,
+            323.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Platelet Count",
+          "bbox": [
+            93.0,
+            337.0,
+            564.0,
+            359.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "RBC",
+          "bbox": [
+            93.0,
+            371.0,
+            464.0,
+            394.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Hematocrit",
+          "bbox": [
+            93.0,
+            406.0,
+            442.0,
+            428.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "MCV",
+          "bbox": [
+            91.0,
+            437.0,
+            410.0,
+            462.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "ALT",
+          "bbox": [
+            93.0,
+            266.0,
+            382.0,
+            290.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "AST",
+          "bbox": [
+            93.0,
+            301.0,
+            394.0,
+            325.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Glucose",
+          "bbox": [
+            91.0,
+            335.0,
+            466.0,
+            361.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Creatinine",
+          "bbox": [
+            91.0,
+            369.0,
+            490.0,
+            395.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "BUN",
+          "bbox": [
+            93.0,
+            406.0,
+            413.0,
+            428.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Sodium",
+          "bbox": [
+            93.0,
+            440.0,
+            483.0,
+            462.0
+          ],
+          "page_width": 1700,
+          "page_height": 2200,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        }
+      ],
+      "events": [
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "pdf_open",
+          "seconds": 0.011687,
+          "pages": 2
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.003108
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.129252
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.019771,
+          "path": "page_0.png",
+          "shape": [
+            2200,
+            1700,
+            3
+          ]
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.07151
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.002267,
+          "ocr_call": 1,
+          "input_shapes": [
+            [
+              2200,
+              1700
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              992
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 36.385038,
+          "call_id": 1,
+          "path": "page_0.png",
+          "item_count": 13
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000245
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.000745
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.143091
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.021233,
+          "path": "page_1.png",
+          "shape": [
+            2200,
+            1700,
+            3
+          ]
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.065058
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "detector_resize",
+          "seconds": 0.003425,
+          "ocr_call": 2,
+          "input_shapes": [
+            [
+              2200,
+              1700
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              992
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 38.593868,
+          "call_id": 2,
+          "path": "page_1.png",
+          "item_count": 13
+        },
+        {
+          "fixture": "dense_small_text_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000223
+        }
+      ]
+    },
+    "small_text_photographed_report.jpg": {
+      "filename": "small_text_photographed_report.jpg",
+      "media_type": "image/jpeg",
+      "expected_pages": 1,
+      "upload_seconds": 0.16258,
+      "extraction_seconds": 35.630617,
+      "structuring_seconds": 0.254546,
+      "total_pipeline_seconds": 36.047743,
+      "page_count": 1,
+      "processed_pages": 1,
+      "status": "completed",
+      "measurement_count": 6,
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 2026,
+          "height": 2520,
+          "quality": {
+            "width": 2026,
+            "height": 2520,
+            "brightness": 185.7,
+            "blur_variance": 190.38,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": "original",
+          "variants_tried": [
+            "original"
+          ],
+          "ocr_item_count": 13,
+          "raw_text_lines": 13,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 1,
+      "detector_resize_count": 1,
+      "repeated_ocr_calls": 0,
+      "ocr_calls": [
+        {
+          "call_id": 3,
+          "path": "3ad764e6-5c61-4366-bdfe-34f8eefc0c02.jpg",
+          "item_count": 13,
+          "seconds": 35.237386,
+          "detector_input_shapes": [
+            [
+              [
+                2520,
+                2026
+              ]
+            ]
+          ],
+          "detector_output_shapes": [
+            [
+              [
+                1280,
+                1024
+              ]
+            ]
+          ]
+        }
+      ],
+      "detector_resize_events": [
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "detector_resize",
+          "seconds": 0.002551,
+          "ocr_call": 3,
+          "input_shapes": [
+            [
+              2520,
+              2026
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              1024
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        }
+      ],
+      "stage_totals": {
+        "pdf_open_seconds": 0,
+        "page_classification_seconds": 0,
+        "pdf_page_render_seconds": 0,
+        "image_load_seconds": 0.043669,
+        "quality_assessment_seconds": 0.089855,
+        "ocr_total_seconds": 35.237386,
+        "detector_resize_seconds": 0.002551,
+        "ocr_line_assembly_seconds": 0.000215,
+        "digital_text_extraction_seconds": 0,
+        "remaining_extraction_overhead_seconds": 0.259492
+      },
+      "accuracy": {
+        "field_totals": {
+          "scored": 36,
+          "correct": 36,
+          "incorrect": 0,
+          "not_scored": 6
+        },
+        "field_accuracy": {
+          "name": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 6,
+            "correct": 6,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 6
+          }
+        },
+        "mismatches": [],
+        "ground_truth_count": 6,
+        "extracted_count": 6,
+        "correctly_identified_tests": 6,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 6,
+        "range_match_count": 6,
+        "flag_match_count": 6,
+        "page_attribution": {
+          "scored": 6,
+          "correct": 6,
+          "incorrect": 0,
+          "not_scored": 0,
+          "details": [
+            {
+              "test": "Hemoglobin",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "WBC",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Platelet Count",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Glucose",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Creatinine",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            },
+            {
+              "test": "Sodium",
+              "status": "correct",
+              "expected_page": 1,
+              "extracted_page": 1
+            }
+          ]
+        }
+      },
+      "measurements": [
+        {
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "result_original": "13.8",
+          "result_numeric": 13.8,
+          "unit_original": "g/dL",
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            271.0,
+            447.0,
+            687.0,
+            481.0
+          ],
+          "ocr_confidence": 0.9882297515869141
+        },
+        {
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "result_original": "7.2",
+          "result_numeric": 7.2,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            269.0,
+            482.0,
+            649.0,
+            516.0
+          ],
+          "ocr_confidence": 0.9903069734573364
+        },
+        {
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "result_original": "265",
+          "result_numeric": 265.0,
+          "unit_original": "x10^3/uL",
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            269.0,
+            520.0,
+            726.0,
+            555.0
+          ],
+          "ocr_confidence": 0.9992820620536804
+        },
+        {
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "result_original": "98",
+          "result_numeric": 98.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            267.0,
+            557.0,
+            621.0,
+            591.0
+          ],
+          "ocr_confidence": 0.9978734254837036
+        },
+        {
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "unit_original": "mg/dL",
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            267.0,
+            592.0,
+            655.0,
+            628.0
+          ],
+          "ocr_confidence": 0.9970040321350098
+        },
+        {
+          "test_name_original": "Sodium",
+          "test_name_normalized": "Sodium",
+          "result_original": "142",
+          "result_numeric": 142.0,
+          "unit_original": "mEq/L",
+          "reference_range_original": "135 - 145",
+          "reference_low": 135.0,
+          "reference_high": 145.0,
+          "derived_flag": "within_range",
+          "page_number": 1,
+          "source_bbox": [
+            265.0,
+            630.0,
+            649.0,
+            664.0
+          ],
+          "ocr_confidence": 0.9994461536407471
+        }
+      ],
+      "bbox_checks": [
+        {
+          "test": "Hemoglobin",
+          "bbox": [
+            271.0,
+            447.0,
+            687.0,
+            481.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "WBC",
+          "bbox": [
+            269.0,
+            482.0,
+            649.0,
+            516.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Platelet Count",
+          "bbox": [
+            269.0,
+            520.0,
+            726.0,
+            555.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Glucose",
+          "bbox": [
+            267.0,
+            557.0,
+            621.0,
+            591.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Creatinine",
+          "bbox": [
+            267.0,
+            592.0,
+            655.0,
+            628.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        },
+        {
+          "test": "Sodium",
+          "bbox": [
+            265.0,
+            630.0,
+            649.0,
+            664.0
+          ],
+          "page_width": 2026,
+          "page_height": 2520,
+          "valid_list": true,
+          "inside_original_dimensions": true
+        }
+      ],
+      "events": [
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "image_load",
+          "seconds": 0.043669,
+          "path": "3ad764e6-5c61-4366-bdfe-34f8eefc0c02.jpg",
+          "shape": [
+            2520,
+            2026,
+            3
+          ]
+        },
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "quality_assessment",
+          "seconds": 0.089855
+        },
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "detector_resize",
+          "seconds": 0.002551,
+          "ocr_call": 3,
+          "input_shapes": [
+            [
+              2520,
+              2026
+            ]
+          ],
+          "output_shapes": [
+            [
+              1280,
+              1024
+            ]
+          ],
+          "limit_side_len": 1280,
+          "limit_type": "max",
+          "max_side_limit": 4000
+        },
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "ocr_image",
+          "seconds": 35.237386,
+          "call_id": 3,
+          "path": "3ad764e6-5c61-4366-bdfe-34f8eefc0c02.jpg",
+          "item_count": 13
+        },
+        {
+          "fixture": "small_text_photographed_report.jpg",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000215
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_ocr_calls": 3,
+    "total_detector_resize_calls": 3,
+    "total_page_attribution_scored": 18,
+    "total_page_attribution_correct": 18,
+    "total_scored_fields": 108,
+    "total_correct_fields": 108,
+    "total_incorrect_fields": 0,
+    "total_not_scored_fields": 18
+  }
+}

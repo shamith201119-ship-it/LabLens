@@ -1,0 +1,450 @@
+{
+  "generated_at": "2026-11-12T14:15:15.212542+00:00",
+  "description": "Phase 9.6.0 diagnostic extraction profile. One real pipeline run per fixture; timings are single-run wall-clock measurements.",
+  "isolated_data_dir": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase960-profile",
+  "fixture_order": [
+    "cbc_report.png",
+    "multipage_scanned_report.pdf",
+    "photographed_report.jpg"
+  ],
+  "environment": {
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "opencv_python": "4.12.0.88",
+    "opencv_contrib_python": "4.10.0.84",
+    "numpy": "2.2.6",
+    "pillow": "13.0.0"
+  },
+  "model": {
+    "get_ocr_call_count": 4,
+    "construction_count": 1,
+    "instance_ids": [
+      2217823873328
+    ],
+    "construction_events": [
+      {
+        "fixture": "cbc_report.png",
+        "stage": "ocr_model_get",
+        "seconds": 27.634244,
+        "constructed": true,
+        "instance_id": 2217823873328,
+        "ocr_call": 1
+      }
+    ]
+  },
+  "fixtures": {
+    "cbc_report.png": {
+      "filename": "cbc_report.png",
+      "expected_pages": 1,
+      "media_type": "image/png",
+      "upload_seconds": 0.217936,
+      "extraction_seconds": 44.685442,
+      "structuring_seconds": 0.183682,
+      "total_pipeline_seconds": 45.08706,
+      "page_count": 1,
+      "processed_pages": 1,
+      "status": "review_required",
+      "measurement_count": 5,
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 900,
+          "height": 360,
+          "quality": {
+            "width": 900,
+            "height": 360,
+            "brightness": 253.28,
+            "blur_variance": 2376.53,
+            "low_resolution": true,
+            "possibly_blurry": false,
+            "low_contrast": true
+          },
+          "variant": "original",
+          "variants_tried": [
+            "original"
+          ],
+          "ocr_item_count": 11,
+          "raw_text_lines": 6,
+          "warnings": [
+            "Low resolution; consider a higher-quality photo."
+          ]
+        }
+      ],
+      "ocr_call_count": 1,
+      "ocr_calls": [
+        {
+          "call_id": 1,
+          "path": "8b909b21-30b9-4d48-bfd4-8b095cbdd0be.png",
+          "item_count": 11,
+          "ocr_image_seconds": 44.429334,
+          "model_init_seconds": 27.634244,
+          "ocr_execution_excluding_init_seconds": 16.79509
+        }
+      ],
+      "get_ocr_call_count": 1,
+      "model_init_count": 1,
+      "preprocessing_call_count": 0,
+      "repeated_ocr_calls": 0,
+      "stage_totals": {
+        "pdf_open_seconds": 0,
+        "page_classification_seconds": 0,
+        "pdf_page_render_seconds": 0,
+        "image_load_seconds": 0.011046,
+        "quality_assessment_seconds": 0.029087,
+        "preprocessing_seconds": 0,
+        "ocr_model_init_seconds": 27.634244,
+        "ocr_total_seconds": 44.429334,
+        "ocr_execution_excluding_init_seconds": 16.79509,
+        "ocr_line_assembly_seconds": 0.000367,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "instrumented_seconds": 44.469834,
+        "remaining_extraction_overhead_seconds": 0.215608
+      },
+      "events": [
+        {
+          "fixture": "cbc_report.png",
+          "stage": "image_load",
+          "seconds": 0.011046,
+          "path": "8b909b21-30b9-4d48-bfd4-8b095cbdd0be.png",
+          "shape": [
+            360,
+            900,
+            3
+          ]
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "quality_assessment",
+          "seconds": 0.029087
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "ocr_model_get",
+          "seconds": 27.634244,
+          "constructed": true,
+          "instance_id": 2217823873328,
+          "ocr_call": 1
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "ocr_image",
+          "seconds": 44.429334,
+          "call_id": 1,
+          "path": "8b909b21-30b9-4d48-bfd4-8b095cbdd0be.png",
+          "item_count": 11
+        },
+        {
+          "fixture": "cbc_report.png",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000367
+        }
+      ]
+    },
+    "multipage_scanned_report.pdf": {
+      "filename": "multipage_scanned_report.pdf",
+      "expected_pages": 2,
+      "media_type": "application/pdf",
+      "upload_seconds": 0.085682,
+      "extraction_seconds": 177.22206,
+      "structuring_seconds": 0.176566,
+      "total_pipeline_seconds": 177.484308,
+      "page_count": 2,
+      "processed_pages": 2,
+      "status": "completed",
+      "measurement_count": 5,
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 250.74,
+            "blur_variance": 827.08,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 19,
+          "raw_text_lines": 7,
+          "warnings": []
+        },
+        {
+          "page_number": 2,
+          "extraction_method": "ocr",
+          "width": 1700,
+          "height": 2200,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 251.63,
+            "blur_variance": 594.09,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "variants_tried": null,
+          "ocr_item_count": 6,
+          "raw_text_lines": 6,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 2,
+      "ocr_calls": [
+        {
+          "call_id": 2,
+          "path": "page_0.png",
+          "item_count": 19,
+          "ocr_image_seconds": 99.824909,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 99.824909
+        },
+        {
+          "call_id": 3,
+          "path": "page_1.png",
+          "item_count": 6,
+          "ocr_image_seconds": 76.056116,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 76.056116
+        }
+      ],
+      "get_ocr_call_count": 2,
+      "model_init_count": 0,
+      "preprocessing_call_count": 0,
+      "repeated_ocr_calls": 0,
+      "stage_totals": {
+        "pdf_open_seconds": 0.005829,
+        "page_classification_seconds": 0.037539,
+        "pdf_page_render_seconds": 0.328616,
+        "image_load_seconds": 0.193668,
+        "quality_assessment_seconds": 0.163138,
+        "preprocessing_seconds": 0,
+        "ocr_model_init_seconds": 0,
+        "ocr_total_seconds": 175.881025,
+        "ocr_execution_excluding_init_seconds": 175.881025,
+        "ocr_line_assembly_seconds": 0.001286,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "instrumented_seconds": 176.611101,
+        "remaining_extraction_overhead_seconds": 0.610959
+      },
+      "events": [
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_open",
+          "seconds": 0.005829,
+          "pages": 2
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.007439
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.164762
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.02555,
+          "path": "page_0.png",
+          "shape": [
+            2200,
+            1700,
+            3
+          ]
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.076296
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_model_get",
+          "seconds": 1e-06,
+          "constructed": false,
+          "instance_id": 2217823873328,
+          "ocr_call": 2
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 99.824909,
+          "call_id": 2,
+          "path": "page_0.png",
+          "item_count": 19
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000957
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "page_classification",
+          "seconds": 0.0301
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "pdf_page_render",
+          "seconds": 0.163854
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "image_load",
+          "seconds": 0.168118,
+          "path": "page_1.png",
+          "shape": [
+            2200,
+            1700,
+            3
+          ]
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "quality_assessment",
+          "seconds": 0.086842
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_model_get",
+          "seconds": 1.3e-05,
+          "constructed": false,
+          "instance_id": 2217823873328,
+          "ocr_call": 3
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_image",
+          "seconds": 76.056116,
+          "call_id": 3,
+          "path": "page_1.png",
+          "item_count": 6
+        },
+        {
+          "fixture": "multipage_scanned_report.pdf",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000329
+        }
+      ]
+    },
+    "photographed_report.jpg": {
+      "filename": "photographed_report.jpg",
+      "expected_pages": 1,
+      "media_type": "image/jpeg",
+      "upload_seconds": 0.199899,
+      "extraction_seconds": 117.931418,
+      "structuring_seconds": 0.237192,
+      "total_pipeline_seconds": 118.368509,
+      "page_count": 1,
+      "processed_pages": 1,
+      "status": "completed",
+      "measurement_count": 5,
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "width": 2034,
+          "height": 2527,
+          "quality": {
+            "width": 2034,
+            "height": 2527,
+            "brightness": 184.06,
+            "blur_variance": 196.0,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": "original",
+          "variants_tried": [
+            "original"
+          ],
+          "ocr_item_count": 12,
+          "raw_text_lines": 11,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 1,
+      "ocr_calls": [
+        {
+          "call_id": 4,
+          "path": "cfb760e4-7940-4abb-889e-be1f95679d85.jpg",
+          "item_count": 12,
+          "ocr_image_seconds": 117.395082,
+          "model_init_seconds": 0.0,
+          "ocr_execution_excluding_init_seconds": 117.395082
+        }
+      ],
+      "get_ocr_call_count": 1,
+      "model_init_count": 0,
+      "preprocessing_call_count": 0,
+      "repeated_ocr_calls": 0,
+      "stage_totals": {
+        "pdf_open_seconds": 0,
+        "page_classification_seconds": 0,
+        "pdf_page_render_seconds": 0,
+        "image_load_seconds": 0.095921,
+        "quality_assessment_seconds": 0.111755,
+        "preprocessing_seconds": 0,
+        "ocr_model_init_seconds": 0,
+        "ocr_total_seconds": 117.395082,
+        "ocr_execution_excluding_init_seconds": 117.395082,
+        "ocr_line_assembly_seconds": 0.000871,
+        "digital_text_extraction_seconds": 0,
+        "ocr_internal_imread_seconds": 0,
+        "instrumented_seconds": 117.603629,
+        "remaining_extraction_overhead_seconds": 0.327789
+      },
+      "events": [
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "image_load",
+          "seconds": 0.095921,
+          "path": "cfb760e4-7940-4abb-889e-be1f95679d85.jpg",
+          "shape": [
+            2527,
+            2034,
+            3
+          ]
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "quality_assessment",
+          "seconds": 0.111755
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "ocr_model_get",
+          "seconds": 1e-06,
+          "constructed": false,
+          "instance_id": 2217823873328,
+          "ocr_call": 4
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "ocr_image",
+          "seconds": 117.395082,
+          "call_id": 4,
+          "path": "cfb760e4-7940-4abb-889e-be1f95679d85.jpg",
+          "item_count": 12
+        },
+        {
+          "fixture": "photographed_report.jpg",
+          "stage": "ocr_line_assembly",
+          "seconds": 0.000871
+        }
+      ]
+    }
+  }
+}

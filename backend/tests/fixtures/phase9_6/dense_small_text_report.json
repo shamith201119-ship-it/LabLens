@@ -1,0 +1,14 @@
+[
+  {"test": "Hemoglobin", "page": 1, "result": "17.0", "numeric_result": 17.0, "qualifier": null, "unit": "g/dL", "range": "12.0 - 16.0", "reference_low": 12.0, "reference_high": 16.0, "derived_flag": "above_range"},
+  {"test": "WBC", "page": 1, "result": "3.5", "numeric_result": 3.5, "qualifier": null, "unit": "x10^3/uL", "range": "4.0 - 11.0", "reference_low": 4.0, "reference_high": 11.0, "derived_flag": "below_range"},
+  {"test": "Platelet Count", "page": 1, "result": "150", "numeric_result": 150.0, "qualifier": null, "unit": "x10^3/uL", "range": "150 - 450", "reference_low": 150.0, "reference_high": 450.0, "derived_flag": "within_range"},
+  {"test": "RBC", "page": 1, "result": "5.5", "numeric_result": 5.5, "qualifier": null, "unit": "x10^6/uL", "range": "4.0 - 5.5", "reference_low": 4.0, "reference_high": 5.5, "derived_flag": "within_range"},
+  {"test": "Hematocrit", "page": 1, "result": "52", "numeric_result": 52.0, "qualifier": null, "unit": "%", "range": "38 - 50", "reference_low": 38.0, "reference_high": 50.0, "derived_flag": "above_range"},
+  {"test": "MCV", "page": 1, "result": "100", "numeric_result": 100.0, "qualifier": null, "unit": "fL", "range": "80 - 100", "reference_low": 80.0, "reference_high": 100.0, "derived_flag": "within_range"},
+  {"test": "ALT", "page": 2, "result": "60", "numeric_result": 60.0, "qualifier": null, "unit": "U/L", "range": "7 - 56", "reference_low": 7.0, "reference_high": 56.0, "derived_flag": "above_range"},
+  {"test": "AST", "page": 2, "result": "38", "numeric_result": 38.0, "qualifier": null, "unit": "U/L", "range": "10 - 40", "reference_low": 10.0, "reference_high": 40.0, "derived_flag": "within_range"},
+  {"test": "Glucose", "page": 2, "result": "110", "numeric_result": 110.0, "qualifier": null, "unit": "mg/dL", "range": "70 - 99", "reference_low": 70.0, "reference_high": 99.0, "derived_flag": "above_range"},
+  {"test": "Creatinine", "page": 2, "result": "1.4", "numeric_result": 1.4, "qualifier": null, "unit": "mg/dL", "range": "0.7 - 1.3", "reference_low": 0.7, "reference_high": 1.3, "derived_flag": "above_range"},
+  {"test": "BUN", "page": 2, "result": "25", "numeric_result": 25.0, "qualifier": null, "unit": "mg/dL", "range": "7 - 20", "reference_low": 7.0, "reference_high": 20.0, "derived_flag": "above_range"},
+  {"test": "Sodium", "page": 2, "result": "130", "numeric_result": 130.0, "qualifier": null, "unit": "mEq/L", "range": "135 - 145", "reference_low": 135.0, "reference_high": 145.0, "derived_flag": "below_range"}
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "test": "TSH",
+    "page": 1,
+    "result": "<0.5",
+    "numeric_result": null,
+    "qualifier": "less_than",
+    "qualifier_threshold": 0.5,
+    "unit": "uIU/mL",
+    "range": "0.40 - 4.50",
+    "reference_low": 0.4,
+    "reference_high": 4.5,
+    "derived_flag": "qualitative"
+  },
+  {
+    "test": "Vitamin B12",
+    "page": 1,
+    "result": ">100",
+    "numeric_result": null,
+    "qualifier": "greater_than",
+    "qualifier_threshold": 100.0,
+    "unit": "pg/mL",
+    "range": "200 - 900",
+    "reference_low": 200.0,
+    "reference_high": 900.0,
+    "derived_flag": "qualitative"
+  },
+  {
+    "test": "Glucose",
+    "page": 1,
+    "result": "98",
+    "numeric_result": 98.0,
+    "qualifier": null,
+    "qualifier_threshold": null,
+    "unit": "mg/dL",
+    "range": null,
+    "reference_low": null,
+    "reference_high": null,
+    "derived_flag": null
+  },
+  {
+    "test": "Hemoglobin",
+    "page": 2,
+    "result": "14.2",
+    "numeric_result": 14.2,
+    "qualifier": null,
+    "qualifier_threshold": null,
+    "unit": null,
+    "range": "12.0 - 16.0",
+    "reference_low": 12.0,
+    "reference_high": 16.0,
+    "derived_flag": "within_range"
+  },
+  {
+    "test": "Triglycerides",
+    "page": 2,
+    "result": "1,234",
+    "numeric_result": 1234.0,
+    "qualifier": null,
+    "qualifier_threshold": null,
+    "unit": "mg/dL",
+    "range": "<150",
+    "reference_low": null,
+    "reference_high": 150.0,
+    "derived_flag": "above_range"
+  }
+]

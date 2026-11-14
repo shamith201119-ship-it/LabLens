@@ -1,0 +1,386 @@
+/* =========================================================================
+   LabLens — branded launch screen (Phase 9.11.6)
+   Ivory stage, ink wordmark, mint/lime accents, editorial restraint.
+   Motion is transform/opacity only; no layout reads at runtime.
+   ========================================================================= */
+
+.global-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 720px at 50% 106%, rgba(201, 242, 119, 0.28), transparent 60%),
+    radial-gradient(880px 540px at 84% -12%, rgba(120, 207, 192, 0.22), transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.62s var(--ease-out), visibility 0.62s var(--ease-out);
+}
+
+.global-loader.is-exiting {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-active {
+  overscroll-behavior: none;
+}
+
+/* ---------- Editorial ghost word ---------- */
+
+.global-loader__ghost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(9rem, 30vw, 26rem);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(18, 37, 31, 0.07);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ---------- Inner column ---------- */
+
+.global-loader__inner {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  width: min(920px, calc(100vw - 48px));
+  height: min(560px, calc(100dvh - 72px));
+  min-height: 420px;
+  padding: 26px 30px 24px;
+}
+
+.global-loader__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  opacity: 0;
+  animation: loader-rise 0.7s 0.12s var(--ease-out) forwards;
+}
+
+.global-loader__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.global-loader__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #78cfc0;
+  box-shadow: 0 0 0 0 rgba(120, 207, 192, 0.55);
+  animation: loader-beacon 2.4s ease-out infinite;
+}
+
+.global-loader__docnum {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.global-loader__body {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: loader-rise 0.72s 0.22s var(--ease-out) forwards;
+}
+
+.global-loader__mark {
+  width: clamp(72px, 9vw, 96px);
+  height: auto;
+  filter: drop-shadow(0 18px 34px rgba(18, 37, 31, 0.22));
+  animation: loader-breathe 2.6s ease-in-out infinite;
+}
+
+.global-loader__word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.7rem, 7.4vw, 4.1rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.global-loader__word span {
+  color: #2f4a3d;
+}
+
+.global-loader__tagline {
+  margin: 0;
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Hairline trace ---------- */
+
+.global-loader__trace {
+  position: relative;
+  justify-self: center;
+  width: min(420px, 72vw);
+  height: 2px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0;
+  animation: loader-rise 0.6s 0.34s var(--ease-out) forwards;
+}
+
+.global-loader__trace-track {
+  position: absolute;
+  inset: 0;
+  background: var(--border-strong);
+}
+
+.global-loader__trace-segment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #78cfc0 22%, #c9f277 78%, transparent);
+  animation: loader-trace 1.55s var(--ease-in-out) infinite;
+}
+
+.global-loader__caption {
+  margin: 0;
+  justify-self: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  opacity: 0;
+  animation: loader-rise 0.6s 0.42s var(--ease-out) forwards;
+}
+
+/* ---------- Exit choreography ---------- */
+
+.global-loader.is-exiting .global-loader__ghost,
+.global-loader.is-exiting .global-loader__body {
+  transform: translateY(-14px);
+  filter: blur(3px);
+  opacity: 0;
+  transition: transform 0.6s var(--ease-out), filter 0.6s var(--ease-out), opacity 0.5s var(--ease-out);
+}
+
+.global-loader.is-exiting .global-loader__topline,
+.global-loader.is-exiting .global-loader__trace,
+.global-loader.is-exiting .global-loader__caption {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.38s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+/* ---------- Startup failure card ---------- */
+
+.startup-guard {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.startup-guard__card {
+  max-width: 460px;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  padding: 34px 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.startup-guard__eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.startup-guard__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.startup-guard__body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.startup-guard__button {
+  justify-self: center;
+  margin-top: 4px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.startup-guard__button:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes loader-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.045);
+  }
+}
+
+@keyframes loader-trace {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(430%);
+  }
+}
+
+@keyframes loader-beacon {
+  0% {
+    box-shadow: 0 0 0 0 rgba(120, 207, 192, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(120, 207, 192, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(120, 207, 192, 0);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .global-loader,
+  .global-loader * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .global-loader__topline,
+  .global-loader__body,
+  .global-loader__trace,
+  .global-loader__caption {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .global-loader__inner {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    min-height: 0;
+    gap: 0;
+    padding: 20px 22px calc(22px + env(safe-area-inset-bottom));
+    grid-template-rows: auto 1fr auto auto;
+  }
+
+  .global-loader__ghost {
+    font-size: 30vw;
+    -webkit-text-stroke-color: rgba(18, 37, 31, 0.09);
+  }
+
+  .global-loader__docnum {
+    display: none;
+  }
+
+  .global-loader__body {
+    gap: 16px;
+  }
+
+  .global-loader__mark {
+    width: 64px;
+  }
+
+  .global-loader__word {
+    font-size: 2.4rem;
+  }
+
+  .global-loader__tagline {
+    font-size: 13px;
+  }
+
+  .global-loader__trace {
+    width: min(300px, 78vw);
+    margin-bottom: 12px;
+  }
+
+  .global-loader__caption {
+    font-size: 9px;
+    max-width: 22ch;
+    text-align: center;
+  }
+}

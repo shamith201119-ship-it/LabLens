@@ -1,0 +1,452 @@
+{
+  "generated_at": "2026-11-11T16:57:10.506Z",
+  "frontend_url": "http://127.0.0.1:5173",
+  "api_url": "http://127.0.0.1:8000",
+  "fixture": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.png",
+  "report_id": "9f0f3cfc-8a35-4dea-995d-cc2ca3cdb9a7",
+  "measurements": {
+    "hemoglobin": {
+      "id": "3f54be37-b8c5-42e1-a78a-73b96d47d85a",
+      "source_bbox": [
+        37,
+        69,
+        244,
+        83
+      ]
+    },
+    "wbc": {
+      "id": "115657eb-7a65-44af-af1d-debce6200c64",
+      "source_bbox": [
+        38,
+        108,
+        274,
+        122
+      ]
+    },
+    "platelet": {
+      "id": "4bdddb9f-ed82-4716-a766-6216b33da74a",
+      "source_bbox": null
+    },
+    "hematocrit": {
+      "id": "0d00ffa2-db6a-4ec7-9070-84730dac12f6",
+      "source_bbox": [
+        500,
+        10,
+        100,
+        40
+      ],
+      "invalid": "reversed coordinates"
+    },
+    "rbc": {
+      "id": "d446cb81-8506-4d96-9ab7-705b0129d7f3",
+      "source_bbox": [
+        10,
+        10,
+        9999,
+        40
+      ],
+      "invalid": "out-of-bounds coordinates"
+    }
+  },
+  "checks": [
+    {
+      "name": "Backend health is ok",
+      "status": "passed",
+      "detail": "{\"status\":\"ok\",\"database\":\"ok\",\"storage\":\"ok\",\"max_file_size_bytes\":20971520}"
+    },
+    {
+      "name": "CBC PNG uploaded",
+      "status": "passed",
+      "detail": "9f0f3cfc-8a35-4dea-995d-cc2ca3cdb9a7"
+    },
+    {
+      "name": "CBC PNG extracted with OCR",
+      "status": "passed",
+      "detail": "review_required"
+    },
+    {
+      "name": "Measurements structured from OCR",
+      "status": "passed",
+      "detail": "5 measurements"
+    },
+    {
+      "name": "Page dimensions available",
+      "status": "passed",
+      "detail": "900 x 360"
+    },
+    {
+      "name": "Hemoglobin measurement found",
+      "status": "passed",
+      "detail": "3f54be37-b8c5-42e1-a78a-73b96d47d85a"
+    },
+    {
+      "name": "WBC measurement found",
+      "status": "passed",
+      "detail": "115657eb-7a65-44af-af1d-debce6200c64"
+    },
+    {
+      "name": "Platelet measurement found",
+      "status": "passed",
+      "detail": "4bdddb9f-ed82-4716-a766-6216b33da74a"
+    },
+    {
+      "name": "Hematocrit measurement found",
+      "status": "passed",
+      "detail": "0d00ffa2-db6a-4ec7-9070-84730dac12f6"
+    },
+    {
+      "name": "RBC measurement found",
+      "status": "passed",
+      "detail": "d446cb81-8506-4d96-9ab7-705b0129d7f3"
+    },
+    {
+      "name": "Hemoglobin has valid source bbox",
+      "status": "passed",
+      "detail": "[37,69,244,83]"
+    },
+    {
+      "name": "Missing-provenance fixture has source_bbox = null",
+      "status": "passed",
+      "detail": "null"
+    },
+    {
+      "name": "Reversed-coordinate fixture is stored",
+      "status": "passed",
+      "detail": "[500,10,100,40]"
+    },
+    {
+      "name": "Out-of-bounds-coordinate fixture is stored",
+      "status": "passed",
+      "detail": "[10,10,9999,40]"
+    },
+    {
+      "name": "Mixed PDF uploaded",
+      "status": "passed",
+      "detail": "83152181-047b-4af0-a28f-df4d29cfd822"
+    },
+    {
+      "name": "Mixed PDF extracted",
+      "status": "passed",
+      "detail": "completed"
+    },
+    {
+      "name": "Mixed PDF page methods are OCR, OCR, digital",
+      "status": "passed",
+      "detail": "ocr, ocr, digital"
+    },
+    {
+      "name": "Scanned PDF OCR dimensions available in metadata",
+      "status": "passed",
+      "detail": "2500 x 1000"
+    },
+    {
+      "name": "Mixed PDF measurements structured",
+      "status": "passed",
+      "detail": "15 measurements"
+    },
+    {
+      "name": "Scanned PDF page 1 has at least two source-guided measurements",
+      "status": "passed",
+      "detail": "5 measurements"
+    },
+    {
+      "name": "Scanned PDF page 2 has at least two source-guided measurements",
+      "status": "passed",
+      "detail": "5 measurements"
+    },
+    {
+      "name": "Digital PDF page 3 has measurements without OCR bbox",
+      "status": "passed",
+      "detail": "5 measurements"
+    },
+    {
+      "name": "Verification page rendered all measurements",
+      "status": "passed",
+      "detail": "5 rows"
+    },
+    {
+      "name": "A: Hemoglobin: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "A: exactly one measurement highlight appears",
+      "status": "passed",
+      "detail": "1 highlight"
+    },
+    {
+      "name": "A: source indicator names the page",
+      "status": "passed",
+      "detail": "Source: Page 1 · OCR score 99.6%"
+    },
+    {
+      "name": "A: OCR score is present and labelled as OCR",
+      "status": "passed",
+      "detail": "Source: Page 1 · OCR score 99.6%"
+    },
+    {
+      "name": "B: Hemoglobin: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.111111111111112,\"top\":19.166666666666668,\"width\":23,\"height\":3.888888888888889}, actual {\"left\":4.110047119623043,\"top\":19.134954732862138,\"width\":23.000455996352027,\"height\":3.8835689314485484}, max delta 0.0317 pp"
+    },
+    {
+      "name": "C: WBC: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "C: WBC: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.222222222222222,\"top\":30,\"width\":26.222222222222225,\"height\":3.888888888888889}, actual {\"left\":4.219486244110047,\"top\":29.996960024319808,\"width\":26.22283021735826,\"height\":3.8835689314485484}, max delta 0.0053 pp"
+    },
+    {
+      "name": "C: exactly one highlight remains after switching",
+      "status": "passed",
+      "detail": "previous row no longer selected"
+    },
+    {
+      "name": "D: missing bbox: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "D: no highlight for null source_bbox",
+      "status": "passed",
+      "detail": "0 highlights"
+    },
+    {
+      "name": "D: missing-provenance row still shows its page source label",
+      "status": "passed",
+      "detail": "Source: Page 1 · OCR score 95.4%"
+    },
+    {
+      "name": "D: missing-provenance row remains editable",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "D: edit panel opens for null bbox",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "E: reversed bbox: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "E: no highlight for reversed coordinates",
+      "status": "passed",
+      "detail": "0 highlights"
+    },
+    {
+      "name": "E: out-of-bounds bbox: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "E: no highlight for out-of-bounds coordinates",
+      "status": "passed",
+      "detail": "0 highlights"
+    },
+    {
+      "name": "F: Verify action still works",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "F: reselect WBC: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "F: correction saved through the existing edit flow",
+      "status": "passed",
+      "detail": "was 8.5, now 8.6 x10^3/uL"
+    },
+    {
+      "name": "F: WBC after edit: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.222222222222222,\"top\":30,\"width\":26.222222222222225,\"height\":3.888888888888889}, actual {\"left\":4.219486244110047,\"top\":29.996960024319808,\"width\":26.22283021735826,\"height\":3.8835689314485484}, max delta 0.0053 pp"
+    },
+    {
+      "name": "Keyboard Enter selects a measurement",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Keyboard: Hemoglobin: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.111111111111112,\"top\":19.166666666666668,\"width\":23,\"height\":3.888888888888889}, actual {\"left\":4.110047119623043,\"top\":19.159446724426203,\"width\":23.000455996352027,\"height\":3.8835689314485484}, max delta 0.0072 pp"
+    },
+    {
+      "name": "G: scanned PDF page 1 displays as an image",
+      "status": "passed",
+      "detail": "image preview"
+    },
+    {
+      "name": "G: scanned PDF page 1 does not render an iframe",
+      "status": "passed",
+      "detail": "no iframe"
+    },
+    {
+      "name": "G: rendered page image dimensions match OCR rendering dimensions",
+      "status": "passed",
+      "detail": "2500 x 1000 image, 2500 x 1000 OCR"
+    },
+    {
+      "name": "G: scanned PDF page 1 measurement: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "G: scanned PDF page 1: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.32,\"top\":19.400000000000002,\"width\":22.8,\"height\":3.5000000000000004}, actual {\"left\":4.3198054415564675,\"top\":19.395044839641283,\"width\":22.79981760145919,\"height\":3.4959720322237424}, max delta 0.0050 pp"
+    },
+    {
+      "name": "H: second scanned page 1 measurement: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "H: scanned PDF highlight moved: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.32,\"top\":30.5,\"width\":26.040000000000003,\"height\":3.1}, actual {\"left\":4.3198054415564675,\"top\":30.49855601155191,\"width\":26.04043167654659,\"height\":3.093175254597963}, max delta 0.0068 pp"
+    },
+    {
+      "name": "H: previous scanned PDF measurement is no longer selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "H: scanned PDF page 2 measurement: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "H: switching to an OCR page loads page 2 image",
+      "status": "passed",
+      "detail": "http://127.0.0.1:8000/api/reports/83152181-047b-4af0-a28f-df4d29cfd822/pages/2/image"
+    },
+    {
+      "name": "H: page label reports page 2 of 3",
+      "status": "passed",
+      "detail": "Page 2 of 3"
+    },
+    {
+      "name": "H: page 2 image dimensions match page 2 OCR rendering",
+      "status": "passed",
+      "detail": "2500 x 1000 image, 2500 x 1000 OCR"
+    },
+    {
+      "name": "H: scanned PDF page 2: highlight geometry within 0.5 percentage points",
+      "status": "passed",
+      "detail": "expected {\"left\":4.32,\"top\":19.400000000000002,\"width\":22.8,\"height\":3.5000000000000004}, actual {\"left\":4.3198054415564675,\"top\":19.395044839641283,\"width\":22.79981760145919,\"height\":3.4959720322237424}, max delta 0.0050 pp"
+    },
+    {
+      "name": "I: digital PDF page 3 measurement: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "I: digital PDF page 3 retains the native iframe",
+      "status": "passed",
+      "detail": "iframe preview"
+    },
+    {
+      "name": "I: digital PDF page 3 does not render an OCR page image",
+      "status": "passed",
+      "detail": "no image preview"
+    },
+    {
+      "name": "I: page label reports page 3 of 3",
+      "status": "passed",
+      "detail": "Page 3 of 3"
+    },
+    {
+      "name": "J: scanned PDF missing bbox: row selected",
+      "status": "passed",
+      "detail": "verification-row is-selected"
+    },
+    {
+      "name": "J: scanned PDF remains an image without a highlight",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "J: missing-provenance scanned PDF row remains editable",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "J: scanned PDF edit panel opens for null bbox",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "J: scanned PDF measurement verification still works",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "No browser console/page errors",
+      "status": "passed",
+      "detail": "none"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_3\\phase9_3_hemoglobin_highlight.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_3\\phase9_3_wbc_highlight.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_3\\phase9_3_missing_provenance.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_3\\phase9_3_invalid_provenance.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_3\\phase9_3_keyboard_selection.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_4\\phase9_4_scanned_pdf_highlight.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_4\\phase9_4_scanned_pdf_page2.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_4\\phase9_4_digital_pdf_page3.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_4\\phase9_4_missing_provenance.png"
+  ],
+  "passed": 69,
+  "failed": 0,
+  "pdf": {
+    "report_id": "83152181-047b-4af0-a28f-df4d29cfd822",
+    "pages": {
+      "1": {
+        "method": "ocr",
+        "quality": {
+          "width": 2500,
+          "height": 1000,
+          "brightness": 253.29,
+          "blur_variance": 546.91,
+          "low_resolution": false,
+          "possibly_blurry": false,
+          "low_contrast": true
+        }
+      },
+      "2": {
+        "method": "ocr",
+        "quality": {
+          "width": 2500,
+          "height": 1000,
+          "brightness": 251.93,
+          "blur_variance": 551.51,
+          "low_resolution": false,
+          "possibly_blurry": false,
+          "low_contrast": true
+        }
+      },
+      "3": {
+        "method": "digital",
+        "page_width": 595,
+        "page_height": 842
+      }
+    },
+    "measurements": {
+      "page1": "7a2d899b-5ec0-4778-9b05-dc46c6acf247",
+      "page2": "924e0475-b035-4640-935d-0bb1d84f1d17",
+      "page3": "95c1ddf9-2d68-4782-94b6-b0231519d6bb",
+      "missing": "bbeb1622-1de6-4733-93cc-aa7c9c23d928"
+    }
+  },
+  "finished_at": "2026-11-11T17:00:30.206Z"
+}

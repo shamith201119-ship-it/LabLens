@@ -1,0 +1,356 @@
+{
+  "checks": [
+    {
+      "name": "360px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "390px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "768px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "1024px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "1280px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "1440px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    },
+    {
+      "name": "1920px: landing renders (hero visible)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: loader not stuck on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no horizontal overflow on landing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no overflow mid-page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: welcome renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: loader not stuck on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no horizontal overflow on welcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: app shell renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no horizontal overflow on app shell",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: no console errors",
+      "status": "passed",
+      "detail": "clean"
+    }
+  ],
+  "passed": 70,
+  "failed": 0
+}

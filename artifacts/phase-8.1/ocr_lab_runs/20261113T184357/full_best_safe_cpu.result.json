@@ -1,0 +1,2541 @@
+{
+  "ok": true,
+  "label": "full_best_safe_cpu",
+  "run_id": "20261113T184357__full_best_safe_cpu",
+  "started_at": "2026-11-13T13:17:20.219098+00:00",
+  "spec": {
+    "run_id": "20261113T184357__full_best_safe_cpu",
+    "label": "full_best_safe_cpu",
+    "temp_root": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101",
+    "cpu_threads": 4,
+    "text_recognition_batch_size": 1,
+    "fixtures": [
+      {
+        "key": "digital_pdf",
+        "category": "digital_pdf",
+        "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\clean_digital_report.pdf",
+        "filename": "clean_digital_report.pdf",
+        "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\clean_digital_report.json",
+        "notes": "Control: direct PDF text extraction; OCR must not run."
+      },
+      {
+        "key": "cbc_png",
+        "category": "image_png",
+        "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.png",
+        "filename": "cbc_report.png",
+        "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.json",
+        "notes": "Single-page image; representative OCR workload."
+      },
+      {
+        "key": "multipage_scanned_pdf",
+        "category": "image_only_pdf",
+        "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\multipage_scanned_report.pdf",
+        "filename": "multipage_scanned_report.pdf",
+        "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\multipage_scanned_report.json",
+        "notes": "Two image-only pages rendered at 200 DPI by the production pipeline."
+      },
+      {
+        "key": "photographed_jpg",
+        "category": "photograph",
+        "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.jpg",
+        "filename": "photographed_report.jpg",
+        "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.json",
+        "notes": "Camera-style photograph; single OCR call on the original JPEG."
+      },
+      {
+        "key": "photo_scanned_pdf_200dpi",
+        "category": "photo_scanned_pdf",
+        "path": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.pdf",
+        "filename": "photo_scanned_report_200dpi.pdf",
+        "ground_truth": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.json",
+        "notes": "Temporary image-only PDF embedding the photograph; page size preserves 200-DPI pixel dimensions.",
+        "derived_metadata": {
+          "source_jpg": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.jpg",
+          "source_sha256": "85d1156c4c191ac9d48425ecba26862523c2ab0ac7258097583d74baf4f2b135",
+          "source_pixels": [
+            2034,
+            2527
+          ],
+          "source_format": "JPEG",
+          "derived_pdf": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.pdf",
+          "derived_sha256": "c2906619cce4907ac09a7afd2f4f299ea2e002454c2890ea9c66b8a3338a6181",
+          "derived_size_bytes": 284853,
+          "page_count": 1,
+          "page_size_points": [
+            732.24,
+            909.72
+          ],
+          "render_dpi": 200,
+          "rendered_pixels": [
+            2034,
+            2527
+          ],
+          "pixel_dimensions_preserved": true,
+          "embedded_text_length": 0,
+          "image_only": true,
+          "metadata_path": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.json"
+        }
+      }
+    ],
+    "min_available_bytes": 262144000,
+    "created_at": "2026-11-13T13:17:19.537799+00:00"
+  },
+  "real_data_before": {
+    "data_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data",
+    "db_path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\lablens.db",
+    "db_exists": true,
+    "upload_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\uploads",
+    "upload_file_count": 20,
+    "upload_total_bytes": 320157,
+    "db_sha256": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "db_size_bytes": 176128
+  },
+  "isolation": {
+    "temp_root": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101",
+    "run_root": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\workers\\20261113T184357__full_best_safe_cpu",
+    "data_dir": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\workers\\20261113T184357__full_best_safe_cpu\\data",
+    "db_path": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\workers\\20261113T184357__full_best_safe_cpu\\data\\lablens.db",
+    "uploads_dir": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\workers\\20261113T184357__full_best_safe_cpu\\data\\uploads",
+    "real_data_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data",
+    "real_data_bypassed": true
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "paddle_version": "3.3.1",
+    "paddleocr_version": "3.7.0",
+    "is_compiled_with_cuda": false,
+    "device": "cpu",
+    "cpu_count_logical": 4,
+    "cpu_count_physical": 2,
+    "system_ram_total_bytes": 8375230464,
+    "available_bytes_at_start": 713232384
+  },
+  "model": {
+    "init_seconds": 1.9005,
+    "init_kwargs": {
+      "use_doc_orientation_classify": false,
+      "use_doc_unwarping": false,
+      "use_textline_orientation": false,
+      "lang": "en",
+      "enable_mkldnn": false,
+      "text_det_limit_side_len": 1280,
+      "text_det_limit_type": "max",
+      "cpu_threads": 4,
+      "text_recognition_batch_size": 1
+    },
+    "common_args": {
+      "device": null,
+      "engine": null,
+      "engine_config": null,
+      "enable_hpi": null,
+      "enable_mkldnn": false,
+      "mkldnn_cache_capacity": 10,
+      "cpu_threads": 4,
+      "enable_cinn": false,
+      "use_pptrt": false,
+      "pptrt_precision": "fp32"
+    },
+    "effective_config": {
+      "SubPipelines.DocPreprocessor.SubModules.DocOrientationClassify.model_name": "PP-LCNet_x1_0_doc_ori",
+      "SubPipelines.DocPreprocessor.SubModules.DocUnwarping.model_name": "UVDoc",
+      "SubModules.TextDetection.model_name": "PP-OCRv6_medium_det",
+      "SubModules.TextDetection.limit_side_len": 1280,
+      "SubModules.TextDetection.limit_type": "max",
+      "SubModules.TextLineOrientation.model_name": "PP-LCNet_x1_0_textline_ori",
+      "SubModules.TextLineOrientation.batch_size": 6,
+      "SubModules.TextRecognition.model_name": "PP-OCRv6_medium_rec",
+      "SubModules.TextRecognition.batch_size": 1
+    },
+    "model_cache_dir": "C:\\Users\\sureshr\\.paddlex\\official_models"
+  },
+  "fixtures": [
+    {
+      "key": "digital_pdf",
+      "category": "digital_pdf",
+      "filename": "clean_digital_report.pdf",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\clean_digital_report.pdf",
+      "file_size_bytes": 2356,
+      "file_sha256": "fc34d861696cdc66c855822f4e1c0bc579d847b364b7a649250a42d324d835de",
+      "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+      "upload_seconds": 0.2467,
+      "extraction_seconds": 0.2154,
+      "structure_seconds": 0.1577,
+      "total_seconds": 0.6198,
+      "extraction_status": "completed",
+      "warnings": [],
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "digital",
+          "raw_text": "METABOLIC PANEL LABORATORY REPORT\nPatient: Synthetic Jane Doe   Date: 2026-11-10\nTest Name                     Result    Units    Reference Interval    Flag\nGlucose, Fasting              112       mg/dL    70 - 99               H\nHemoglobin A1c                6.2       %        4.0 - 5.6             High\nCreatinine, Serum             0.95      mg/dL    0.50 - 1.20           Normal\nTotal Cholesterol             220       mg/dL    < 200                 H\nTriglycerides                 165       mg/dL    < 150                 High\n",
+          "raw_text_length": 533,
+          "page_width": 595.0,
+          "page_height": 842.0,
+          "effective_width": 595.0,
+          "effective_height": 842.0,
+          "ocr_item_count": 0,
+          "quality": null,
+          "variant": null,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 0,
+      "ocr_seconds_total": 0,
+      "ocr_calls": [],
+      "measurements": [
+        {
+          "id": "e1dbd8cf-e7ed-4910-9e89-bcb7439aa658",
+          "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+          "test_name_original": "Glucose, Fasting",
+          "test_name_normalized": "Glucose",
+          "test_code": "GLU",
+          "result_original": "112",
+          "result_numeric": 112.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": "High",
+          "derived_flag": "above_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Glucose, Fasting              112       mg/dL",
+          "source_bbox": [
+            50.0,
+            109.25,
+            319.05,
+            122.99
+          ],
+          "extraction_method": "digital",
+          "ocr_confidence": null,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:11.224019+00:00",
+          "updated_at": "2026-11-13T13:18:11.224019+00:00"
+        },
+        {
+          "id": "3fcf05ed-c105-4b4e-9e05-1f97b6f0ae75",
+          "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+          "test_name_original": "Hemoglobin A1c",
+          "test_name_normalized": "HbA1c",
+          "test_code": "HBA1C",
+          "result_original": "6.2",
+          "result_numeric": 6.2,
+          "result_qualifier": null,
+          "unit_original": "%",
+          "unit_normalized": null,
+          "reference_range_original": "4.0 - 5.6",
+          "reference_low": 4.0,
+          "reference_high": 5.6,
+          "reference_unit": "%",
+          "reference_context": null,
+          "lab_flag": "High",
+          "derived_flag": "above_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hemoglobin A1c                6.2       %",
+          "source_bbox": [
+            50.0,
+            129.25,
+            325.72,
+            142.99
+          ],
+          "extraction_method": "digital",
+          "ocr_confidence": null,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:11.248763+00:00",
+          "updated_at": "2026-11-13T13:18:11.248763+00:00"
+        },
+        {
+          "id": "13034211-5a1d-4089-9094-cc668984091c",
+          "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+          "test_name_original": "Creatinine, Serum",
+          "test_name_normalized": "Creatinine",
+          "test_code": "CREAT",
+          "result_original": "0.95",
+          "result_numeric": 0.95,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "0.50 - 1.20",
+          "reference_low": 0.5,
+          "reference_high": 1.2,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": "Normal",
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Creatinine, Serum             0.95      mg/dL",
+          "source_bbox": [
+            50.0,
+            149.25,
+            352.38,
+            162.99
+          ],
+          "extraction_method": "digital",
+          "ocr_confidence": null,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:11.273271+00:00",
+          "updated_at": "2026-11-13T13:18:11.273271+00:00"
+        },
+        {
+          "id": "a8193b0c-962b-449a-acea-e531c81889bc",
+          "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+          "test_name_original": "Total Cholesterol",
+          "test_name_normalized": "Total Cholesterol",
+          "test_code": "TC",
+          "result_original": "220",
+          "result_numeric": 220.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "< 200",
+          "reference_low": null,
+          "reference_high": 200.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": "High",
+          "derived_flag": "above_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Total Cholesterol             220       mg/dL",
+          "source_bbox": [
+            50.0,
+            169.25,
+            316.55,
+            182.99
+          ],
+          "extraction_method": "digital",
+          "ocr_confidence": null,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:11.298776+00:00",
+          "updated_at": "2026-11-13T13:18:11.298776+00:00"
+        },
+        {
+          "id": "de5cbbca-ade5-41bf-b00e-723249b37727",
+          "report_id": "2f678522-1320-433e-8f0c-ea0845bb8909",
+          "test_name_original": "Triglycerides",
+          "test_name_normalized": "Triglycerides",
+          "test_code": "TG",
+          "result_original": "165",
+          "result_numeric": 165.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "< 150",
+          "reference_low": null,
+          "reference_high": 150.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": "High",
+          "derived_flag": "above_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Triglycerides                 165       mg/dL",
+          "source_bbox": [
+            50.0,
+            189.25,
+            322.1,
+            202.99
+          ],
+          "extraction_method": "digital",
+          "ocr_confidence": null,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:11.323866+00:00",
+          "updated_at": "2026-11-13T13:18:11.323866+00:00"
+        }
+      ],
+      "accuracy": {
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "mismatches": [],
+        "extracted_measurements": [
+          {
+            "test": "Glucose",
+            "value": "112",
+            "numeric": 112.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "70 - 99",
+            "range_low": 70.0,
+            "range_high": 99.0,
+            "flag": "above_range",
+            "lab_flag": "High",
+            "page": 1
+          },
+          {
+            "test": "HbA1c",
+            "value": "6.2",
+            "numeric": 6.2,
+            "qualifier": null,
+            "unit": "%",
+            "range": "4.0 - 5.6",
+            "range_low": 4.0,
+            "range_high": 5.6,
+            "flag": "above_range",
+            "lab_flag": "High",
+            "page": 1
+          },
+          {
+            "test": "Creatinine",
+            "value": "0.95",
+            "numeric": 0.95,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "0.50 - 1.20",
+            "range_low": 0.5,
+            "range_high": 1.2,
+            "flag": "within_range",
+            "lab_flag": "Normal",
+            "page": 1
+          },
+          {
+            "test": "Total Cholesterol",
+            "value": "220",
+            "numeric": 220.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "< 200",
+            "range_low": null,
+            "range_high": 200.0,
+            "flag": "above_range",
+            "lab_flag": "High",
+            "page": 1
+          },
+          {
+            "test": "Triglycerides",
+            "value": "165",
+            "numeric": 165.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "< 150",
+            "range_low": null,
+            "range_high": 150.0,
+            "flag": "above_range",
+            "lab_flag": "High",
+            "page": 1
+          }
+        ]
+      },
+      "page_attribution": {
+        "scored": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_scored": 5,
+        "details": [
+          {
+            "test": "Glucose",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "HbA1c",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Creatinine",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Total Cholesterol",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Triglycerides",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          }
+        ]
+      },
+      "source_bboxes": [
+        {
+          "test": "Glucose",
+          "page": 1,
+          "bbox": [
+            50.0,
+            109.25,
+            319.05,
+            122.99
+          ],
+          "source_text": "Glucose, Fasting              112       mg/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 0,
+          "overlaps_ocr_line": null
+        },
+        {
+          "test": "HbA1c",
+          "page": 1,
+          "bbox": [
+            50.0,
+            129.25,
+            325.72,
+            142.99
+          ],
+          "source_text": "Hemoglobin A1c                6.2       %",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 0,
+          "overlaps_ocr_line": null
+        },
+        {
+          "test": "Creatinine",
+          "page": 1,
+          "bbox": [
+            50.0,
+            149.25,
+            352.38,
+            162.99
+          ],
+          "source_text": "Creatinine, Serum             0.95      mg/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 0,
+          "overlaps_ocr_line": null
+        },
+        {
+          "test": "Total Cholesterol",
+          "page": 1,
+          "bbox": [
+            50.0,
+            169.25,
+            316.55,
+            182.99
+          ],
+          "source_text": "Total Cholesterol             220       mg/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 0,
+          "overlaps_ocr_line": null
+        },
+        {
+          "test": "Triglycerides",
+          "page": 1,
+          "bbox": [
+            50.0,
+            189.25,
+            322.1,
+            202.99
+          ],
+          "source_text": "Triglycerides                 165       mg/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 0,
+          "overlaps_ocr_line": null
+        }
+      ]
+    },
+    {
+      "key": "cbc_png",
+      "category": "image_png",
+      "filename": "cbc_report.png",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase8_1_accuracy\\cbc_report.png",
+      "file_size_bytes": 11721,
+      "file_sha256": "e72fba5c4ab196709d7e881d8e3b42a81d766ea00eb800d62c0e4e2b3afde807",
+      "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+      "upload_seconds": 0.109,
+      "extraction_seconds": 13.1063,
+      "structure_seconds": 0.1741,
+      "total_seconds": 13.3895,
+      "extraction_status": "review_required",
+      "warnings": [
+        "Low resolution; consider a higher-quality photo."
+      ],
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "raw_text": "COMPLETE BLOOD COUNT (CBC)\nHemoglobin 14.2 g/dL 12.0 - 16.0\nWhite Blood Cell Count 8.5 x10^3/uL 4.0 - 11.0\nPlateletCount 240 x10^3/uL 150 - 450\nRed Blood Cell Count 4.65 mil/uL 4.20 -5.40\nHematocrit 42.0 % 37.0 - 48.0",
+          "raw_text_length": 217,
+          "page_width": 900.0,
+          "page_height": 360.0,
+          "effective_width": 900.0,
+          "effective_height": 360.0,
+          "ocr_item_count": 11,
+          "quality": {
+            "width": 900,
+            "height": 360,
+            "brightness": 253.28,
+            "blur_variance": 2376.53,
+            "low_resolution": true,
+            "possibly_blurry": false,
+            "low_contrast": true
+          },
+          "variant": "original",
+          "warnings": [
+            "Low resolution; consider a higher-quality photo."
+          ]
+        }
+      ],
+      "ocr_call_count": 1,
+      "ocr_seconds_total": 12.8863,
+      "ocr_calls": [
+        {
+          "image_name": "7e9efcb0-18cf-4e2d-8fb2-753d8c25b164.png",
+          "inferred_page": null,
+          "seconds": 12.8863,
+          "item_count": 11
+        }
+      ],
+      "measurements": [
+        {
+          "id": "8af9685f-d5c6-40a9-8aab-4116050ff857",
+          "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "test_code": "HGB",
+          "result_original": "14.2",
+          "result_numeric": 14.2,
+          "result_qualifier": null,
+          "unit_original": "g/dL",
+          "unit_normalized": null,
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "reference_unit": "g/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hemoglobin 14.2 g/dL",
+          "source_bbox": [
+            37.0,
+            69.0,
+            244.0,
+            83.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9956127405166626,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:24.634167+00:00",
+          "updated_at": "2026-11-13T13:18:24.634167+00:00"
+        },
+        {
+          "id": "7487bee4-0243-4829-8aa4-bf1de682443b",
+          "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+          "test_name_original": "White Blood Cell Count",
+          "test_name_normalized": "White Blood Cell Count",
+          "test_code": "WBC",
+          "result_original": "8.5",
+          "result_numeric": 8.5,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "White Blood Cell Count 8.5 x10^3/uL",
+          "source_bbox": [
+            38.0,
+            108.0,
+            274.0,
+            122.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.977943480014801,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:24.662708+00:00",
+          "updated_at": "2026-11-13T13:18:24.662708+00:00"
+        },
+        {
+          "id": "7a5318de-1045-4011-81a8-c432aa667df9",
+          "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+          "test_name_original": "PlateletCount",
+          "test_name_normalized": "Platelet Count",
+          "test_code": "PLT",
+          "result_original": "240",
+          "result_numeric": 240.0,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "PlateletCount 240 x10^3/uL",
+          "source_bbox": [
+            37.0,
+            147.0,
+            255.0,
+            163.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9656572341918945,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:24.689266+00:00",
+          "updated_at": "2026-11-13T13:18:24.689266+00:00"
+        },
+        {
+          "id": "9c4d522e-f1ef-4b8c-b887-14fc79de7561",
+          "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+          "test_name_original": "Red Blood Cell Count",
+          "test_name_normalized": "Red Blood Cell Count",
+          "test_code": "RBC",
+          "result_original": "4.65",
+          "result_numeric": 4.65,
+          "result_qualifier": null,
+          "unit_original": "mil/uL",
+          "unit_normalized": null,
+          "reference_range_original": "4.20 -5.40",
+          "reference_low": 4.2,
+          "reference_high": 5.4,
+          "reference_unit": "mil/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Red Blood Cell Count 4.65 mil/uL",
+          "source_bbox": [
+            38.0,
+            189.0,
+            268.0,
+            202.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9834097027778625,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:24.713470+00:00",
+          "updated_at": "2026-11-13T13:18:24.713470+00:00"
+        },
+        {
+          "id": "ce619982-2932-4d69-934f-f45ff90b6015",
+          "report_id": "295d4cd8-9fc8-4433-8651-974481f9c34d",
+          "test_name_original": "Hematocrit",
+          "test_name_normalized": "Hematocrit",
+          "test_code": "HCT",
+          "result_original": "42.0",
+          "result_numeric": 42.0,
+          "result_qualifier": null,
+          "unit_original": "%",
+          "unit_normalized": null,
+          "reference_range_original": "37.0 - 48.0",
+          "reference_low": 37.0,
+          "reference_high": 48.0,
+          "reference_unit": "%",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hematocrit 42.0 %",
+          "source_bbox": [
+            38.0,
+            228.0,
+            229.0,
+            242.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9837202429771423,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:18:24.742144+00:00",
+          "updated_at": "2026-11-13T13:18:24.742144+00:00"
+        }
+      ],
+      "accuracy": {
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 2,
+        "range_match_count": 5,
+        "flag_match_count": 0,
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 2,
+            "correct": 2,
+            "incorrect": 0,
+            "not_scored": 3
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "field_totals": {
+          "scored": 22,
+          "correct": 22,
+          "incorrect": 0,
+          "not_scored": 13
+        },
+        "mismatches": [],
+        "extracted_measurements": [
+          {
+            "test": "Hemoglobin",
+            "value": "14.2",
+            "numeric": 14.2,
+            "qualifier": null,
+            "unit": "g/dL",
+            "range": "12.0 - 16.0",
+            "range_low": 12.0,
+            "range_high": 16.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "White Blood Cell Count",
+            "value": "8.5",
+            "numeric": 8.5,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "4.0 - 11.0",
+            "range_low": 4.0,
+            "range_high": 11.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "value": "240",
+            "numeric": 240.0,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "150 - 450",
+            "range_low": 150.0,
+            "range_high": 450.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Red Blood Cell Count",
+            "value": "4.65",
+            "numeric": 4.65,
+            "qualifier": null,
+            "unit": "mil/uL",
+            "range": "4.20 -5.40",
+            "range_low": 4.2,
+            "range_high": 5.4,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Hematocrit",
+            "value": "42.0",
+            "numeric": 42.0,
+            "qualifier": null,
+            "unit": "%",
+            "range": "37.0 - 48.0",
+            "range_low": 37.0,
+            "range_high": 48.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          }
+        ]
+      },
+      "page_attribution": {
+        "scored": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_scored": 5,
+        "details": [
+          {
+            "test": "Hemoglobin",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "White Blood Cell Count",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Platelet Count",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Red Blood Cell Count",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          },
+          {
+            "test": "Hematocrit",
+            "status": "not_scored",
+            "expected_page": null,
+            "extracted_page": 1,
+            "reason": "no ground-truth page"
+          }
+        ]
+      },
+      "source_bboxes": [
+        {
+          "test": "Hemoglobin",
+          "page": 1,
+          "bbox": [
+            37.0,
+            69.0,
+            244.0,
+            83.0
+          ],
+          "source_text": "Hemoglobin 14.2 g/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 11,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.5072
+        },
+        {
+          "test": "White Blood Cell Count",
+          "page": 1,
+          "bbox": [
+            38.0,
+            108.0,
+            274.0,
+            122.0
+          ],
+          "source_text": "White Blood Cell Count 8.5 x10^3/uL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 11,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "Platelet Count",
+          "page": 1,
+          "bbox": [
+            37.0,
+            147.0,
+            255.0,
+            163.0
+          ],
+          "source_text": "PlateletCount 240 x10^3/uL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 11,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.4736
+        },
+        {
+          "test": "Red Blood Cell Count",
+          "page": 1,
+          "bbox": [
+            38.0,
+            189.0,
+            268.0,
+            202.0
+          ],
+          "source_text": "Red Blood Cell Count 4.65 mil/uL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 11,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.4435
+        },
+        {
+          "test": "Hematocrit",
+          "page": 1,
+          "bbox": [
+            38.0,
+            228.0,
+            229.0,
+            242.0
+          ],
+          "source_text": "Hematocrit 42.0 %",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 11,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.267
+        }
+      ]
+    },
+    {
+      "key": "multipage_scanned_pdf",
+      "category": "image_only_pdf",
+      "filename": "multipage_scanned_report.pdf",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\multipage_scanned_report.pdf",
+      "file_size_bytes": 116464,
+      "file_sha256": "411d464d7334dfd10b8b98f0dbfa16d2b7e263f329fc74d8f8341b38de1fbc52",
+      "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+      "upload_seconds": 0.2209,
+      "extraction_seconds": 56.9336,
+      "structure_seconds": 0.1578,
+      "total_seconds": 57.3123,
+      "extraction_status": "completed",
+      "warnings": [],
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "raw_text": "SYNTHETIC LABORATORY REPORT\nComplete Blood Count Panel\nTest Result Unit Reference\nHemoglobin 14.2 g/dL 12.0 - 16.0\nWBC 8.5 x10^3/uL 4.0 - 11.0\nPlatelet Count 240 x10^3/uL 150 - 450\nSynthetic demonstration data - Page 1 of 2",
+          "raw_text_length": 223,
+          "page_width": null,
+          "page_height": null,
+          "effective_width": 1700,
+          "effective_height": 2200,
+          "ocr_item_count": 19,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 250.74,
+            "blur_variance": 827.08,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "warnings": []
+        },
+        {
+          "page_number": 2,
+          "extraction_method": "ocr",
+          "raw_text": "SYNTHETIC LABORATORY REPORT\nMetabolic Panel\nGlucose: 128 mg/dL\nReference range: 70 - 99 mg/dL\nCreatinine: 1.0 mg/dL (reference 0.7 - 1.3 mg/dL)\nSynthetic demonstration data - Page 2 of 2",
+          "raw_text_length": 186,
+          "page_width": null,
+          "page_height": null,
+          "effective_width": 1700,
+          "effective_height": 2200,
+          "ocr_item_count": 6,
+          "quality": {
+            "width": 1700,
+            "height": 2200,
+            "brightness": 251.63,
+            "blur_variance": 594.09,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 2,
+      "ocr_seconds_total": 56.2399,
+      "ocr_calls": [
+        {
+          "image_name": "page_0.png",
+          "inferred_page": 1,
+          "seconds": 30.7903,
+          "item_count": 19
+        },
+        {
+          "image_name": "page_1.png",
+          "inferred_page": 2,
+          "seconds": 25.4496,
+          "item_count": 6
+        }
+      ],
+      "measurements": [
+        {
+          "id": "fa4fd80c-0b7b-4fab-9505-94135360f437",
+          "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "test_code": "HGB",
+          "result_original": "14.2",
+          "result_numeric": 14.2,
+          "result_qualifier": null,
+          "unit_original": "g/dL",
+          "unit_normalized": null,
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "reference_unit": "g/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hemoglobin 14.2 g/dL",
+          "source_bbox": [
+            144.0,
+            526.0,
+            1501.0,
+            581.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9792705178260803,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:22.007930+00:00",
+          "updated_at": "2026-11-13T13:19:22.007930+00:00"
+        },
+        {
+          "id": "124b4956-6a34-4874-b6b8-657a4646b7a5",
+          "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "test_code": "WBC",
+          "result_original": "8.5",
+          "result_numeric": 8.5,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "WBC 8.5 x10^3/uL",
+          "source_bbox": [
+            142.0,
+            677.0,
+            1479.0,
+            725.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9643247723579407,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:22.035284+00:00",
+          "updated_at": "2026-11-13T13:19:22.035284+00:00"
+        },
+        {
+          "id": "cb6155dc-0d6e-4528-9b99-325f04a40b55",
+          "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "test_code": "PLT",
+          "result_original": "240",
+          "result_numeric": 240.0,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Platelet Count 240 x10^3/uL",
+          "source_bbox": [
+            147.0,
+            828.0,
+            1479.0,
+            877.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.972564160823822,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:22.059144+00:00",
+          "updated_at": "2026-11-13T13:19:22.059144+00:00"
+        },
+        {
+          "id": "70440817-40e4-46b8-afe6-e54520d73bcf",
+          "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "test_code": "GLU",
+          "result_original": "128",
+          "result_numeric": 128.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "above_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 2,
+          "source_text": "Glucose: 128 mg/dL",
+          "source_bbox": [
+            147.0,
+            431.0,
+            660.0,
+            560.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9878075122833252,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:22.085750+00:00",
+          "updated_at": "2026-11-13T13:19:22.085750+00:00"
+        },
+        {
+          "id": "69ffd0b7-4398-439b-ab48-8622b5b4c93b",
+          "report_id": "cf7b8ab0-f13c-45be-95fc-fef7ae08f522",
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "test_code": "CREAT",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 2,
+          "source_text": "Creatinine: 1.0 mg/dL (reference   mg/dL)",
+          "source_bbox": [
+            149.0,
+            730.0,
+            1095.0,
+            777.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9917195439338684,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:22.110112+00:00",
+          "updated_at": "2026-11-13T13:19:22.110112+00:00"
+        }
+      ],
+      "accuracy": {
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "mismatches": [],
+        "extracted_measurements": [
+          {
+            "test": "Hemoglobin",
+            "value": "14.2",
+            "numeric": 14.2,
+            "qualifier": null,
+            "unit": "g/dL",
+            "range": "12.0 - 16.0",
+            "range_low": 12.0,
+            "range_high": 16.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "White Blood Cell Count",
+            "value": "8.5",
+            "numeric": 8.5,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "4.0 - 11.0",
+            "range_low": 4.0,
+            "range_high": 11.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "value": "240",
+            "numeric": 240.0,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "150 - 450",
+            "range_low": 150.0,
+            "range_high": 450.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Glucose",
+            "value": "128",
+            "numeric": 128.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "70 - 99",
+            "range_low": 70.0,
+            "range_high": 99.0,
+            "flag": "above_range",
+            "lab_flag": null,
+            "page": 2
+          },
+          {
+            "test": "Creatinine",
+            "value": "1.0",
+            "numeric": 1.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "0.7 - 1.3",
+            "range_low": 0.7,
+            "range_high": 1.3,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 2
+          }
+        ]
+      },
+      "page_attribution": {
+        "scored": 5,
+        "correct": 5,
+        "incorrect": 0,
+        "not_scored": 0,
+        "details": [
+          {
+            "test": "Hemoglobin",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "WBC",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Glucose",
+            "status": "correct",
+            "expected_page": 2,
+            "extracted_page": 2
+          },
+          {
+            "test": "Creatinine",
+            "status": "correct",
+            "expected_page": 2,
+            "extracted_page": 2
+          }
+        ]
+      },
+      "source_bboxes": [
+        {
+          "test": "Hemoglobin",
+          "page": 1,
+          "bbox": [
+            144.0,
+            526.0,
+            1501.0,
+            581.0
+          ],
+          "source_text": "Hemoglobin 14.2 g/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 19,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.1392
+        },
+        {
+          "test": "White Blood Cell Count",
+          "page": 1,
+          "bbox": [
+            142.0,
+            677.0,
+            1479.0,
+            725.0
+          ],
+          "source_text": "WBC 8.5 x10^3/uL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 19,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.1118
+        },
+        {
+          "test": "Platelet Count",
+          "page": 1,
+          "bbox": [
+            147.0,
+            828.0,
+            1479.0,
+            877.0
+          ],
+          "source_text": "Platelet Count 240 x10^3/uL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 19,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.1614
+        },
+        {
+          "test": "Glucose",
+          "page": 2,
+          "bbox": [
+            147.0,
+            431.0,
+            660.0,
+            560.0
+          ],
+          "source_text": "Glucose: 128 mg/dL",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 6,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.3178
+        },
+        {
+          "test": "Creatinine",
+          "page": 2,
+          "bbox": [
+            149.0,
+            730.0,
+            1095.0,
+            777.0
+          ],
+          "source_text": "Creatinine: 1.0 mg/dL (reference   mg/dL)",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 6,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "key": "photographed_jpg",
+      "category": "photograph",
+      "filename": "photographed_report.jpg",
+      "path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.jpg",
+      "file_size_bytes": 281466,
+      "file_sha256": "85d1156c4c191ac9d48425ecba26862523c2ab0ac7258097583d74baf4f2b135",
+      "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+      "upload_seconds": 0.0759,
+      "extraction_seconds": 35.0651,
+      "structure_seconds": 0.1872,
+      "total_seconds": 35.3281,
+      "extraction_status": "completed",
+      "warnings": [],
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "raw_text": "SYNTHETIC LABORATORY REPORT\nComplete Blood Count & Metabolic Panel\nPatient: Synthetic Sample DOB: 1990-01-01 Collected: 2026-11-12\nAccession: SYN-954 Physician: Dr. Example Reported: 2026-11-12\nHemoglobin: 13.8 g/dL Reference: 12.0 - 16.0\nWBC: 7.2 x10^3/uL Reference: 4.0 - 11.0\nPlatelet Count: 265 x10^3/uL Reference: 150 - 450\nGlucose: 98 mg/dL Reference: 70 - 99\nCreatinine: 1.0 mg/dL Reference: 0.7 - 1.3\nSynthetic benchmark values. Not clinical recommendations.\nSynthetic demonstration data - not for clinical use Page 1 of 1",
+          "raw_text_length": 530,
+          "page_width": 2034.0,
+          "page_height": 2527.0,
+          "effective_width": 2034.0,
+          "effective_height": 2527.0,
+          "ocr_item_count": 15,
+          "quality": {
+            "width": 2034,
+            "height": 2527,
+            "brightness": 184.06,
+            "blur_variance": 196.0,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": "original",
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 1,
+      "ocr_seconds_total": 34.7129,
+      "ocr_calls": [
+        {
+          "image_name": "1cce90a2-9f72-4027-85fa-843a7999629b.jpg",
+          "inferred_page": null,
+          "seconds": 34.7129,
+          "item_count": 15
+        }
+      ],
+      "measurements": [
+        {
+          "id": "9a1cc277-d649-4bcb-9ed1-bc5bdf265b80",
+          "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "test_code": "HGB",
+          "result_original": "13.8",
+          "result_numeric": 13.8,
+          "result_qualifier": null,
+          "unit_original": "g/dL",
+          "unit_normalized": null,
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "reference_unit": "g/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hemoglobin: 13.8 g/dL Reference:",
+          "source_bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9965973496437073,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:57.348224+00:00",
+          "updated_at": "2026-11-13T13:19:57.348224+00:00"
+        },
+        {
+          "id": "4cfc378a-43ee-49d2-a694-98182a8ac71a",
+          "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "test_code": "WBC",
+          "result_original": "7.2",
+          "result_numeric": 7.2,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "WBC: 7.2 x10^3/uL Reference:",
+          "source_bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9720425605773926,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:57.379232+00:00",
+          "updated_at": "2026-11-13T13:19:57.379232+00:00"
+        },
+        {
+          "id": "54090392-7d77-4cef-9faf-3ba1ecedac99",
+          "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "test_code": "PLT",
+          "result_original": "265",
+          "result_numeric": 265.0,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Platelet Count: 265 x10^3/uL Reference:",
+          "source_bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9900802373886108,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:57.413578+00:00",
+          "updated_at": "2026-11-13T13:19:57.413578+00:00"
+        },
+        {
+          "id": "0cd4c06e-843f-495f-815b-4f11cd403eb4",
+          "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "test_code": "GLU",
+          "result_original": "98",
+          "result_numeric": 98.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Glucose: 98 mg/dL Reference:",
+          "source_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9941369295120239,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:57.446622+00:00",
+          "updated_at": "2026-11-13T13:19:57.446622+00:00"
+        },
+        {
+          "id": "ec7bd9c8-3799-4014-9487-9a6b614b53cc",
+          "report_id": "7da1fa5c-81dc-4851-9b65-d30a93d1fc54",
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "test_code": "CREAT",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Creatinine: 1.0 mg/dL Reference:",
+          "source_bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1295.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9915990233421326,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:19:57.475433+00:00",
+          "updated_at": "2026-11-13T13:19:57.475433+00:00"
+        }
+      ],
+      "accuracy": {
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "mismatches": [],
+        "extracted_measurements": [
+          {
+            "test": "Hemoglobin",
+            "value": "13.8",
+            "numeric": 13.8,
+            "qualifier": null,
+            "unit": "g/dL",
+            "range": "12.0 - 16.0",
+            "range_low": 12.0,
+            "range_high": 16.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "White Blood Cell Count",
+            "value": "7.2",
+            "numeric": 7.2,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "4.0 - 11.0",
+            "range_low": 4.0,
+            "range_high": 11.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "value": "265",
+            "numeric": 265.0,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "150 - 450",
+            "range_low": 150.0,
+            "range_high": 450.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Glucose",
+            "value": "98",
+            "numeric": 98.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "70 - 99",
+            "range_low": 70.0,
+            "range_high": 99.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Creatinine",
+            "value": "1.0",
+            "numeric": 1.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "0.7 - 1.3",
+            "range_low": 0.7,
+            "range_high": 1.3,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          }
+        ]
+      },
+      "page_attribution": {
+        "scored": 5,
+        "correct": 5,
+        "incorrect": 0,
+        "not_scored": 0,
+        "details": [
+          {
+            "test": "Hemoglobin",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "WBC",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Glucose",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Creatinine",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          }
+        ]
+      },
+      "source_bboxes": [
+        {
+          "test": "Hemoglobin",
+          "page": 1,
+          "bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "source_text": "Hemoglobin: 13.8 g/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "White Blood Cell Count",
+          "page": 1,
+          "bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "source_text": "WBC: 7.2 x10^3/uL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "Platelet Count",
+          "page": 1,
+          "bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "source_text": "Platelet Count: 265 x10^3/uL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.4983
+        },
+        {
+          "test": "Glucose",
+          "page": 1,
+          "bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "source_text": "Glucose: 98 mg/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "Creatinine",
+          "page": 1,
+          "bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1295.0
+          ],
+          "source_text": "Creatinine: 1.0 mg/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "key": "photo_scanned_pdf_200dpi",
+      "category": "photo_scanned_pdf",
+      "filename": "photo_scanned_report_200dpi.pdf",
+      "path": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.pdf",
+      "file_size_bytes": 284853,
+      "file_sha256": "c2906619cce4907ac09a7afd2f4f299ea2e002454c2890ea9c66b8a3338a6181",
+      "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+      "upload_seconds": 0.155,
+      "extraction_seconds": 35.5073,
+      "structure_seconds": 0.1685,
+      "total_seconds": 35.8308,
+      "extraction_status": "completed",
+      "warnings": [],
+      "pages": [
+        {
+          "page_number": 1,
+          "extraction_method": "ocr",
+          "raw_text": "SYNTHETIC LABORATORY REPORT\nComplete Blood Count & Metabolic Panel\nPatient: Synthetic Sample DOB: 1990-01-01 Collected: 2026-11-12\nAccession: SYN-954 Physician: Dr. Example Reported: 2026-11-12\nHemoglobin: 13.8 g/dL Reference: 12.0 - 16.0\nWBC: 7.2 x10^3/uL Reference: 4.0 - 11.0\nPlatelet Count: 265 x10^3/uL Reference: 150 - 450\nGlucose: 98 mg/dL Reference: 70 - 99\nCreatinine: 1.0 mg/dL Reference: 0.7 - 1.3\nSynthetic benchmark values. Not clinical recommendations.\nSynthetic demonstration data - not for clinical use Page 1 of 1",
+          "raw_text_length": 530,
+          "page_width": null,
+          "page_height": null,
+          "effective_width": 2034,
+          "effective_height": 2527,
+          "ocr_item_count": 15,
+          "quality": {
+            "width": 2034,
+            "height": 2527,
+            "brightness": 184.06,
+            "blur_variance": 196.0,
+            "low_resolution": false,
+            "possibly_blurry": false,
+            "low_contrast": false
+          },
+          "variant": null,
+          "warnings": []
+        }
+      ],
+      "ocr_call_count": 1,
+      "ocr_seconds_total": 34.4896,
+      "ocr_calls": [
+        {
+          "image_name": "page_0.png",
+          "inferred_page": 1,
+          "seconds": 34.4896,
+          "item_count": 15
+        }
+      ],
+      "measurements": [
+        {
+          "id": "86f98cd1-fe1b-4843-af44-f0aa4c5cc7e7",
+          "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+          "test_name_original": "Hemoglobin",
+          "test_name_normalized": "Hemoglobin",
+          "test_code": "HGB",
+          "result_original": "13.8",
+          "result_numeric": 13.8,
+          "result_qualifier": null,
+          "unit_original": "g/dL",
+          "unit_normalized": null,
+          "reference_range_original": "12.0 - 16.0",
+          "reference_low": 12.0,
+          "reference_high": 16.0,
+          "reference_unit": "g/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Hemoglobin: 13.8 g/dL Reference:",
+          "source_bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9966007471084595,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:20:33.236355+00:00",
+          "updated_at": "2026-11-13T13:20:33.236355+00:00"
+        },
+        {
+          "id": "9e07393f-f86d-4038-a40b-9b06fb3ab1dc",
+          "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+          "test_name_original": "WBC",
+          "test_name_normalized": "White Blood Cell Count",
+          "test_code": "WBC",
+          "result_original": "7.2",
+          "result_numeric": 7.2,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "4.0 - 11.0",
+          "reference_low": 4.0,
+          "reference_high": 11.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "WBC: 7.2 x10^3/uL Reference:",
+          "source_bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9721755981445312,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:20:33.262412+00:00",
+          "updated_at": "2026-11-13T13:20:33.262412+00:00"
+        },
+        {
+          "id": "740696b3-819e-47b3-b7fc-88e4ec57ab3e",
+          "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+          "test_name_original": "Platelet Count",
+          "test_name_normalized": "Platelet Count",
+          "test_code": "PLT",
+          "result_original": "265",
+          "result_numeric": 265.0,
+          "result_qualifier": null,
+          "unit_original": "x10^3/uL",
+          "unit_normalized": null,
+          "reference_range_original": "150 - 450",
+          "reference_low": 150.0,
+          "reference_high": 450.0,
+          "reference_unit": "x10^3/uL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Platelet Count: 265 x10^3/uL Reference:",
+          "source_bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9907602667808533,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:20:33.290403+00:00",
+          "updated_at": "2026-11-13T13:20:33.290403+00:00"
+        },
+        {
+          "id": "5631449b-9e38-4b5b-8c26-1e96a4aee515",
+          "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+          "test_name_original": "Glucose",
+          "test_name_normalized": "Glucose",
+          "test_code": "GLU",
+          "result_original": "98",
+          "result_numeric": 98.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "70 - 99",
+          "reference_low": 70.0,
+          "reference_high": 99.0,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Glucose: 98 mg/dL Reference:",
+          "source_bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9941233396530151,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:20:33.316319+00:00",
+          "updated_at": "2026-11-13T13:20:33.316319+00:00"
+        },
+        {
+          "id": "5e912a1d-9cd1-4cf9-8dac-295607c99f6b",
+          "report_id": "e935ff27-5e9f-4bf2-97b2-975c3da2b5f6",
+          "test_name_original": "Creatinine",
+          "test_name_normalized": "Creatinine",
+          "test_code": "CREAT",
+          "result_original": "1.0",
+          "result_numeric": 1.0,
+          "result_qualifier": null,
+          "unit_original": "mg/dL",
+          "unit_normalized": null,
+          "reference_range_original": "0.7 - 1.3",
+          "reference_low": 0.7,
+          "reference_high": 1.3,
+          "reference_unit": "mg/dL",
+          "reference_context": null,
+          "lab_flag": null,
+          "derived_flag": "within_range",
+          "sample_date": null,
+          "specimen_type": null,
+          "page_number": 1,
+          "source_text": "Creatinine: 1.0 mg/dL Reference:",
+          "source_bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1293.0
+          ],
+          "extraction_method": "ocr",
+          "ocr_confidence": 0.9912631511688232,
+          "verification_status": "extracted",
+          "created_at": "2026-11-13T13:20:33.343565+00:00",
+          "updated_at": "2026-11-13T13:20:33.343565+00:00"
+        }
+      ],
+      "accuracy": {
+        "ground_truth_count": 5,
+        "extracted_count": 5,
+        "correctly_identified_tests": 5,
+        "biomarker_recall": 1.0,
+        "biomarker_precision": 1.0,
+        "unit_match_count": 5,
+        "range_match_count": 5,
+        "flag_match_count": 5,
+        "field_accuracy": {
+          "name": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "numeric_value": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "unit": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_low": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "reference_high": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "flag": {
+            "scored": 5,
+            "correct": 5,
+            "incorrect": 0,
+            "not_scored": 0
+          },
+          "qualifier": {
+            "scored": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "not_scored": 5
+          }
+        },
+        "field_totals": {
+          "scored": 30,
+          "correct": 30,
+          "incorrect": 0,
+          "not_scored": 5
+        },
+        "mismatches": [],
+        "extracted_measurements": [
+          {
+            "test": "Hemoglobin",
+            "value": "13.8",
+            "numeric": 13.8,
+            "qualifier": null,
+            "unit": "g/dL",
+            "range": "12.0 - 16.0",
+            "range_low": 12.0,
+            "range_high": 16.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "White Blood Cell Count",
+            "value": "7.2",
+            "numeric": 7.2,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "4.0 - 11.0",
+            "range_low": 4.0,
+            "range_high": 11.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "value": "265",
+            "numeric": 265.0,
+            "qualifier": null,
+            "unit": "x10^3/uL",
+            "range": "150 - 450",
+            "range_low": 150.0,
+            "range_high": 450.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Glucose",
+            "value": "98",
+            "numeric": 98.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "70 - 99",
+            "range_low": 70.0,
+            "range_high": 99.0,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          },
+          {
+            "test": "Creatinine",
+            "value": "1.0",
+            "numeric": 1.0,
+            "qualifier": null,
+            "unit": "mg/dL",
+            "range": "0.7 - 1.3",
+            "range_low": 0.7,
+            "range_high": 1.3,
+            "flag": "within_range",
+            "lab_flag": null,
+            "page": 1
+          }
+        ]
+      },
+      "page_attribution": {
+        "scored": 5,
+        "correct": 5,
+        "incorrect": 0,
+        "not_scored": 0,
+        "details": [
+          {
+            "test": "Hemoglobin",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "WBC",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Platelet Count",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Glucose",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          },
+          {
+            "test": "Creatinine",
+            "status": "correct",
+            "expected_page": 1,
+            "extracted_page": 1
+          }
+        ]
+      },
+      "source_bboxes": [
+        {
+          "test": "Hemoglobin",
+          "page": 1,
+          "bbox": [
+            288.0,
+            631.0,
+            1162.0,
+            695.0
+          ],
+          "source_text": "Hemoglobin: 13.8 g/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "White Blood Cell Count",
+          "page": 1,
+          "bbox": [
+            284.0,
+            779.0,
+            1077.0,
+            839.0
+          ],
+          "source_text": "WBC: 7.2 x10^3/uL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "Platelet Count",
+          "page": 1,
+          "bbox": [
+            280.0,
+            928.0,
+            1248.0,
+            993.0
+          ],
+          "source_text": "Platelet Count: 265 x10^3/uL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 0.4974
+        },
+        {
+          "test": "Glucose",
+          "page": 1,
+          "bbox": [
+            276.0,
+            1078.0,
+            1021.0,
+            1139.0
+          ],
+          "source_text": "Glucose: 98 mg/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        },
+        {
+          "test": "Creatinine",
+          "page": 1,
+          "bbox": [
+            270.0,
+            1228.0,
+            1089.0,
+            1293.0
+          ],
+          "source_text": "Creatinine: 1.0 mg/dL Reference:",
+          "valid_box": true,
+          "within_page": true,
+          "ocr_line_count": 15,
+          "overlaps_ocr_line": true,
+          "max_overlap_ratio": 1.0
+        }
+      ]
+    }
+  ],
+  "abort_reason": null,
+  "memory": {
+    "peak_process_rss_bytes": 737898496,
+    "peak_process_rss_mb": 703.7,
+    "min_system_available_bytes": 613408768,
+    "min_system_available_mb": 585.0,
+    "samples": 181,
+    "sampler_error": null
+  },
+  "finished_at": "2026-11-13T13:20:33.459562+00:00",
+  "real_data_after": {
+    "data_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data",
+    "db_path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\lablens.db",
+    "db_exists": true,
+    "upload_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\uploads",
+    "upload_file_count": 20,
+    "upload_total_bytes": 320157,
+    "db_sha256": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "db_size_bytes": 176128
+  },
+  "real_data_unchanged": true
+}

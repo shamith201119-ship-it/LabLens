@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-11-13T15:41:11.468Z",
+  "frontend_url": "http://127.0.0.1:5174",
+  "api_url": "http://127.0.0.1:8001",
+  "checks": [
+    {
+      "name": "all biomarker names render in full at 1440px",
+      "status": "passed",
+      "detail": "none clipped"
+    },
+    {
+      "name": "longest biomarker name visible verbatim",
+      "status": "passed",
+      "detail": "Glucose | HbA1c | Creatinine | Total Cholesterol | Triglycerides"
+    },
+    {
+      "name": "abnormal flags use backend vocabulary",
+      "status": "passed",
+      "detail": "Above laboratory range | Above laboratory range | Above laboratory range | Above laboratory range"
+    },
+    {
+      "name": "no Edited marker on uncorrected rows",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected filter appears with 0 count",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction patch accepted",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected row carries Edited marker",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected filter increments to 1 after edit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected filter isolates exactly the edited row",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "re-verified corrected row is confirmed again",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Edited marker survives re-verification",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "corrected measurement stays in Corrected filter after re-verification",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "uncorrected measurements never appear in Corrected filter",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "header reports Edited count",
+      "status": "passed",
+      "detail": "1"
+    },
+    {
+      "name": "biomarker names readable at 1280px",
+      "status": "passed",
+      "detail": "none clipped"
+    },
+    {
+      "name": "biomarker names readable at 1440px",
+      "status": "passed",
+      "detail": "none clipped"
+    },
+    {
+      "name": "biomarker names readable at 1920px",
+      "status": "passed",
+      "detail": "none clipped"
+    },
+    {
+      "name": "selection flow still verifies only chosen rows",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no select-all control present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no Verify all control present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no uncaught console errors",
+      "status": "passed",
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_2_1\\01-corrected-filter.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_2_1\\02-names-1280.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_2_1\\02-names-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_11_2_1\\02-names-1920.png"
+  ],
+  "console_errors": [],
+  "passed": 21,
+  "failed": 0
+}

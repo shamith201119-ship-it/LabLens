@@ -1,0 +1,143 @@
+{
+  "phase": "9.10.1",
+  "session_id": "20261113T184357",
+  "started_at": "2026-11-13T13:13:57.937147+00:00",
+  "artifacts_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\phase-8.1",
+  "session_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\phase-8.1\\ocr_lab_runs\\20261113T184357",
+  "temp_root": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101",
+  "real_data_before": {
+    "data_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data",
+    "db_path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\lablens.db",
+    "db_exists": true,
+    "upload_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\uploads",
+    "upload_file_count": 20,
+    "upload_total_bytes": 320157,
+    "db_sha256": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "db_size_bytes": 176128
+  },
+  "hardware": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "cpu_physical_cores": 2,
+    "cpu_logical_cores": 4,
+    "ram_total_bytes": 8375230464,
+    "ram_available_bytes": 1415548928,
+    "ram_total_gb": 7.8,
+    "cpu_frequency": {
+      "current": 1190.0,
+      "min": 0.0,
+      "max": 1190.0
+    },
+    "wmi_cpu_raw": {
+      "returncode": 0,
+      "stdout": "{\"Name\":\"Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz\",\"NumberOfCores\":2,\"NumberOfLogicalProcessors\":4,\"MaxClockSpeed\":1190,\"L3CacheSize\":4096}",
+      "stderr": ""
+    },
+    "wmi_gpu_raw": {
+      "returncode": 0,
+      "stdout": "{\"Name\":\"Intel(R) UHD Graphics\",\"DriverVersion\":\"27.20.100.9664\",\"AdapterRAM\":1073741824,\"VideoProcessor\":\"Intel(R) UHD Graphics Family\"}",
+      "stderr": ""
+    },
+    "nvidia_smi": {
+      "available": false,
+      "returncode": null,
+      "error": "FileNotFoundError: [WinError 2] The system cannot find the file specified"
+    }
+  },
+  "packages": {
+    "paddlepaddle": "3.3.1",
+    "paddleocr": "3.7.0",
+    "paddlex": "3.7.2",
+    "pymupdf": "2.1",
+    "opencv-python": "4.12.0.88",
+    "opencv-contrib-python": "4.10.0.84",
+    "numpy": "2.2.6",
+    "psutil": "7.2.2",
+    "pillow": "13.0.0"
+  },
+  "gpu": {
+    "paddle_version": "3.3.1",
+    "is_compiled_with_cuda": false,
+    "default_device": "cpu",
+    "available_devices": [],
+    "cuda_version": "False",
+    "cudnn_version": "False",
+    "set_device_gpu": "FAILED",
+    "error_type": "ValueError",
+    "error_message": "The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA",
+    "device_restored": "cpu",
+    "command": {
+      "returncode": 0,
+      "stdout": "{\"paddle_version\": \"3.3.1\", \"is_compiled_with_cuda\": false, \"default_device\": \"cpu\", \"available_devices\": [], \"cuda_version\": \"False\", \"cudnn_version\": \"False\", \"set_device_gpu\": \"FAILED\", \"error_type\": \"ValueError\", \"error_message\": \"The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA\", \"device_restored\": \"cpu\"}",
+      "stderr": "INFO: Could not find files for the given pattern(s).\nC:\\Users\\sureshr\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\paddle\\utils\\cpp_extension\\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md\n  warnings.warn(warning_message)"
+    },
+    "gpu_inference_available": false
+  },
+  "model_cache": {
+    "cache_dir": "C:\\Users\\sureshr\\.paddlex\\official_models",
+    "models": [
+      {
+        "name": "PP-LCNet_x1_0_doc_ori",
+        "size_bytes": 6872070
+      },
+      {
+        "name": "PP-LCNet_x1_0_textline_ori",
+        "size_bytes": 6858378
+      },
+      {
+        "name": "PP-OCRv6_medium_det",
+        "size_bytes": 62299839
+      },
+      {
+        "name": "PP-OCRv6_medium_rec",
+        "size_bytes": 76864039
+      },
+      {
+        "name": "UVDoc",
+        "size_bytes": 32254868
+      }
+    ],
+    "total_bytes": 185149194,
+    "small_or_tiny_cached": [],
+    "recommendation": "No PP-OCRv6 small/tiny text detection or recognition model is cached locally; a smaller-model experiment would require a model download and is out of scope."
+  },
+  "derived_fixture": {
+    "source_jpg": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\tests\\fixtures\\phase9_5\\photographed_report.jpg",
+    "source_sha256": "85d1156c4c191ac9d48425ecba26862523c2ab0ac7258097583d74baf4f2b135",
+    "source_pixels": [
+      2034,
+      2527
+    ],
+    "source_format": "JPEG",
+    "derived_pdf": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.pdf",
+    "derived_sha256": "7711d5e49c0d4fb93ea453c8da2020964ae56eb7138639925e72bff337ec78ab",
+    "derived_size_bytes": 284853,
+    "page_count": 1,
+    "page_size_points": [
+      732.24,
+      909.72
+    ],
+    "render_dpi": 200,
+    "rendered_pixels": [
+      2034,
+      2527
+    ],
+    "pixel_dimensions_preserved": true,
+    "embedded_text_length": 0,
+    "image_only": true,
+    "metadata_path": "C:\\Users\\sureshr\\AppData\\Local\\Temp\\opencode\\lablens-phase9101\\fixtures\\photo_scanned_report_200dpi.json"
+  },
+  "finished_at": "2026-11-13T13:20:34.503740+00:00",
+  "real_data_after": {
+    "data_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data",
+    "db_path": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\lablens.db",
+    "db_exists": true,
+    "upload_dir": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\backend\\data\\uploads",
+    "upload_file_count": 20,
+    "upload_total_bytes": 320157,
+    "db_sha256": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "db_size_bytes": 176128
+  },
+  "real_data_unchanged": true
+}

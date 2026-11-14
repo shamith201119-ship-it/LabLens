@@ -1,0 +1,1177 @@
+{
+  "catalogue_version": "2.0",
+  "entries": {
+    "Hemoglobin": {
+      "display_name": "Hemoglobin",
+      "what_it_measures": "Hemoglobin is the protein inside red blood cells that carries oxygen from your lungs to every part of your body, and carries carbon dioxide back to your lungs to be breathed out.",
+      "why_doctors_look_at_it": "Hemoglobin levels help assess how effectively your blood can transport oxygen. Levels outside the reference range may prompt further investigation into iron status, nutrition, kidney function, or other factors.",
+      "possible_influences": [
+        "Iron or vitamin B12 deficiency",
+        "Recent blood loss",
+        "Dehydration (can make levels appear higher)",
+        "Pregnancy (can lower levels due to increased blood volume)",
+        "Living at high altitude (can raise levels)",
+        "Smoking history",
+        "Chronic illness affecting red blood cell production"
+      ],
+      "cannot_establish": "A single hemoglobin value alone cannot diagnose a specific condition. The result must be interpreted alongside other blood count results, your symptoms, and clinical history.",
+      "context_factors": ["Age and sex", "Altitude of residence", "Pregnancy status", "Recent illness or surgery", "Current medications"],
+      "questions": [
+        "Could recent blood loss, diet, or a chronic condition be affecting this result?",
+        "Should other tests such as ferritin or B12 be checked alongside this?",
+        "Is a repeat test needed to confirm whether this is a consistent finding?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        },
+        {
+          "id": "nhlbi_anemia",
+          "title": "Anemia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/anemia"
+        }
+      ]
+    },
+    "Red Blood Cell Count": {
+      "display_name": "Red Blood Cell Count (RBC)",
+      "what_it_measures": "The red blood cell count measures the total number of red blood cells in a volume of your blood. Red blood cells are responsible for carrying oxygen throughout your body.",
+      "why_doctors_look_at_it": "Doctors review RBC count alongside hemoglobin and hematocrit to build a full picture of your blood's oxygen-carrying capacity. It can help identify patterns related to anemia, dehydration, or other conditions.",
+      "possible_influences": [
+        "Iron, vitamin B12, or folate status",
+        "Dehydration (can artificially raise count)",
+        "Bone marrow function",
+        "Chronic kidney disease (which affects a hormone that stimulates red cell production)",
+        "Altitude of residence"
+      ],
+      "cannot_establish": "An RBC count outside the reference range does not by itself establish a diagnosis. Additional tests and clinical context are always required.",
+      "context_factors": ["Age and sex", "Altitude", "Hydration level", "Chronic conditions"],
+      "questions": [
+        "Is this result consistent with my hemoglobin and hematocrit values?",
+        "Should iron, B12, or folate levels be checked?",
+        "Could any medication be affecting my red blood cell production?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Hematocrit": {
+      "display_name": "Hematocrit (HCT)",
+      "what_it_measures": "Hematocrit is the percentage of your blood volume that is made up of red blood cells. It reflects how much of your blood is dedicated to carrying oxygen.",
+      "why_doctors_look_at_it": "Hematocrit is reviewed together with hemoglobin and RBC count as part of a complete blood count. It helps assess the proportion of red cells and can indicate whether you have too few or too many.",
+      "possible_influences": [
+        "Dehydration (can raise the percentage)",
+        "Iron or nutritional deficiencies",
+        "Recent blood loss",
+        "Altitude of residence",
+        "Bone marrow or kidney disease"
+      ],
+      "cannot_establish": "Hematocrit alone cannot explain why the percentage is outside range. It is interpreted as part of the full blood count alongside clinical context.",
+      "context_factors": ["Age and sex", "Hydration status", "Altitude", "Recent blood donations or procedures"],
+      "questions": [
+        "How does this compare to my hemoglobin result?",
+        "Could dehydration or altitude be influencing this reading?",
+        "Should I have additional tests to investigate the cause?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Mean Corpuscular Volume": {
+      "display_name": "Mean Corpuscular Volume (MCV)",
+      "what_it_measures": "MCV measures the average size of your red blood cells. It tells doctors whether your red blood cells are smaller than usual (microcytic), normal-sized (normocytic), or larger than usual (macrocytic).",
+      "why_doctors_look_at_it": "Red blood cell size can point toward the type of anemia or nutritional deficiency present. Small cells often suggest iron deficiency; large cells may suggest vitamin B12 or folate deficiency, or certain medications.",
+      "possible_influences": [
+        "Iron status (low iron tends to produce smaller cells)",
+        "Vitamin B12 or folate levels (deficiencies produce larger cells)",
+        "Certain medications such as methotrexate or hydroxyurea",
+        "Liver disease",
+        "Hypothyroidism",
+        "Alcohol intake"
+      ],
+      "cannot_establish": "MCV alone cannot identify the cause of a size abnormality. It must be interpreted alongside other CBC results, B12, folate, iron studies, and clinical context.",
+      "context_factors": ["Current medications", "Dietary habits", "Alcohol consumption", "Known chronic illness"],
+      "questions": [
+        "Should B12 and folate be tested to explain an elevated MCV?",
+        "Could any current medications be affecting red blood cell size?",
+        "What additional tests would help clarify this finding?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Mean Corpuscular Hemoglobin": {
+      "display_name": "Mean Corpuscular Hemoglobin (MCH)",
+      "what_it_measures": "MCH measures the average amount of hemoglobin contained in each red blood cell. It reflects how much oxygen-carrying protein each cell holds.",
+      "why_doctors_look_at_it": "MCH is part of the red blood cell indices in a CBC. Low MCH often accompanies iron deficiency; high MCH may suggest macrocytic anemia. It is interpreted alongside MCV and MCHC.",
+      "possible_influences": [
+        "Iron deficiency (can lower MCH)",
+        "Vitamin B12 or folate deficiency (can raise MCH)",
+        "Chronic illness"
+      ],
+      "cannot_establish": "MCH alone does not diagnose a specific condition. Its significance depends on other CBC results and clinical history.",
+      "context_factors": ["Iron status", "B12 and folate levels", "Chronic conditions"],
+      "questions": [
+        "How does this result relate to my MCV and hemoglobin?",
+        "Could an iron or B12 deficiency explain this finding?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Mean Corpuscular Hemoglobin Concentration": {
+      "display_name": "Mean Corpuscular Hemoglobin Concentration (MCHC)",
+      "what_it_measures": "MCHC measures the average concentration of hemoglobin within a given volume of red blood cells. It tells doctors how densely packed with hemoglobin the cells are.",
+      "why_doctors_look_at_it": "Low MCHC alongside low MCV can support the possibility of iron-deficiency anemia. High MCHC may occur with hereditary spherocytosis. It is one of the red blood cell indices reviewed together as part of a CBC.",
+      "possible_influences": [
+        "Iron status",
+        "Inherited red blood cell disorders",
+        "Severe dehydration"
+      ],
+      "cannot_establish": "MCHC by itself cannot determine the reason for a concentration difference. Additional tests and clinical context are needed.",
+      "context_factors": ["Known blood disorders", "Iron and nutritional status"],
+      "questions": [
+        "Could an iron deficiency be responsible for this MCHC result?",
+        "Should any additional red blood cell tests be considered?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Red Cell Distribution Width": {
+      "display_name": "Red Cell Distribution Width (RDW)",
+      "what_it_measures": "RDW measures how much the size of your red blood cells varies. A higher RDW means there is more variation in cell size (anisocytosis). Normal RDW means the cells are mostly similar in size.",
+      "why_doctors_look_at_it": "RDW helps distinguish between different types of anemia when reviewed alongside MCV. For example, iron deficiency tends to produce high RDW with low MCV, while thalassemia may show low MCV with normal RDW.",
+      "possible_influences": [
+        "Iron, B12, or folate deficiency",
+        "Mixed deficiencies (iron and B12 together)",
+        "Blood transfusion history"
+      ],
+      "cannot_establish": "An elevated RDW alone cannot identify the specific cause of size variation. The result is interpreted alongside the full CBC.",
+      "context_factors": ["Recent transfusion", "Known nutritional deficiencies"],
+      "questions": [
+        "Could a mixed nutritional deficiency explain the elevated RDW?",
+        "How does this relate to my MCV and hemoglobin?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "White Blood Cell Count": {
+      "display_name": "White Blood Cell Count (WBC)",
+      "what_it_measures": "The white blood cell count measures the total number of white blood cells in your blood. White blood cells are a key part of the immune system and help the body fight infection and disease.",
+      "why_doctors_look_at_it": "An elevated or reduced WBC count can reflect a wide range of situations, from infection and inflammation to medication effects. It is usually reviewed alongside a white cell differential (which breaks down the types of white cells present).",
+      "possible_influences": [
+        "Recent or current infection",
+        "Physical or emotional stress",
+        "Certain medications including steroids and chemotherapy",
+        "Inflammatory conditions",
+        "Strenuous exercise shortly before the test",
+        "Smoking"
+      ],
+      "cannot_establish": "Total WBC count cannot determine the specific cause of an abnormality. A differential count and clinical assessment are required.",
+      "context_factors": ["Recent illness", "Current medications", "Recent exercise or stress", "Smoking history"],
+      "questions": [
+        "Could a recent infection or medication be affecting my white blood cell count?",
+        "Should a white cell differential be reviewed?",
+        "Is a repeat test needed?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "Platelet Count": {
+      "display_name": "Platelet Count (PLT)",
+      "what_it_measures": "Platelets are tiny cell fragments in your blood that help form clots and stop bleeding. The platelet count measures how many platelets are present in a volume of your blood.",
+      "why_doctors_look_at_it": "Very low platelet counts can be associated with an increased risk of bleeding; very high counts may warrant further investigation. Many conditions and medications can influence platelet counts.",
+      "possible_influences": [
+        "Recent illness or infection",
+        "Certain medications including aspirin and chemotherapy",
+        "Iron deficiency (can raise platelets)",
+        "Inflammation",
+        "Viral infections such as dengue or influenza",
+        "Autoimmune conditions"
+      ],
+      "cannot_establish": "A platelet count outside the reference range cannot by itself establish a bleeding disorder or other diagnosis. Clinical context and additional tests are essential.",
+      "context_factors": ["Current medications", "Recent illness", "History of bruising or unusual bleeding", "Known autoimmune conditions"],
+      "questions": [
+        "Could any current medications be affecting my platelet count?",
+        "Should I watch for any particular symptoms given this platelet result?",
+        "Is a repeat count recommended?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        },
+        {
+          "id": "nhlbi_plt",
+          "title": "Thrombocytopenia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/thrombocytopenia"
+        }
+      ]
+    },
+    "Glucose": {
+      "display_name": "Blood Glucose",
+      "what_it_measures": "Glucose is the main sugar (a type of carbohydrate) found in your blood. It is your body's primary source of energy. Blood glucose levels rise after eating and fall after fasting.",
+      "why_doctors_look_at_it": "Blood glucose is used to screen for diabetes, prediabetes, and hypoglycemia (low blood sugar). The interpretation depends significantly on whether the test was taken fasting or after eating.",
+      "possible_influences": [
+        "Time since your last meal",
+        "Physical activity level",
+        "Stress (physical or emotional)",
+        "Certain medications including steroids and thiazide diuretics",
+        "Recent illness",
+        "Insulin or diabetes medications (can lower glucose)"
+      ],
+      "cannot_establish": "A single glucose reading cannot diagnose diabetes. A diagnosis typically requires repeated testing on separate occasions and clinical context.",
+      "context_factors": ["Fasting duration before the test", "Recent meals and their composition", "Physical activity", "Current medications"],
+      "questions": [
+        "Was this test taken after an appropriate fasting period?",
+        "Should an HbA1c or repeat fasting glucose be considered?",
+        "Could any recent illness or medication affect this result?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_glucose",
+          "title": "Blood Glucose Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/"
+        },
+        {
+          "id": "cdc_diabetes",
+          "title": "Diabetes Tests",
+          "publisher": "Centers for Disease Control and Prevention (CDC)",
+          "url": "https://www.cdc.gov/diabetes/basics/getting-tested.html"
+        }
+      ]
+    },
+    "HbA1c": {
+      "display_name": "HbA1c (Glycated Haemoglobin)",
+      "what_it_measures": "HbA1c measures the percentage of hemoglobin in your blood that has had glucose attached to it. Because red blood cells live for about 2–3 months, HbA1c reflects your average blood glucose level over that period — not just on the day of the test.",
+      "why_doctors_look_at_it": "HbA1c is used to screen for diabetes and prediabetes, and to monitor how well blood sugar is being managed in people already diagnosed with diabetes. It is not affected by short-term food or activity.",
+      "possible_influences": [
+        "Underlying conditions that affect red blood cell lifespan (such as hemolytic anemia or sickle cell trait) can make HbA1c unreliable",
+        "Iron deficiency anemia can falsely raise HbA1c",
+        "Blood transfusions can lower HbA1c",
+        "Certain hemoglobin variants may interfere with some assays"
+      ],
+      "cannot_establish": "An elevated HbA1c alone does not prove a diabetes diagnosis; it must be interpreted alongside clinical assessment and, usually, a second confirmatory test. It may be unreliable in certain blood conditions.",
+      "context_factors": ["Known hemoglobin variants", "Recent blood transfusion", "Conditions affecting red blood cell turnover", "Previous HbA1c results"],
+      "questions": [
+        "Could any condition affecting my red blood cells make this HbA1c result less reliable?",
+        "Should this result be confirmed with a second test?",
+        "How does this compare to my previous HbA1c results?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_hba1c",
+          "title": "Hemoglobin A1c (HbA1c) Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/"
+        },
+        {
+          "id": "niddk_hba1c",
+          "title": "The A1C Test & Diabetes",
+          "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis/a1c-test"
+        }
+      ]
+    },
+    "Total Cholesterol": {
+      "display_name": "Total Cholesterol",
+      "what_it_measures": "Total cholesterol is the overall measurement of all cholesterol types in your blood, including LDL (often called 'bad' cholesterol), HDL (often called 'good' cholesterol), and other lipid particles.",
+      "why_doctors_look_at_it": "Total cholesterol is used as one measure of cardiovascular risk, but it must be reviewed alongside its individual components — especially LDL and HDL — to be meaningful. A high total cholesterol number driven by high HDL has a different implication than one driven by high LDL.",
+      "possible_influences": [
+        "Dietary fat and cholesterol intake",
+        "Physical activity levels",
+        "Genetics and family history",
+        "Fasting status at time of test",
+        "Certain medications including statins, thiazides, beta-blockers, and oral contraceptives",
+        "Thyroid function",
+        "Pregnancy",
+        "Liver and kidney conditions"
+      ],
+      "cannot_establish": "Total cholesterol alone cannot determine cardiovascular risk. The LDL-to-HDL ratio, triglycerides, and other risk factors must be considered together.",
+      "context_factors": ["Fasting status before the test", "Family history of cardiovascular disease", "Current medications", "Diet and lifestyle"],
+      "questions": [
+        "What do my individual LDL and HDL results show?",
+        "Could diet, activity, or a medication be influencing this result?",
+        "Should I discuss cardiovascular risk more broadly with a clinician?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_chol",
+          "title": "Cholesterol Levels",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/"
+        },
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "LDL Cholesterol": {
+      "display_name": "LDL Cholesterol",
+      "what_it_measures": "LDL (low-density lipoprotein) cholesterol is sometimes called 'bad' cholesterol because high levels can contribute to the build-up of fatty deposits inside blood vessel walls over time.",
+      "why_doctors_look_at_it": "LDL is a key component of cardiovascular risk assessment. Appropriate LDL targets depend on an individual's overall cardiovascular risk profile — a clinician considers many factors when deciding whether intervention is warranted.",
+      "possible_influences": [
+        "Diet high in saturated and trans fats",
+        "Physical inactivity",
+        "Genetics (familial hypercholesterolaemia can cause very high LDL)",
+        "Hypothyroidism",
+        "Kidney disease",
+        "Certain medications",
+        "Fasting status (the test is usually done fasting)"
+      ],
+      "cannot_establish": "An elevated LDL result alone cannot determine whether intervention is needed. That decision requires a full cardiovascular risk assessment including age, blood pressure, smoking history, diabetes status, and family history.",
+      "context_factors": ["Fasting status", "Family history of heart disease", "Smoking history", "Blood pressure", "Diabetes status"],
+      "questions": [
+        "What is my overall cardiovascular risk picture when this LDL result is considered with other factors?",
+        "Could diet or a medication be contributing to this result?",
+        "Should a full lipid panel be reviewed alongside this?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_chol",
+          "title": "Cholesterol Levels",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/"
+        },
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "HDL Cholesterol": {
+      "display_name": "HDL Cholesterol",
+      "what_it_measures": "HDL (high-density lipoprotein) cholesterol is often called 'good' cholesterol because it helps carry cholesterol away from blood vessels back to the liver, where it can be removed from the body.",
+      "why_doctors_look_at_it": "Higher HDL levels are generally associated with a more favourable cardiovascular profile. Low HDL is one component of an overall cardiovascular risk assessment. HDL is reviewed alongside LDL, triglycerides, and total cholesterol.",
+      "possible_influences": [
+        "Regular physical activity tends to raise HDL",
+        "Smoking tends to lower HDL",
+        "Excess body weight",
+        "Diet composition",
+        "Genetics",
+        "Certain medications",
+        "Type 2 diabetes or insulin resistance"
+      ],
+      "cannot_establish": "HDL alone does not predict cardiovascular outcome. It is one piece of a broader risk picture that includes LDL, triglycerides, blood pressure, and lifestyle factors.",
+      "context_factors": ["Physical activity level", "Smoking status", "Metabolic health", "Genetics"],
+      "questions": [
+        "Could lifestyle changes such as exercise or stopping smoking help improve my HDL?",
+        "How does my HDL relate to my LDL and overall lipid profile?",
+        "Should any further cardiovascular risk factors be assessed?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_chol",
+          "title": "Cholesterol Levels",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/"
+        }
+      ]
+    },
+    "Triglycerides": {
+      "display_name": "Triglycerides",
+      "what_it_measures": "Triglycerides are a type of fat (lipid) in your blood. After you eat, your body converts calories it doesn't immediately need for energy into triglycerides and stores them in fat cells.",
+      "why_doctors_look_at_it": "Triglycerides are part of a full lipid profile. High levels are associated with metabolic risk factors and may be relevant to cardiovascular health when reviewed alongside cholesterol results.",
+      "possible_influences": [
+        "Eating — triglycerides rise significantly after a meal, which is why the test is usually done fasting",
+        "Alcohol intake",
+        "Excess calories or carbohydrate-heavy diet",
+        "Physical inactivity",
+        "Diabetes or insulin resistance",
+        "Certain medications including steroids, beta-blockers, and some diuretics",
+        "Thyroid conditions",
+        "Genetic predisposition"
+      ],
+      "cannot_establish": "An isolated elevated triglyceride result cannot determine the cause or confirm a metabolic condition. Fasting status is critical for interpretation.",
+      "context_factors": ["Fasting status (number of hours without food before the test)", "Recent alcohol consumption", "Diet composition", "Physical activity", "Current medications"],
+      "questions": [
+        "Was this test taken fasting? If not, when was it last eaten?",
+        "Could diet or alcohol intake be contributing to this result?",
+        "Should any additional metabolic markers be checked?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_chol",
+          "title": "Cholesterol Levels",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/"
+        },
+        {
+          "id": "nhlbi_trig",
+          "title": "Blood Triglycerides",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-triglycerides"
+        }
+      ]
+    },
+    "Alanine Aminotransferase": {
+      "display_name": "Alanine Aminotransferase (ALT)",
+      "what_it_measures": "ALT is an enzyme found mainly in the liver. When liver cells are damaged or irritated, ALT is released into the bloodstream, raising the measured level.",
+      "why_doctors_look_at_it": "ALT is a commonly used marker of liver health. Elevated levels prompt investigation into the possible cause — which can range from recent strenuous exercise to medication effects, alcohol, or liver conditions.",
+      "possible_influences": [
+        "Strenuous exercise shortly before the test",
+        "Certain medications and supplements (many common drugs affect ALT)",
+        "Alcohol consumption",
+        "Obesity",
+        "Recent muscle injury"
+      ],
+      "cannot_establish": "An elevated ALT alone cannot identify the cause of liver enzyme elevation. The degree of elevation, pattern alongside AST and other liver tests, and clinical history are all needed.",
+      "context_factors": ["Recent exercise intensity", "Complete list of medications and supplements", "Alcohol intake", "Known liver or gallbladder conditions"],
+      "questions": [
+        "Could recent exercise, medication, or supplements be responsible for this ALT result?",
+        "Should AST, ALP, and bilirubin also be reviewed?",
+        "Are any lifestyle or medication changes relevant to discuss?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "Aspartate Aminotransferase": {
+      "display_name": "Aspartate Aminotransferase (AST)",
+      "what_it_measures": "AST is an enzyme found in the liver, heart, and muscles. When these tissues are damaged, AST is released into the bloodstream. It is less specific to the liver than ALT.",
+      "why_doctors_look_at_it": "AST is reviewed alongside ALT to understand liver enzyme patterns. The ratio of AST to ALT can sometimes provide additional context, though interpretation always requires clinical judgment.",
+      "possible_influences": [
+        "Strenuous exercise (muscle damage releases AST)",
+        "Certain medications and supplements",
+        "Alcohol consumption",
+        "Liver conditions",
+        "Heart muscle damage"
+      ],
+      "cannot_establish": "AST is not liver-specific and an elevated result alone cannot determine the organ of origin. It must be reviewed alongside ALT and other liver tests.",
+      "context_factors": ["Recent intense exercise or muscle injury", "Medication and supplement list", "Alcohol intake"],
+      "questions": [
+        "How does my AST compare to my ALT?",
+        "Could a muscle-related cause explain an elevated AST?",
+        "What other liver tests would help clarify this finding?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "Alkaline Phosphatase": {
+      "display_name": "Alkaline Phosphatase (ALP)",
+      "what_it_measures": "ALP is an enzyme found in the liver, bones, and other tissues. It plays a role in several biological processes and is released into the blood when these tissues are active or damaged.",
+      "why_doctors_look_at_it": "Elevated ALP can point toward liver or bile duct issues, or increased bone activity. It is interpreted alongside other liver tests and sometimes bone-specific markers to identify the source.",
+      "possible_influences": [
+        "Normal bone growth (children and adolescents naturally have higher ALP)",
+        "Pregnancy",
+        "Bone healing after a fracture",
+        "Liver or bile duct conditions",
+        "Certain medications",
+        "Vitamin D deficiency"
+      ],
+      "cannot_establish": "Elevated ALP cannot confirm whether the source is liver, bone, or another tissue. Additional tests (such as GGT for liver, or bone-specific ALP) are required for further evaluation.",
+      "context_factors": ["Age and growth phase", "Pregnancy status", "Recent bone injury", "Liver or gallbladder history"],
+      "questions": [
+        "Should GGT be checked to help determine whether the ALP is liver-related?",
+        "Could pregnancy, bone turnover, or vitamin D status be contributing to this result?",
+        "What other tests would help identify the source?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "Total Bilirubin": {
+      "display_name": "Total Bilirubin",
+      "what_it_measures": "Bilirubin is a yellow pigment produced when red blood cells break down. The liver processes bilirubin and excretes it into bile. Total bilirubin measures both the unprocessed (indirect) and liver-processed (direct) forms.",
+      "why_doctors_look_at_it": "Elevated bilirubin can cause jaundice (yellowing of the skin or eyes). Its cause may relate to excess red blood cell breakdown, liver processing problems, or bile duct blockage. The direct-to-indirect ratio can help distinguish these.",
+      "possible_influences": [
+        "Gilbert's syndrome (a common, benign genetic variation causing mildly elevated indirect bilirubin)",
+        "Fasting before the test can mildly raise bilirubin in Gilbert's syndrome",
+        "Liver disease",
+        "Bile duct obstruction",
+        "Haemolytic conditions (increased red blood cell destruction)"
+      ],
+      "cannot_establish": "An elevated total bilirubin alone cannot identify the cause. Direct and indirect fractions, other liver tests, and clinical assessment are required.",
+      "context_factors": ["Fasting duration before test", "Known genetic variants such as Gilbert's syndrome", "Symptoms of jaundice", "Liver or gallbladder history"],
+      "questions": [
+        "Should direct and indirect bilirubin fractions be checked to help identify the cause?",
+        "Could Gilbert's syndrome or another benign cause explain a mild elevation?",
+        "Are there any symptoms such as jaundice or dark urine?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "Albumin": {
+      "display_name": "Albumin",
+      "what_it_measures": "Albumin is the most abundant protein in the blood. It is produced by the liver and helps maintain fluid balance, transport hormones and drugs, and support many body processes.",
+      "why_doctors_look_at_it": "Low albumin can reflect reduced liver synthesis, inadequate nutrition, excessive protein loss (through the kidneys or gut), or significant inflammation. It is a broad marker reviewed in the context of liver, kidney, and nutritional assessment.",
+      "possible_influences": [
+        "Nutritional intake (protein malnutrition can lower albumin)",
+        "Liver function (the liver makes albumin)",
+        "Kidney conditions that cause protein excretion",
+        "Major surgery, burns, or significant illness (albumin drops in acute illness — it is an acute phase reactant)",
+        "Dehydration (can artificially raise albumin)",
+        "Inflammatory states (albumin falls during significant inflammation)"
+      ],
+      "cannot_establish": "Low albumin alone cannot identify the specific cause. Nutritional, liver, and kidney contexts must all be assessed alongside clinical history.",
+      "context_factors": ["Nutritional status and appetite", "Known liver or kidney conditions", "Recent illness, surgery, or infection", "Hydration status"],
+      "questions": [
+        "Could nutritional intake, kidney protein loss, or liver function be contributing to this albumin level?",
+        "Should kidney protein tests (such as urine albumin-to-creatinine ratio) also be checked?",
+        "How does this relate to my liver function tests?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        },
+        {
+          "id": "medlineplus_cmp",
+          "title": "Comprehensive Metabolic Panel (CMP)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/"
+        }
+      ]
+    },
+    "Creatinine": {
+      "display_name": "Creatinine",
+      "what_it_measures": "Creatinine is a waste product produced by normal muscle metabolism. The kidneys filter creatinine from the blood, so the level in blood reflects how well the kidneys are removing waste.",
+      "why_doctors_look_at_it": "Creatinine is a standard marker for assessing kidney function. Elevated levels may indicate that the kidneys are not filtering effectively, while very low levels may reflect reduced muscle mass. It is often used together with eGFR and BUN.",
+      "possible_influences": [
+        "Muscle mass (larger muscles produce more creatinine)",
+        "High dietary protein or creatine supplement intake can temporarily raise creatinine",
+        "Dehydration",
+        "Certain medications",
+        "Strenuous exercise before the test",
+        "Some medications can interfere with creatinine assays"
+      ],
+      "cannot_establish": "Creatinine alone cannot diagnose kidney disease. A single elevated result may have non-kidney explanations. Serial measurements, eGFR, urine tests, and clinical context are needed.",
+      "context_factors": ["Hydration level", "Muscle mass and body composition", "Protein or creatine supplement intake", "Current medications", "Known kidney history"],
+      "questions": [
+        "How does this result compare to my eGFR and BUN?",
+        "Could dehydration, muscle mass, or protein intake be influencing this creatinine level?",
+        "Is a repeat test or further kidney assessment recommended?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_creat",
+          "title": "Creatinine Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/creatinine-test/"
+        }
+      ]
+    },
+    "Blood Urea Nitrogen": {
+      "display_name": "Blood Urea Nitrogen (BUN)",
+      "what_it_measures": "Blood urea nitrogen (BUN) measures the amount of urea nitrogen in your blood. Urea is a waste product formed when the liver breaks down protein. The kidneys filter urea from the blood.",
+      "why_doctors_look_at_it": "BUN reflects both kidney function and dietary protein intake. It is reviewed alongside creatinine and eGFR. The BUN-to-creatinine ratio can help suggest whether an elevated BUN relates to diet, dehydration, or kidney function.",
+      "possible_influences": [
+        "High dietary protein intake",
+        "Dehydration (raises BUN by concentrating the blood)",
+        "Gastrointestinal bleeding (blood breakdown releases protein)",
+        "Kidney function",
+        "Certain medications including steroids and some antibiotics",
+        "Strenuous exercise"
+      ],
+      "cannot_establish": "An elevated BUN alone cannot confirm kidney disease; dietary and hydration factors are common explanations. The BUN-to-creatinine ratio and urine tests provide additional context.",
+      "context_factors": ["Protein intake in recent diet", "Hydration status", "Recent gastrointestinal symptoms", "Medication list"],
+      "questions": [
+        "Could a high-protein diet or dehydration explain this BUN result?",
+        "How does BUN compare to my creatinine result?",
+        "Should any further kidney function tests be ordered?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_creat",
+          "title": "Creatinine Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/creatinine-test/"
+        },
+        {
+          "id": "medlineplus_cmp",
+          "title": "Comprehensive Metabolic Panel (CMP)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/"
+        }
+      ]
+    },
+    "Estimated GFR": {
+      "display_name": "Estimated GFR (eGFR)",
+      "what_it_measures": "Estimated GFR (glomerular filtration rate) is a calculated estimate of how well your kidneys are filtering your blood. It is derived from your creatinine level along with factors such as age and sex.",
+      "why_doctors_look_at_it": "eGFR is a standard method used to stage chronic kidney disease (CKD) and monitor kidney function over time. A lower eGFR reflects less filtration capacity. Single values are interpreted with caution; trends over time are more meaningful.",
+      "possible_influences": [
+        "Muscle mass (affects the creatinine used in the calculation)",
+        "Dehydration",
+        "Age (eGFR naturally decreases with age)",
+        "Certain medications that affect creatinine levels",
+        "Acute illness"
+      ],
+      "cannot_establish": "A single eGFR value outside the reference range cannot confirm chronic kidney disease. CKD is defined by persistent reduction over at least three months alongside other markers. Clinical review is essential.",
+      "context_factors": ["Age and baseline eGFR values", "Hydration status", "Muscle mass", "Known kidney or vascular conditions"],
+      "questions": [
+        "Has my eGFR been measured before? How does this compare to previous results?",
+        "Should a repeat eGFR and urine albumin test be done to check for persistence?",
+        "Are there any conditions or medications that might be affecting this calculation?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_egfr",
+          "title": "Estimated Glomerular Filtration Rate (eGFR)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/estimated-glomerular-filtration-rate-egfr-and-gfr-tests/"
+        },
+        {
+          "id": "niddk_ckd",
+          "title": "Kidney Disease Tests and Diagnosis",
+          "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+          "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis"
+        }
+      ]
+    },
+    "Urea": {
+      "display_name": "Urea",
+      "what_it_measures": "Urea is a waste product of protein metabolism made by the liver. It is filtered out of the blood by the kidneys and excreted in urine. Serum urea reflects both protein intake and kidney filtration.",
+      "why_doctors_look_at_it": "Serum urea is used alongside creatinine to assess kidney function and hydration status. It is similar to BUN but expressed as the total urea molecule rather than just its nitrogen component.",
+      "possible_influences": [
+        "High protein dietary intake",
+        "Dehydration",
+        "Gastrointestinal bleeding",
+        "Kidney function",
+        "Liver disease (reduced urea production in severe disease)"
+      ],
+      "cannot_establish": "Urea alone cannot diagnose kidney disease. Creatinine, eGFR, and urine tests alongside clinical assessment are required.",
+      "context_factors": ["Dietary protein intake", "Hydration", "Liver and kidney history"],
+      "questions": [
+        "How does this compare to my creatinine and eGFR?",
+        "Could diet or dehydration explain this urea level?",
+        "Is further kidney assessment needed?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cmp",
+          "title": "Comprehensive Metabolic Panel (CMP)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/"
+        }
+      ]
+    },
+    "Sodium": {
+      "display_name": "Sodium",
+      "what_it_measures": "Sodium is an electrolyte — a mineral that carries an electrical charge — found in your blood and body fluids. It plays an important role in fluid balance, nerve function, and muscle contraction.",
+      "why_doctors_look_at_it": "Blood sodium levels outside the normal range (too high: hypernatremia; too low: hyponatremia) can affect how the body functions. Sodium is part of the electrolyte panel in a comprehensive metabolic panel.",
+      "possible_influences": [
+        "Fluid intake (drinking too much water can dilute sodium)",
+        "Dehydration (can concentrate sodium)",
+        "Kidney function",
+        "Certain medications including diuretics and antidepressants",
+        "Hormonal conditions such as SIADH or adrenal insufficiency",
+        "Diarrhoea or vomiting causing fluid and electrolyte losses"
+      ],
+      "cannot_establish": "An abnormal sodium level alone cannot determine the cause. The clinical context, fluid status, kidney function, and medication list are all necessary.",
+      "context_factors": ["Fluid intake history", "Current medications", "Recent vomiting, diarrhoea, or sweating", "Kidney and adrenal history"],
+      "questions": [
+        "Could a medication or fluid intake pattern be affecting my sodium?",
+        "Should other electrolytes be reviewed together?",
+        "Are there any symptoms such as swelling, fatigue, or confusion?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cmp",
+          "title": "Comprehensive Metabolic Panel (CMP)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/"
+        }
+      ]
+    },
+    "Potassium": {
+      "display_name": "Potassium",
+      "what_it_measures": "Potassium is an electrolyte that is essential for normal cell function, nerve transmission, and muscle contraction — including the heart muscle.",
+      "why_doctors_look_at_it": "Both high (hyperkalemia) and low (hypokalemia) potassium levels can affect heart rhythm and muscle function. Potassium is routinely checked when assessing kidney function, monitoring certain medications, or investigating symptoms.",
+      "possible_influences": [
+        "Kidney function (kidneys regulate potassium excretion)",
+        "Certain medications — especially diuretics, ACE inhibitors, and digoxin",
+        "Diet (potassium-rich foods such as bananas, beans, and leafy greens)",
+        "Vomiting or diarrhoea",
+        "Prolonged exercise",
+        "Sample handling — potassium can be artificially elevated if the blood sample is processed incorrectly (haemolysis)"
+      ],
+      "cannot_establish": "An abnormal potassium result cannot determine the cause without knowing kidney function, medications, and symptoms. Very high results should prompt checking for sample haemolysis.",
+      "context_factors": ["Current medications especially diuretics or heart medications", "Dietary potassium intake", "Kidney function", "Recent vomiting, diarrhoea"],
+      "questions": [
+        "Could any current medications be affecting my potassium level?",
+        "Should kidney function be checked alongside this result?",
+        "If my potassium is very high, could the blood sample have broken down (haemolysed)?"
+      ],
+      "sources": [
+        {
+          "id": "medlineplus_cmp",
+          "title": "Comprehensive Metabolic Panel (CMP)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/"
+        }
+      ]
+    }
+  },
+  "pattern_explanations": {
+    "CBC_ANEMIA_PATTERN": {
+      "plain_title": "Low Hemoglobin Finding",
+      "plain_description": "Your hemoglobin result is below this laboratory's reference range. Hemoglobin is the protein in red blood cells that carries oxygen. When it is below the range, your clinician may want to explore why — possibilities range from dietary factors and iron or B12 status to chronic illness or other conditions.",
+      "why_grouped": "This finding was detected because hemoglobin alone is below the printed reference interval.",
+      "what_to_discuss": "Possible causes, iron and nutritional status, and whether additional investigations are needed.",
+      "limitations": ["This is an educational observation, not a diagnosis of anemia or any other condition. Many factors influence hemoglobin.", "Additional measurements, clinical history, and examination are essential."],
+      "sources": [
+        {
+          "id": "nhlbi_anemia",
+          "title": "Anemia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/anemia"
+        }
+      ]
+    },
+    "CBC_MICROCYTIC_PATTERN": {
+      "plain_title": "Small Cell Pattern (Microcytic Picture)",
+      "plain_description": "Both your hemoglobin and red blood cell size (MCV) are below this laboratory's reference ranges. Red blood cells that are both low in number of oxygen carriers and smaller than average is a pattern that may prompt investigation into iron status, among other possibilities.",
+      "why_grouped": "Phase 4 identified that both hemoglobin and MCV are below their respective reference ranges in this report.",
+      "what_to_discuss": "Iron stores (such as ferritin), dietary intake, and whether further tests are appropriate.",
+      "limitations": ["This pattern alone does not diagnose iron deficiency or any specific condition.", "Thalassemia trait and other causes can produce a similar pattern. Clinical evaluation is essential."],
+      "sources": [
+        {
+          "id": "nhlbi_anemia",
+          "title": "Anemia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/anemia"
+        }
+      ]
+    },
+    "CBC_MACROCYTIC_PATTERN": {
+      "plain_title": "Large Cell Pattern (Macrocytic Picture)",
+      "plain_description": "Your hemoglobin is below range while your red blood cell size (MCV) is above range, meaning the cells are larger than average but there are fewer effective oxygen carriers. This combination may prompt investigation into vitamin B12, folate, thyroid function, or medication effects.",
+      "why_grouped": "Phase 4 identified that hemoglobin is below range while MCV is above range in this report.",
+      "what_to_discuss": "Vitamin B12 and folate levels, thyroid function, medication history, and whether further tests are needed.",
+      "limitations": ["This pattern alone cannot identify the cause.", "Liver disease, alcohol use, and certain medications can produce similar patterns. Clinical assessment is required."],
+      "sources": [
+        {
+          "id": "nhlbi_anemia",
+          "title": "Anemia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/anemia"
+        }
+      ]
+    },
+    "CBC_HIGH_MCV": {
+      "plain_title": "Elevated Red Cell Size (MCV above range)",
+      "plain_description": "Your red blood cell size (MCV) is above this laboratory's reference range, meaning the cells are larger than average. This can have several causes including vitamin B12 or folate status, thyroid function, alcohol use, or medication effects.",
+      "why_grouped": "Phase 4 identified that MCV is above the printed reference interval.",
+      "what_to_discuss": "Vitamin B12, folate, thyroid, and medication review.",
+      "limitations": ["Elevated MCV alone does not diagnose a specific condition.", "Clinical assessment and targeted testing are required."],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "CBC_ELEVATED_HEMOGLOBIN": {
+      "plain_title": "Hemoglobin above Reference Range",
+      "plain_description": "Your hemoglobin is above this laboratory's reference range. While hemoglobin below range tends to receive more attention, elevated hemoglobin also warrants review. Common non-concerning factors include dehydration and altitude, but persistent elevation may warrant further assessment.",
+      "why_grouped": "Phase 4 identified that hemoglobin is above the printed reference interval.",
+      "what_to_discuss": "Hydration status, altitude of residence, smoking history, and whether further evaluation is appropriate.",
+      "limitations": ["Elevated hemoglobin alone does not indicate a specific condition.", "Dehydration is a common and reversible cause. Clinical context is essential."],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "CBC_LEUKOCYTOSIS_PATTERN": {
+      "plain_title": "White Blood Cell Count above Range",
+      "plain_description": "Your total white blood cell count is above this laboratory's reference range. White blood cells are part of your immune system. An elevated count is very commonly a response to infection, inflammation, physical stress, or medication — it does not automatically indicate anything serious.",
+      "why_grouped": "Phase 4 identified that the white blood cell count is above the printed reference interval.",
+      "what_to_discuss": "Whether there is a current or recent infection, any medication that could cause this, and whether a differential count (breakdown of white cell types) has been reviewed.",
+      "limitations": ["An elevated WBC alone cannot determine the cause. Clinical context and a white cell differential count provide essential additional information."],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "CBC_LEUKOPENIA_PATTERN": {
+      "plain_title": "White Blood Cell Count below Range",
+      "plain_description": "Your total white blood cell count is below this laboratory's reference range. This can occur with certain viral infections, some medications, or other conditions affecting the bone marrow. It may also be an individual variation.",
+      "why_grouped": "Phase 4 identified that the white blood cell count is below the printed reference interval.",
+      "what_to_discuss": "Recent illness, medication list, and whether further investigation is appropriate.",
+      "limitations": ["A low WBC alone cannot determine the cause. Clinical assessment and a differential count are required."],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "CBC_THROMBOCYTOPENIA_PATTERN": {
+      "plain_title": "Platelet Count below Range",
+      "plain_description": "Your platelet count is below this laboratory's reference range. Platelets help blood clot. A low count may warrant monitoring for unusual bruising or bleeding, and further investigation into the cause.",
+      "why_grouped": "Phase 4 identified that the platelet count is below the printed reference interval.",
+      "what_to_discuss": "Medication review, recent illness, and whether a repeat count or further testing is needed.",
+      "limitations": ["The significance of a low platelet count depends heavily on the degree of reduction and clinical symptoms. This educational note cannot assess severity."],
+      "sources": [
+        {
+          "id": "nhlbi_plt",
+          "title": "Thrombocytopenia",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/thrombocytopenia"
+        }
+      ]
+    },
+    "CBC_THROMBOCYTOSIS_PATTERN": {
+      "plain_title": "Platelet Count above Range",
+      "plain_description": "Your platelet count is above this laboratory's reference range. An elevated platelet count is often reactive — meaning it is a response to another condition such as iron deficiency, infection, or inflammation — rather than a primary finding.",
+      "why_grouped": "Phase 4 identified that the platelet count is above the printed reference interval.",
+      "what_to_discuss": "Possible reactive causes such as iron status, inflammation, or recent illness, and whether further evaluation is needed.",
+      "limitations": ["Elevated platelet count is most often reactive and benign. Clinical assessment is needed to determine whether further investigation is appropriate."],
+      "sources": [
+        {
+          "id": "medlineplus_cbc",
+          "title": "Complete Blood Count (CBC)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/"
+        }
+      ]
+    },
+    "GLUCOSE_ELEVATED": {
+      "plain_title": "Blood Glucose above Reference Range",
+      "plain_description": "Your blood glucose is above this laboratory's reference range. Glucose rises after eating and falls with fasting, so interpretation depends on when this sample was taken. A single elevated result does not diagnose diabetes.",
+      "why_grouped": "Phase 4 identified that glucose is above the printed reference interval.",
+      "what_to_discuss": "Fasting status, meal timing, HbA1c if not already measured, and whether a repeat test is needed.",
+      "limitations": ["A single elevated glucose cannot diagnose diabetes or prediabetes. Fasting status and repeat testing are essential context."],
+      "sources": [
+        {
+          "id": "medlineplus_glucose",
+          "title": "Blood Glucose Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/"
+        }
+      ]
+    },
+    "GLUCOSE_HYPOGLYCEMIA_PATTERN": {
+      "plain_title": "Blood Glucose below Reference Range",
+      "plain_description": "Your blood glucose is below this laboratory's reference range. Very low blood glucose is called hypoglycemia. This can occur with prolonged fasting, diabetes medication, or other conditions. Any symptoms at the time of the test are important context.",
+      "why_grouped": "Phase 4 identified that glucose is below the printed reference interval.",
+      "what_to_discuss": "Fasting duration, any symptoms at the time of the blood draw, current medications especially diabetes medications, and whether repeat testing is needed.",
+      "limitations": ["The significance of a low glucose depends entirely on symptoms, context, and whether it represents a consistent finding."],
+      "sources": [
+        {
+          "id": "medlineplus_glucose",
+          "title": "Blood Glucose Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/"
+        }
+      ]
+    },
+    "HBA1C_ELEVATED": {
+      "plain_title": "HbA1c above Reference Range",
+      "plain_description": "Your HbA1c is above this laboratory's reference range. HbA1c reflects average blood glucose over approximately 2–3 months. An elevated result is an important finding to discuss with a clinician, but a diagnosis of diabetes requires careful clinical assessment.",
+      "why_grouped": "Phase 4 identified that HbA1c is above the printed reference interval.",
+      "what_to_discuss": "Whether a confirmatory test is needed, prior HbA1c values, fasting glucose, and any conditions that might affect the reliability of HbA1c.",
+      "limitations": ["HbA1c can be unreliable in people with certain blood conditions (such as haemolytic anaemia, iron deficiency, or haemoglobin variants). A single elevated result does not establish a diagnosis without clinical assessment."],
+      "sources": [
+        {
+          "id": "medlineplus_hba1c",
+          "title": "Hemoglobin A1c (HbA1c) Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/"
+        }
+      ]
+    },
+    "GLUCOSE_HBA1C_CONCORDANT_ELEVATION": {
+      "plain_title": "Blood Glucose and HbA1c Both above Range",
+      "plain_description": "Both your blood glucose and HbA1c are above their respective reference ranges. The combination of an elevated short-term glucose reading and an elevated longer-term glycation marker (HbA1c) is a finding that is important to discuss with a healthcare professional.",
+      "why_grouped": "Phase 4 identified that both glucose and HbA1c exceed their respective printed reference intervals.",
+      "what_to_discuss": "Whether further evaluation or confirmatory testing is appropriate, lifestyle and medication factors, and overall metabolic health.",
+      "limitations": ["This educational note does not and cannot establish a diagnosis. That determination requires clinical assessment, often including repeat testing on a separate occasion."],
+      "sources": [
+        {
+          "id": "niddk_hba1c",
+          "title": "The A1C Test & Diabetes",
+          "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis/a1c-test"
+        }
+      ]
+    },
+    "LIPID_ELEVATED_LDL": {
+      "plain_title": "LDL Cholesterol above Reference Range",
+      "plain_description": "Your LDL cholesterol is above this laboratory's reference range. LDL is associated with cholesterol deposits in blood vessel walls. How significant this finding is depends on your overall cardiovascular risk profile, which includes many other factors your clinician considers.",
+      "why_grouped": "Phase 4 identified that LDL cholesterol is above the printed reference interval.",
+      "what_to_discuss": "Overall cardiovascular risk assessment, lifestyle factors, family history, and whether intervention is appropriate.",
+      "limitations": ["An elevated LDL result alone does not determine cardiovascular risk. It must be interpreted in the context of a full risk assessment."],
+      "sources": [
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "LIPID_LOW_HDL": {
+      "plain_title": "HDL Cholesterol below Reference Range",
+      "plain_description": "Your HDL (good) cholesterol is below this laboratory's reference range. HDL helps remove cholesterol from blood vessels. Lower HDL is one component of a broader cardiovascular risk picture.",
+      "why_grouped": "Phase 4 identified that HDL cholesterol is below the printed reference interval.",
+      "what_to_discuss": "Physical activity levels, smoking, metabolic health, and overall cardiovascular risk profile.",
+      "limitations": ["HDL alone does not determine cardiovascular outcome. It is one of several interacting risk factors."],
+      "sources": [
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "LIPID_ELEVATED_TRIGLYCERIDES": {
+      "plain_title": "Triglycerides above Reference Range",
+      "plain_description": "Your triglycerides are above this laboratory's reference range. Triglycerides are fats that rise significantly after eating, so fasting status before the test is a critical factor in interpreting this result.",
+      "why_grouped": "Phase 4 identified that triglycerides are above the printed reference interval.",
+      "what_to_discuss": "Fasting status, dietary intake, alcohol, activity level, and overall metabolic assessment.",
+      "limitations": ["Triglyceride results are strongly influenced by recent food and alcohol intake. A non-fasting result cannot be interpreted as reliably as a fasting result."],
+      "sources": [
+        {
+          "id": "nhlbi_trig",
+          "title": "Blood Triglycerides",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-triglycerides"
+        }
+      ]
+    },
+    "LIPID_COMBINED_DYSLIPIDEMIA": {
+      "plain_title": "LDL and Triglycerides Both above Range",
+      "plain_description": "Both your LDL cholesterol and triglycerides are above their respective reference ranges. This combination is a finding worth discussing with a clinician as part of a full cardiovascular and metabolic risk assessment.",
+      "why_grouped": "Phase 4 identified that both LDL cholesterol and triglycerides exceed their respective reference intervals.",
+      "what_to_discuss": "Full lipid profile, fasting status for the triglyceride result, cardiovascular risk factors, and lifestyle.",
+      "limitations": ["This is an educational observation based solely on the printed reference intervals. It is not a diagnosis of any lipid disorder."],
+      "sources": [
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "LIPID_ELEVATED_TOTAL_CHOLESTEROL": {
+      "plain_title": "Total Cholesterol above Reference Range",
+      "plain_description": "Your total cholesterol is above this laboratory's reference range. Total cholesterol is a sum of multiple components, so individual results (LDL, HDL, triglycerides) are needed to understand what is driving the total.",
+      "why_grouped": "Phase 4 identified that total cholesterol is above the printed reference interval.",
+      "what_to_discuss": "Individual lipid fractions (LDL, HDL, triglycerides), fasting status, and overall cardiovascular risk.",
+      "limitations": ["Total cholesterol without lipid fractions gives limited information about cardiovascular risk. High HDL, for example, can raise the total without representing the same risk as high LDL."],
+      "sources": [
+        {
+          "id": "nhlbi_chol",
+          "title": "Blood Cholesterol",
+          "publisher": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol"
+        }
+      ]
+    },
+    "LIVER_ENZYME_ELEVATION": {
+      "plain_title": "ALT above Reference Range",
+      "plain_description": "Your ALT (a liver enzyme) is above this laboratory's reference range. ALT is released from liver cells when they are damaged or irritated. Many common and often reversible factors can cause mild ALT elevation.",
+      "why_grouped": "Phase 4 identified that ALT is above the printed reference interval.",
+      "what_to_discuss": "Recent exercise, medications and supplements (many can affect ALT), alcohol intake, and whether a repeat test or further liver investigation is appropriate.",
+      "limitations": ["An elevated ALT alone cannot identify the cause. The degree, pattern, and clinical context are all essential."],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "LIVER_HEPATOCELLULAR_PATTERN": {
+      "plain_title": "ALT and AST Both above Range",
+      "plain_description": "Both ALT and AST (liver enzymes) are above their respective reference ranges. When both are elevated together, it is a pattern that warrants clinical review to understand the degree of elevation and possible causes.",
+      "why_grouped": "Phase 4 identified that both ALT and AST exceed their respective printed reference intervals.",
+      "what_to_discuss": "Medication list, alcohol intake, recent exercise, viral hepatitis history, and further liver assessment.",
+      "limitations": ["This pattern alone does not indicate a specific liver condition. Many reversible causes exist. Clinical assessment is essential."],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "LIVER_CHOLESTATIC_PATTERN": {
+      "plain_title": "ALP above Reference Range",
+      "plain_description": "Your ALP (alkaline phosphatase) is above this laboratory's reference range. ALP comes from several tissues including the liver and bones. The cause of an elevated ALP requires further investigation.",
+      "why_grouped": "Phase 4 identified that ALP is above the printed reference interval.",
+      "what_to_discuss": "Whether the source is liver, bone, or another tissue, using GGT, bone markers, or imaging as appropriate.",
+      "limitations": ["ALP elevation has many causes and cannot be attributed to any specific organ or condition without further testing."],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "LIVER_HYPOALBUMINEMIA_PATTERN": {
+      "plain_title": "Albumin below Reference Range",
+      "plain_description": "Your albumin is below this laboratory's reference range. Albumin is the main blood protein made by the liver. Low albumin can reflect reduced liver synthesis, inadequate nutrition, protein loss through the kidneys, or significant acute illness.",
+      "why_grouped": "Phase 4 identified that albumin is below the printed reference interval.",
+      "what_to_discuss": "Nutritional intake, liver health, kidney protein loss, and whether recent illness may explain a temporary reduction.",
+      "limitations": ["Albumin falls with any significant illness or inflammatory state (it is an acute-phase reactant). It cannot indicate a specific organ problem without full clinical context."],
+      "sources": [
+        {
+          "id": "medlineplus_lft",
+          "title": "Liver Function Tests",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/liver-function-tests/"
+        }
+      ]
+    },
+    "KIDNEY_FUNCTION_PATTERN": {
+      "plain_title": "Creatinine outside Reference Range",
+      "plain_description": "Your creatinine is outside this laboratory's reference range. Creatinine is a waste product filtered by the kidneys. Many factors beyond kidney disease — including muscle mass, dietary protein, and dehydration — affect creatinine levels.",
+      "why_grouped": "Phase 4 identified that creatinine is outside the printed reference interval.",
+      "what_to_discuss": "Hydration status, muscle mass, protein or supplement intake, eGFR, and whether further kidney assessment is appropriate.",
+      "limitations": ["Creatinine alone cannot diagnose kidney disease. Many non-kidney factors affect serum creatinine."],
+      "sources": [
+        {
+          "id": "medlineplus_creat",
+          "title": "Creatinine Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/creatinine-test/"
+        }
+      ]
+    },
+    "KIDNEY_ELEVATED_BUN": {
+      "plain_title": "BUN above Reference Range",
+      "plain_description": "Your blood urea nitrogen (BUN) is above this laboratory's reference range. BUN reflects protein metabolism and kidney filtration. Dehydration and high protein intake are common and reversible causes of elevated BUN.",
+      "why_grouped": "Phase 4 identified that BUN is above the printed reference interval.",
+      "what_to_discuss": "Hydration, dietary protein, kidney function, and whether further testing is appropriate.",
+      "limitations": ["BUN is a non-specific marker influenced by many factors. Creatinine and eGFR provide important additional context."],
+      "sources": [
+        {
+          "id": "medlineplus_creat",
+          "title": "Creatinine Test",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/creatinine-test/"
+        }
+      ]
+    },
+    "KIDNEY_CONCORDANT_AZOTEMIA": {
+      "plain_title": "Creatinine and BUN Both above Range",
+      "plain_description": "Both creatinine and BUN are above their respective reference ranges. When both kidney waste markers are elevated together, clinical review is warranted to assess kidney function and rule out contributing factors such as dehydration.",
+      "why_grouped": "Phase 4 identified that both creatinine and BUN exceed their respective printed reference intervals.",
+      "what_to_discuss": "eGFR, hydration, medication review, and further kidney assessment.",
+      "limitations": ["Both creatinine and BUN can be elevated by non-kidney causes. Clinical assessment including eGFR and urine testing is needed."],
+      "sources": [
+        {
+          "id": "medlineplus_egfr",
+          "title": "Estimated Glomerular Filtration Rate (eGFR)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/estimated-glomerular-filtration-rate-egfr-and-gfr-tests/"
+        }
+      ]
+    },
+    "KIDNEY_REDUCED_EGFR": {
+      "plain_title": "eGFR below Reference Range",
+      "plain_description": "Your estimated GFR (a measure of kidney filtration capacity) is below this laboratory's reference range. eGFR naturally declines with age, and a single reduced value does not establish chronic kidney disease. Trends over time and urine protein tests are important context.",
+      "why_grouped": "Phase 4 identified that eGFR is below the printed reference interval.",
+      "what_to_discuss": "Whether previous eGFR values are available for comparison, urine albumin testing, hydration, and whether a repeat measurement is appropriate.",
+      "limitations": ["A single reduced eGFR cannot diagnose CKD, which is defined as persistent reduction over at least three months alongside other markers. Age, muscle mass, and dehydration all affect the calculation."],
+      "sources": [
+        {
+          "id": "medlineplus_egfr",
+          "title": "Estimated Glomerular Filtration Rate (eGFR)",
+          "publisher": "MedlinePlus / U.S. National Library of Medicine",
+          "url": "https://medlineplus.gov/lab-tests/estimated-glomerular-filtration-rate-egfr-and-gfr-tests/"
+        },
+        {
+          "id": "niddk_ckd",
+          "title": "Kidney Disease Tests and Diagnosis",
+          "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+          "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis"
+        }
+      ]
+    }
+  }
+}
