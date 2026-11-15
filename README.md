@@ -307,10 +307,6 @@ Watch the full demo on YouTube: **[LabLens — DSH Hacks V2 project demo](https:
   </a>
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UmrJ1Z9Iz_o?si=iVmmj1mncd5dWuyl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-(GitHub strips iframes, so the thumbnail link above is what renders on github.com — the embedded player works in VS Code preview and docs sites that allow video HTML.)
-
 The verification-first journey is best seen live. A pre-built QA gallery lives in this repository under `docs/development/qa/full-product-audit/screenshots/` (all synthetic data) — the marketing site, redesigned verification workspace (desktop and mobile), completion flow, results, clinician handoff and launch-screen captures from the final submission-readiness pass.
 
 **Suggested 5-minute demo**
