@@ -1,7 +1,6 @@
 # Phase 3A OCR dependencies (optional; install separately)
 # CPU-only. Do not install on machines without sufficient RAM.
 pymupdf==2.1.0
-opencv-python==4.12.0.84
 Pillow==13.0.0
 paddlepaddle==3.3.1
 paddleocr==3.7.0

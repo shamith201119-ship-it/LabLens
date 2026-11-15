@@ -1,10 +1,6 @@
 import io
 import os
-import tempfile
 from pathlib import Path
-
-_TEMP_DATA_DIR = Path(tempfile.mkdtemp(prefix="lablens-phase972-page-image"))
-os.environ["LABLENS_DATA_DIR"] = str(_TEMP_DATA_DIR)
 
 import fitz
 import pytest

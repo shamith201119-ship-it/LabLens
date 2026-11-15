@@ -34,6 +34,7 @@ UNIT_CANONICAL = {
     "x10^3/ul": "x10^3/ul",
     "10^3/ul": "x10^3/ul",
     "x10^6/ul": "x10^6/ul",
+    "mil/ul": "mil/ul",
     "10^6/ul": "x10^6/ul",
     "u/l": "u/l",
     "iu/l": "iu/l",
