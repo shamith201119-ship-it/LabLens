@@ -1,0 +1,269 @@
+﻿{
+  "schema_version": "1.0.0",
+  "phase": "9.10.2",
+  "tool": {
+    "name": "lablens-ocr-profiler",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-11-13T13:45:39.279625+00:00",
+  "hardware": {
+    "cpu": {
+      "model": "Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz",
+      "architecture": "X86_64",
+      "bits": 64,
+      "physical_cores": 2,
+      "logical_cores": 4,
+      "frequency_mhz": 1190.0,
+      "capabilities": [
+        "3dnow",
+        "3dnowprefetch",
+        "abm",
+        "acpi",
+        "adx",
+        "aes",
+        "apic",
+        "avx",
+        "avx2",
+        "avx512bitalg",
+        "avx512bw",
+        "avx512cd",
+        "avx512dq",
+        "avx512f",
+        "avx512ifma",
+        "avx512vbmi",
+        "avx512vbmi2",
+        "avx512vl",
+        "avx512vnni",
+        "avx512vpopcntdq",
+        "bmi1",
+        "bmi2",
+        "clflush",
+        "clflushopt",
+        "cmov",
+        "cx16",
+        "cx8",
+        "de",
+        "dtes64",
+        "dts",
+        "erms",
+        "est",
+        "f16c",
+        "fma",
+        "fpu",
+        "fxsr",
+        "gfni",
+        "ht",
+        "hypervisor",
+        "ia64",
+        "intel_pt",
+        "invpcid",
+        "lahf_lm",
+        "mca",
+        "mce",
+        "mmx",
+        "monitor",
+        "movbe",
+        "msr",
+        "mtrr",
+        "osxsave",
+        "pae",
+        "pat",
+        "pbe",
+        "pcid",
+        "pclmulqdq",
+        "pdcm",
+        "pge",
+        "pni",
+        "popcnt",
+        "pse",
+        "pse36",
+        "rdpid",
+        "rdrnd",
+        "rdseed",
+        "sep",
+        "serial",
+        "sha",
+        "smap",
+        "smep",
+        "ss",
+        "sse",
+        "sse2",
+        "sse4_1",
+        "sse4_2",
+        "ssse3",
+        "tm",
+        "tm2",
+        "tsc",
+        "tscdeadline",
+        "umip",
+        "vaes",
+        "vme",
+        "vpclmulqdq",
+        "xsave",
+        "xtpr"
+      ],
+      "capabilities_source": "py-cpuinfo"
+    },
+    "nvidia": {
+      "present": false,
+      "name": null,
+      "driver_version": null,
+      "vram_bytes": null,
+      "source": null
+    },
+    "other_accelerators": [
+      {
+        "kind": "integrated_gpu",
+        "model": "Intel(R) UHD Graphics",
+        "driver_version": "27.20.100.9664"
+      }
+    ]
+  },
+  "memory": {
+    "total_bytes": 8375230464,
+    "available_bytes": 1849487360
+  },
+  "runtime": {
+    "os": {
+      "system": "Windows",
+      "architecture": "AMD64"
+    },
+    "python": {
+      "version": "3.12.10"
+    },
+    "packages": {
+      "paddlepaddle": {
+        "version": "3.3.1",
+        "compiled_with_cuda": false,
+        "cuda_version": null,
+        "cudnn_version": null
+      },
+      "paddleocr": {
+        "version": "3.7.0"
+      },
+      "paddlex": {
+        "version": "3.7.2"
+      }
+    },
+    "paddle_devices": []
+  },
+  "model": {
+    "text_detection_model": "PP-OCRv6_medium_det",
+    "text_recognition_model": "PP-OCRv6_medium_rec",
+    "detection_limit_side_len": 1280,
+    "detection_limit_type": "max",
+    "precision": "fp32",
+    "mkl_dnn_enabled": false,
+    "cpu_threads_default": 10,
+    "recognition_batch_size_default": 6,
+    "production_config_source": "backend/app/services/ocr_engine.py + installed paddlex defaults",
+    "cache_total_bytes": 185149194,
+    "cache_dir": "~/.paddlex/official_models"
+  },
+  "gpu": {
+    "hardware_present": false,
+    "runtime_compatible": false,
+    "devices": [],
+    "cuda_version": null,
+    "cudnn_version": null,
+    "smoke_test": {
+      "status": "skipped_incompatible",
+      "backend": null,
+      "init_seconds": null,
+      "inference_seconds": null,
+      "error_type": "ValueError",
+      "error_message": "The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA",
+      "workload": null
+    },
+    "performance_status": "untested",
+    "performance_reason": "Paddle runtime not CUDA-compatible on this machine",
+    "fallback": null
+  },
+  "adaptive_candidates": {
+    "logical_cores": 4,
+    "physical_cores": 2,
+    "cpu_threads": [
+      1,
+      2,
+      4
+    ],
+    "recognition_batch_size": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "selection_method": "one-variable-at-a-time against the production-equivalent baseline; accuracy signature must match the baseline exactly; fastest warm OCR wins",
+    "fixed_constraints": "PP-OCRv6 medium detection+recognition, 1280px max detector, fp32, MKL-DNN disabled, direct PDF text path untouched"
+  },
+  "prior_evidence": {
+    "available": true,
+    "phase": "9.10.1",
+    "results_file": "docs/development/phase-8.1/OCR_LAB_RESULTS.json",
+    "measured_on": "this machine, 2026-11-13 (Phase 9.10.1)",
+    "note": "reused Phase 9.10.1 measurements; preferred config cpu_threads=4, batch=1; accuracy identical across 5 categories; five-category wall clock 162.0s -> 142.5s (12.0% reduction)"
+  },
+  "experiments": [],
+  "safety": {
+    "min_available_required_bytes": 1610612736,
+    "stop_reserve_bytes": 786432000,
+    "preflight_available_bytes": 1849487360,
+    "precondition_met": true,
+    "memory_guard_triggered": false,
+    "sequential_execution": true,
+    "workers_launched": 0,
+    "skipped_experiments": []
+  },
+  "db_integrity": {
+    "db_sha256_before": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "db_sha256_after": "830674a49e9658c452ac7417baaaae09a81c3d592fa9c26f1c6970f29399322a",
+    "upload_file_count_before": 20,
+    "upload_file_count_after": 20,
+    "report_rows": 3,
+    "unchanged": true
+  },
+  "recommendations": [
+    {
+      "id": "cpu-prior-best",
+      "scope": "cpu",
+      "text": "Phase 9.10.1 measurements on this machine (reused evidence): cpu_threads=4 with recognition batch=1 beat production defaults (\u221212.0% five-category wall clock; PNG 1.11x, scanned PDF 1.19x) with bit-identical accuracy and source geometry. Adopt only after re-checking accuracy on your target fixtures.",
+      "evidence_class": "recommendation",
+      "based_on": [
+        "docs/development/phase-8.1/OCR_LAB_RESULTS.json"
+      ]
+    },
+    {
+      "id": "cpu-adaptive-matrix",
+      "scope": "cpu",
+      "text": "This machine's adaptive thread candidates are [1, 2, 4] (capped at 4 logical cores) and recognition batches [1, 2, 4, 6]; detection stays at 1280px, Medium models, FP32, MKL-DNN off. Do not transfer another laptop's constants without re-measuring and re-verifying accuracy.",
+      "evidence_class": "recommendation",
+      "based_on": [
+        "this profile",
+        "Phase 9.10.1 tuning tables"
+      ]
+    },
+    {
+      "id": "gpu-untested",
+      "scope": "gpu",
+      "text": "GPU acceleration is untested on this machine: the installed PaddlePaddle build is not CUDA-compatible (or no NVIDIA GPU/driver is usable). Do not select a GPU device until a machine passes the compile-flag + device + smoke-test gate in --mode benchmark --include-gpu.",
+      "evidence_class": "recommendation",
+      "based_on": [
+        "this profile runtime probe",
+        "Phase 9.10.1 GPU finding"
+      ]
+    },
+    {
+      "id": "overall-reuse",
+      "scope": "overall",
+      "text": "On other computers, copy this repository's docs/development/phase-8.1/ and run `py -3.12 docs/development/phase-8.1/ocr_hardware_profile.py` for inventory, then `... --mode benchmark` (requires >= 1.5 GiB free RAM). Results are comparable because field names, units, schema (v1) and fixed model/detector constraints are identical across machines.",
+      "evidence_class": "recommendation",
+      "based_on": [
+        "ocr_hardware_profile.schema.v1.json"
+      ]
+    }
+  ],
+  "untested": [
+    "gpu_inference_performance",
+    "smaller_ppocrv6_models (none cached; download forbidden in this phase)"
+  ]
+}

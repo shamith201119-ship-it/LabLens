@@ -13,7 +13,9 @@ export interface ApiReport {
   updated_at: string
 }
 
-const UNAVAILABLE = 'LabLens could not connect to its local storage service. Please check that the backend is running on 127.0.0.1:8000.'
+/** Message includes the actual configured base URL so it stays correct
+ *  when the build points elsewhere (for example an isolated test port). */
+const UNAVAILABLE = `LabLens could not reach its local backend at ${API_BASE}. Please check that the backend is running and try again.`
 
 async function safeFetch(input: RequestInfo, init?: RequestInit): Promise<Response> {
   try {

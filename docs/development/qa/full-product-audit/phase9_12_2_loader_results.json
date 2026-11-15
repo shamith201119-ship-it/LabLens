@@ -1,0 +1,128 @@
+{
+  "tag": "after",
+  "generated_at": "2026-11-15T04:08:48.070Z",
+  "passed": 24,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "1440px: loader is present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: flat background, no gradients",
+      "status": "passed",
+      "detail": "bg=rgb(247, 248, 243) image=none"
+    },
+    {
+      "name": "1440px: wordmark reads LabLens",
+      "status": "passed",
+      "detail": "LabLens"
+    },
+    {
+      "name": "1440px: exactly one progress bar",
+      "status": "passed",
+      "detail": "1 bar(s), 4px"
+    },
+    {
+      "name": "1440px: progress bar width is restrained",
+      "status": "passed",
+      "detail": "240px"
+    },
+    {
+      "name": "1440px: no removed loader decoration",
+      "status": "passed",
+      "detail": "{\"ghost\":0,\"badge\":0,\"docnum\":0,\"mark\":0,\"tagline\":0,\"caption\":0,\"trace\":0}"
+    },
+    {
+      "name": "1440px: no horizontal overflow",
+      "status": "passed",
+      "detail": "-10"
+    },
+    {
+      "name": "1440px: progress bar is mid-fill in real time",
+      "status": "passed",
+      "detail": "scaleX=0.826984"
+    },
+    {
+      "name": "1440px: loader clears the viewport",
+      "status": "passed",
+      "detail": "1449ms"
+    },
+    {
+      "name": "1440px: scroll lock is released",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: app marks itself ready",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no console or page errors",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "name": "390px: loader is present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: flat background, no gradients",
+      "status": "passed",
+      "detail": "bg=rgb(247, 248, 243) image=none"
+    },
+    {
+      "name": "390px: wordmark reads LabLens",
+      "status": "passed",
+      "detail": "LabLens"
+    },
+    {
+      "name": "390px: exactly one progress bar",
+      "status": "passed",
+      "detail": "1 bar(s), 4px"
+    },
+    {
+      "name": "390px: progress bar width is restrained",
+      "status": "passed",
+      "detail": "190px"
+    },
+    {
+      "name": "390px: no removed loader decoration",
+      "status": "passed",
+      "detail": "{\"ghost\":0,\"badge\":0,\"docnum\":0,\"mark\":0,\"tagline\":0,\"caption\":0,\"trace\":0}"
+    },
+    {
+      "name": "390px: no horizontal overflow",
+      "status": "passed",
+      "detail": "-10"
+    },
+    {
+      "name": "390px: progress bar is mid-fill in real time",
+      "status": "passed",
+      "detail": "scaleX=0.674607"
+    },
+    {
+      "name": "390px: loader clears the viewport",
+      "status": "passed",
+      "detail": "1436ms"
+    },
+    {
+      "name": "390px: scroll lock is released",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: app marks itself ready",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no console or page errors",
+      "status": "passed",
+      "detail": ""
+    }
+  ]
+}

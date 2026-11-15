@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-11-15T03:59:24.588Z",
+  "checks": [
+    {
+      "name": "fixture processed with zero measurements",
+      "status": "passed",
+      "detail": "count=0"
+    },
+    {
+      "name": "structure saved zero measurements",
+      "status": "passed",
+      "detail": "{\"report_id\":\"07707a40-9851-4537-9581-888241f778da\",\"measurements_saved\":0,\"candidates\":[]}"
+    },
+    {
+      "name": "1440px: empty state renders",
+      "status": "passed",
+      "detail": "{\"empty\":1,\"cards\":0,\"grid\":0,\"bar\":0,\"title\":\"No measurements were extracted\",\"back\":\"Back to my reports\",\"overflow\":-10,\"nestedScrollers\":0}"
+    },
+    {
+      "name": "1440px: no confirmation bar without measurements",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: empty state explains the outcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: back to reports action is present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: no horizontal overflow",
+      "status": "passed",
+      "detail": "-10"
+    },
+    {
+      "name": "1440px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "1440px: no console errors",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "name": "390px: empty state renders",
+      "status": "passed",
+      "detail": "{\"empty\":1,\"cards\":0,\"grid\":0,\"bar\":0,\"title\":\"No measurements were extracted\",\"back\":\"Back to my reports\",\"overflow\":-10,\"nestedScrollers\":0}"
+    },
+    {
+      "name": "390px: no confirmation bar without measurements",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: empty state explains the outcome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: back to reports action is present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: no horizontal overflow",
+      "status": "passed",
+      "detail": "-10"
+    },
+    {
+      "name": "390px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "390px: no console errors",
+      "status": "passed",
+      "detail": ""
+    }
+  ],
+  "screenshot": "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-empty-1440.png",
+  "error": null,
+  "report_id": "07707a40-9851-4537-9581-888241f778da",
+  "finished_at": "2026-11-15T03:59:31.182Z",
+  "passed": 16,
+  "failed": 0
+}

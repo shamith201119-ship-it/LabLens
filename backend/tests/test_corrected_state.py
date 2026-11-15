@@ -1,4 +1,4 @@
-"""Phase 9.11.2.1: has_corrections metadata and correction-state separation."""
+﻿"""Phase 9.11.2.1: has_corrections metadata and correction-state separation."""
 
 import json
 import sys
@@ -10,7 +10,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
-EVALUATOR_DIR = BACKEND_DIR.parent / "artifacts" / "phase-8.1"
+EVALUATOR_DIR = BACKEND_DIR / "tests"
 for path in (str(BACKEND_DIR), str(EVALUATOR_DIR)):
     if path not in sys.path:
         sys.path.insert(0, path)
@@ -143,7 +143,7 @@ def test_verify_selected_returns_has_corrections_for_corrected_rows():
     assert payload["verified"] == 1
     returned = next(m for m in payload["measurements"] if m["id"] == corrected)
     assert bool(returned["has_corrections"]) is True
-    # untouched never corrected → stays false
+    # untouched never corrected â†’ stays false
     measurements = {m["id"]: m for m in _get(report_id)}
     assert measurements[untouched]["has_corrections"] is False
     assert measurements[corrected]["has_corrections"] is True

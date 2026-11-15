@@ -1,4 +1,4 @@
-"""Focused tests for the Phase 9.10.3 adaptive OCR runtime.
+﻿"""Focused tests for the Phase 9.10.3 adaptive OCR runtime.
 
 GPU-specific tests are SIMULATED. The installed PaddlePaddle on this machine is
 CPU-only, so no real GPU inference is executed in any test. Simulated GPU
@@ -15,7 +15,7 @@ import pytest
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 PROJECT_DIR = BACKEND_DIR.parent
-EVALUATOR_DIR = PROJECT_DIR / "artifacts" / "phase-8.1"
+EVALUATOR_DIR = BACKEND_DIR / "tests"
 for path in (str(BACKEND_DIR), str(EVALUATOR_DIR)):
     if path not in sys.path:
         sys.path.insert(0, path)

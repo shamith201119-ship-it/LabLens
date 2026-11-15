@@ -115,8 +115,8 @@ def run_benchmarks():
     }
     print(f"KeyValue PDF: upload={t_upload3:.4f}s, extract={t_extract3:.4f}s, struct={t_struct3:.4f}s. Extracted {len(ms3)}/{len(gt3)}")
 
-    # Save to artifacts/phase-8.1/BASELINE_BENCHMARK.json
-    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "artifacts", "phase-8.1", "BASELINE_BENCHMARK.json"))
+    # Save to docs/development/phase-8.1/BASELINE_BENCHMARK.json
+    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "docs", "development", "phase-8.1", "BASELINE_BENCHMARK.json"))
     with open(out_path, "w") as out:
         json.dump(results, out, indent=2)
     print("Saved baseline results to:", out_path)

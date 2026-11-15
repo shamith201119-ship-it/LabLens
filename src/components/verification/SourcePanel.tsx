@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties } from 'react'
 import {
   ChevronLeft,
   ChevronRight,
@@ -24,10 +24,7 @@ interface SourcePanelProps {
   currentPageExtraction: ExtractionResult['pages'][number] | undefined
   highlightStyle: CSSProperties | null
   onImageLoad: (size: RenderedImageSize) => void
-  hiddenOnMobile: boolean
   emptyHint?: string
-  /** Optional overlay content docked inside the document viewport (inspection panel). */
-  dockedContent?: ReactNode
 }
 
 const DOCUMENT_TYPE: Record<string, string> = {
@@ -55,20 +52,14 @@ export function SourcePanel({
   currentPageExtraction,
   highlightStyle,
   onImageLoad,
-  hiddenOnMobile,
   emptyHint,
-  dockedContent,
 }: SourcePanelProps) {
   const docType = report
     ? DOCUMENT_TYPE[report.file_extension.toLowerCase()] ?? report.file_extension.toUpperCase()
     : 'Report'
 
   return (
-    <section
-      id="ve-panel-document"
-      className={`ve-source${hiddenOnMobile ? ' ve-mobile-hidden' : ''}`}
-      aria-label="Original report preview"
-    >
+    <section id="ve-panel-document" className="ve-source" aria-label="Original report preview">
       <div className="ve-source__toolbar">
         <div className="ve-source__meta">
           <span className="ve-source__filename" title={report?.original_filename}>
@@ -132,9 +123,7 @@ export function SourcePanel({
         </div>
       </div>
 
-      <div
-        className={`ve-source__viewport${dockedContent ? ' ve-source__viewport--docked' : ''}`}
-      >
+      <div className="ve-source__viewport">
         {docViewMode === 'preview' ? (
           reportId ? (
             imageSource ? (
@@ -174,16 +163,14 @@ export function SourcePanel({
             </pre>
           </div>
         )}
-
-        {dockedContent ? (
-          <div className="ve-source__docked">{dockedContent}</div>
-        ) : null}
       </div>
 
-      <div className="ve-source__legend">
-        <span className="ve-source__legend-swatch" aria-hidden="true" />
-        <span>Highlighted region = selected result</span>
-      </div>
+      {highlightStyle ? (
+        <div className="ve-source__legend">
+          <span className="ve-source__legend-swatch" aria-hidden="true" />
+          <span>Highlighted region = this result on the original page</span>
+        </div>
+      ) : null}
     </section>
   )
 }

@@ -1,23 +1,15 @@
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import {
-  ArrowLeft,
-  CheckCheck,
-  FileText,
-  Info,
-  TriangleAlert,
-  X,
-} from 'lucide-react'
+import { ArrowLeft, FileSearch, Info, TriangleAlert, X } from 'lucide-react'
 import { ButtonLink } from '../components/Button'
 import { PageContainer } from '../components/PageHeader'
 import { usePageTitle } from '../lib/usePageTitle'
-import {
-  VerificationHeader,
-} from '../components/verification/VerificationHeader'
-import { SourcePanel, type RenderedImageSize } from '../components/verification/SourcePanel'
-import { MeasurementWorkspace } from '../components/verification/MeasurementWorkspace'
+import { MeasurementGrid } from '../components/verification/MeasurementGrid'
+import { ConfirmBar } from '../components/verification/ConfirmBar'
+import { ReportViewer } from '../components/verification/ReportViewer'
 import { InspectionPanel } from '../components/verification/InspectionPanel'
-import { displayName, isConfirmed, summarize, type VerificationFilter } from '../lib/verification'
+import type { RenderedImageSize } from '../components/verification/SourcePanel'
+import { displayName, isConfirmed, summarize } from '../lib/verification'
 import {
   analyseReport,
   downloadUrl,
@@ -27,7 +19,6 @@ import {
   listMeasurements,
   pageImageUrl,
   patchMeasurement,
-  verifyMeasurement,
   verifySelectedMeasurements,
   type ApiReport,
   type ExtractionResult,
@@ -36,23 +27,6 @@ import {
 import { ReviewCompletion } from '../components/verification/ReviewCompletion'
 
 type SourceBBox = [number, number, number, number]
-
-const WIDE_LAYOUT = '(min-width: 1200px)'
-const DOCKED_INSPECTION = '(min-width: 861px) and (max-width: 1199px)'
-
-function subscribeWideLayout(callback: () => void): () => void {
-  const query = window.matchMedia(WIDE_LAYOUT)
-  query.addEventListener('change', callback)
-  return () => query.removeEventListener('change', callback)
-}
-
-function useWideLayout(): boolean {
-  return useSyncExternalStore(
-    subscribeWideLayout,
-    () => window.matchMedia(WIDE_LAYOUT).matches,
-    () => false,
-  )
-}
 
 function buildHighlightStyle(
   bbox: Measurement['source_bbox'],
@@ -77,37 +51,32 @@ function buildHighlightStyle(
 
 export function VerificationPage() {
   const { reportId } = useParams()
-  usePageTitle('Review your results — LabLens')
+  usePageTitle('Verify your results — LabLens')
   const navigate = useNavigate()
-  const wideLayout = useWideLayout()
   const returnFocusRef = useRef(false)
 
   const [report, setReport] = useState<ApiReport | null>(null)
   const [extraction, setExtraction] = useState<ExtractionResult | null>(null)
   const [measurements, setMeasurements] = useState<Measurement[]>([])
-  const [selectedMeasurementId, setSelectedMeasurementId] = useState<string | null>(null)
   const [naturalImageSize, setNaturalImageSize] = useState<RenderedImageSize | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [activePage, setActivePage] = useState(1)
-  const [mobileTab, setMobileTab] = useState<'document' | 'measurements'>('measurements')
   const [docViewMode, setDocViewMode] = useState<'preview' | 'ocr'>('preview')
   const [savingCorrection, setSavingCorrection] = useState(false)
   const [correctionError, setCorrectionError] = useState<string | null>(null)
-  const [autoEditId, setAutoEditId] = useState<string | null>(null)
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
   const [confirmingSelected, setConfirmingSelected] = useState(false)
   const [continuing, setContinuing] = useState(false)
-  const [filter, setFilter] = useState<VerificationFilter>('all')
-  const [search, setSearch] = useState('')
   const [completionOpen, setCompletionOpen] = useState(false)
-  const [editSignal, setEditSignal] = useState(0)
   const [announcement, setAnnouncement] = useState('')
+  const [viewerOpen, setViewerOpen] = useState(false)
+  const [viewerMeasurementId, setViewerMeasurementId] = useState<string | null>(null)
+  const [inspectId, setInspectId] = useState<string | null>(null)
+  const [inspectEdit, setInspectEdit] = useState(false)
 
   const loadData = async () => {
     if (!reportId) return
-    setSelectedMeasurementId(null)
-    setAutoEditId(null)
     setNaturalImageSize(null)
     setLoading(true)
     setError(null)
@@ -135,25 +104,6 @@ export function VerificationPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reportId])
 
-  const handleVerifyOne = async (measurementId: string) => {
-    if (!reportId) return
-    const current = measurements.find((m) => m.id === measurementId)
-    const name = current ? displayName(current) : 'Result'
-    try {
-      const updated = await verifyMeasurement(reportId, measurementId)
-      setMeasurements((prev) => prev.map((m) => (m.id === measurementId ? updated : m)))
-      setSelectedIds((prev) => {
-        if (!prev.has(measurementId)) return prev
-        const next = new Set(prev)
-        next.delete(measurementId)
-        return next
-      })
-      setAnnouncement(`${name} confirmed.`)
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Verification failed')
-    }
-  }
-
   const handleToggleSelect = (measurementId: string) => {
     setSelectedIds((prev) => {
       const next = new Set(prev)
@@ -178,6 +128,9 @@ export function VerificationPage() {
       setSelectedIds(new Set())
       const count = result.measurements.length
       setAnnouncement(`${count} ${count === 1 ? 'result' : 'results'} confirmed.`)
+      returnFocusRef.current = true
+      setCompletionOpen(true)
+      window.scrollTo({ top: 0 })
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Verification failed')
     } finally {
@@ -185,36 +138,38 @@ export function VerificationPage() {
     }
   }
 
-  const handleSelectMeasurement = (measurement: Measurement) => {
-    setSelectedMeasurementId(measurement.id)
-    setAutoEditId(null)
+  const handleContinueWithoutSelection = () => {
+    if (!reportId) return
+    returnFocusRef.current = true
+    setCompletionOpen(true)
+    setError(null)
+    window.scrollTo({ top: 0 })
+  }
+
+  const handleOpenReport = (measurement?: Measurement) => {
+    if (measurement) {
+      setViewerMeasurementId(measurement.id)
+      if (measurement.page_number > 0 && measurement.page_number !== activePage) {
+        setActivePage(measurement.page_number)
+      }
+    } else {
+      setViewerMeasurementId(null)
+    }
+    setViewerOpen(true)
+  }
+
+  const handleStartEdit = (measurement: Measurement) => {
+    setInspectId(measurement.id)
+    setInspectEdit(true)
+    setCorrectionError(null)
     if (measurement.page_number > 0 && measurement.page_number !== activePage) {
       setActivePage(measurement.page_number)
-    }
-    if (window.matchMedia(DOCKED_INSPECTION).matches) {
-      setMobileTab('document')
     }
   }
 
   const handleCloseInspection = () => {
-    setSelectedMeasurementId(null)
-    setAutoEditId(null)
-    setCorrectionError(null)
-    if (window.matchMedia(DOCKED_INSPECTION).matches) {
-      setMobileTab('measurements')
-    }
-  }
-
-  const handleStartEdit = (m: Measurement) => {
-    setSelectedMeasurementId(m.id)
-    if (m.page_number > 0 && m.page_number !== activePage) {
-      setActivePage(m.page_number)
-    }
-    if (window.matchMedia(DOCKED_INSPECTION).matches) {
-      setMobileTab('document')
-    }
-    setAutoEditId(m.id)
-    setEditSignal((value) => value + 1)
+    setInspectId(null)
+    setInspectEdit(false)
     setCorrectionError(null)
   }
 
@@ -231,9 +186,7 @@ export function VerificationPage() {
         next.delete(id)
         return next
       })
-      setAnnouncement(
-        `${displayName(updated)} correction saved. It now needs review.`,
-      )
+      setAnnouncement(`${displayName(updated)} correction saved. It now needs review.`)
       return updated
     } catch (e) {
       setCorrectionError(e instanceof Error ? e.message : 'Failed to save correction')
@@ -241,14 +194,6 @@ export function VerificationPage() {
     } finally {
       setSavingCorrection(false)
     }
-  }
-
-  const handleConfirmAndContinue = () => {
-    if (!reportId) return
-    returnFocusRef.current = true
-    setCompletionOpen(true)
-    setError(null)
-    window.scrollTo({ top: 0 })
   }
 
   const handleContinueToResults = async () => {
@@ -275,9 +220,10 @@ export function VerificationPage() {
     if (completionOpen || !returnFocusRef.current) return
     returnFocusRef.current = false
     const timer = window.setTimeout(() => {
-      document
-        .querySelector<HTMLButtonElement>('.ve-continue__cta')
-        ?.focus({ preventScroll: true })
+      const next =
+        document.querySelector<HTMLElement>('.ve-card__box:not(:checked)') ??
+        document.querySelector<HTMLElement>('.ve-confirmbar__cta')
+      next?.focus({ preventScroll: true })
     }, 0)
     return () => window.clearTimeout(timer)
   }, [completionOpen])
@@ -290,9 +236,10 @@ export function VerificationPage() {
           <div className="ve-skel ve-skel--eyebrow" />
           <div className="ve-skel ve-skel--title" />
           <div className="ve-skel ve-skel--sub" />
-          <div className="ve-skel-grid">
-            <div className="ve-skel ve-skel--panel" />
-            <div className="ve-skel ve-skel--panel" />
+          <div className="ve-skel-cards">
+            {[0, 1, 2, 3, 4, 5].map((key) => (
+              <div key={key} className="ve-skel ve-skel--card" />
+            ))}
           </div>
         </div>
       </PageContainer>
@@ -329,8 +276,6 @@ export function VerificationPage() {
   const isOcrPdfPage = Boolean(
     isPdf && currentPageExtraction?.extraction_method === 'ocr',
   )
-  const selectedMeasurement =
-    measurements.find((m) => m.id === selectedMeasurementId) ?? null
   const imageSource = reportId
     ? isImage
       ? downloadUrl(reportId)
@@ -351,62 +296,31 @@ export function VerificationPage() {
     : isOcrPdfPage
       ? renderedPdfPageSize?.height ?? null
       : currentPageExtraction?.page_height ?? null
+
+  const inspectMeasurement = measurements.find((m) => m.id === inspectId) ?? null
+  const viewerMeasurement = measurements.find((m) => m.id === viewerMeasurementId) ?? null
   const highlightStyle =
+    viewerOpen &&
     showImagePreview &&
-    selectedMeasurement &&
-    selectedMeasurement.page_number === activePage
+    viewerMeasurement &&
+    viewerMeasurement.page_number === activePage
       ? buildHighlightStyle(
-          selectedMeasurement.source_bbox,
+          viewerMeasurement.source_bbox,
           highlightPageWidth,
           highlightPageHeight,
         )
       : null
-
-  const inspectionPanel = selectedMeasurement ? (
-    <InspectionPanel
-      key={`${selectedMeasurement.id}:${autoEditId === selectedMeasurement.id ? editSignal : 'view'}`}
-      measurement={selectedMeasurement}
-      extraction={extraction}
-      activePage={activePage}
-      onConfirm={handleVerifyOne}
-      onCorrect={handleCorrectSave}
-      onClose={handleCloseInspection}
-      initialEdit={autoEditId === selectedMeasurement.id}
-      confirming={confirmingSelected}
-      savingCorrection={savingCorrection}
-      correctionError={correctionError}
-    />
-  ) : null
-  const showRailInspection = wideLayout && selectedMeasurement !== null
-  const showDockedInspection = !wideLayout && selectedMeasurement !== null
+  const viewerTitle = viewerMeasurement
+    ? displayName(viewerMeasurement)
+    : report?.original_filename ?? 'Original report'
+  const hasBar = !completionOpen && measurements.length > 0
 
   return (
-    <PageContainer className="ve-page">
+    <PageContainer className={`ve-page${hasBar ? ' has-confirmbar' : ''}`}>
       <Link className="viewer-back" to="/app/reports">
         <ArrowLeft size={14} aria-hidden="true" />
         Back to my reports
       </Link>
-
-      <VerificationHeader summary={summary} />
-
-      {error ? (
-        <div className="ve-error-bar" role="alert">
-          <TriangleAlert size={14} aria-hidden="true" />
-          <span>{error}</span>
-          <button
-            type="button"
-            className="ve-error-bar__dismiss"
-            onClick={() => setError(null)}
-            aria-label="Dismiss error"
-          >
-            <X size={12} aria-hidden="true" />
-          </button>
-        </div>
-      ) : null}
-
-      <div className="ve-sr-only" role="status" aria-live="polite" aria-atomic="true">
-        {announcement}
-      </div>
 
       {completionOpen ? (
         <ReviewCompletion
@@ -419,34 +333,91 @@ export function VerificationPage() {
         />
       ) : (
         <>
-      {/* Mobile segmented control: Document / Measurements */}
-      <div className="ve-mobile-tabs" role="group" aria-label="Verification view">
-        <button
-          type="button"
-          id="ve-tab-document"
-          aria-pressed={mobileTab === 'document'}
-          aria-controls="ve-panel-document"
-          className={`ve-tab${mobileTab === 'document' ? ' is-active' : ''}`}
-          onClick={() => setMobileTab('document')}
-        >
-          <FileText size={14} aria-hidden="true" />
-          Document
-        </button>
-        <button
-          type="button"
-          id="ve-tab-measurements"
-          aria-pressed={mobileTab === 'measurements'}
-          aria-controls="ve-panel-measurements"
-          className={`ve-tab${mobileTab === 'measurements' ? ' is-active' : ''}`}
-          onClick={() => setMobileTab('measurements')}
-        >
-          <CheckCheck size={14} aria-hidden="true" />
-          Measurements ({measurements.length})
-        </button>
-      </div>
+          <header className="ve-pagehead">
+            <p className="ve-eyebrow">Step 3 of 4 · Verify</p>
+            <h1 className="ve-headline">Verify your results</h1>
+            <p className="ve-instruction">
+              Compare each value with your report. Select the values that match.
+            </p>
+            <p className="ve-helper">
+              You&apos;re checking transcription accuracy, not medical normality.
+            </p>
+          </header>
 
-      <div className={`ve-split${showRailInspection || showDockedInspection ? ' ve-split--inspect' : ''}`}>
-        <SourcePanel
+          {error ? (
+            <div className="ve-error-bar" role="alert">
+              <TriangleAlert size={14} aria-hidden="true" />
+              <span>{error}</span>
+              <button
+                type="button"
+                className="ve-error-bar__dismiss"
+                onClick={() => setError(null)}
+                aria-label="Dismiss error"
+              >
+                <X size={12} aria-hidden="true" />
+              </button>
+            </div>
+          ) : null}
+
+          <div className="ve-sr-only" role="status" aria-live="polite" aria-atomic="true">
+            {announcement}
+          </div>
+
+          <div className="ve-toolbar">
+            <p className="ve-toolbar__stat">
+              <span>
+                <strong>{summary.total}</strong>{' '}
+                {summary.total === 1 ? 'result' : 'results'}
+              </span>
+              <span className="ve-toolbar__sep" aria-hidden="true">
+                ·
+              </span>
+              <span>
+                <strong>{summary.confirmed}</strong> confirmed
+              </span>
+            </p>
+            <button
+              type="button"
+              className="ve-toolbar__action"
+              onClick={() => handleOpenReport()}
+            >
+              <FileSearch size={15} aria-hidden="true" />
+              View original report
+            </button>
+          </div>
+
+          <MeasurementGrid
+            measurements={measurements}
+            selectedIds={selectedIds}
+            onToggleSelect={handleToggleSelect}
+            onOpenSource={handleOpenReport}
+            onEdit={handleStartEdit}
+          />
+
+          <p className="ve-disclaimer">
+            <Info size={12} aria-hidden="true" />
+            <span>
+              Verification checks that the values LabLens transcribed match your original
+              report. The original file and its measurements are always preserved, and
+              unconfirmed results are excluded from analysis.
+            </span>
+          </p>
+
+          {hasBar ? (
+            <ConfirmBar
+              selectedCount={selectedIds.size}
+              needsReview={summary.needsReview}
+              total={summary.total}
+              busy={confirmingSelected}
+              onConfirmSelected={handleConfirmSelected}
+              onContinue={handleContinueWithoutSelection}
+            />
+          ) : null}
+        </>
+      )}
+
+      {viewerOpen ? (
+        <ReportViewer
           reportId={reportId}
           report={report}
           totalPages={totalPages}
@@ -459,45 +430,27 @@ export function VerificationPage() {
           currentPageExtraction={currentPageExtraction}
           highlightStyle={highlightStyle}
           onImageLoad={setNaturalImageSize}
-          hiddenOnMobile={mobileTab === 'measurements'}
-          dockedContent={wideLayout ? null : inspectionPanel}
+          title={viewerTitle}
+          restoreSelector={
+            viewerMeasurement ? `#ve-source-${viewerMeasurement.id}` : '.ve-toolbar__action'
+          }
+          onClose={() => setViewerOpen(false)}
         />
+      ) : null}
 
-        {showRailInspection ? (
-          inspectionPanel
-        ) : (
-          <MeasurementWorkspace
-            measurements={measurements}
-            selectedIds={selectedIds}
-            onToggleSelect={handleToggleSelect}
-            onClearSelection={() => setSelectedIds(new Set())}
-            confirmingSelected={confirmingSelected}
-            onConfirmSelected={handleConfirmSelected}
-            filter={filter}
-            onFilterChange={setFilter}
-            search={search}
-            onSearchChange={setSearch}
-            selectedMeasurementId={selectedMeasurementId}
-            onOpenInspection={handleSelectMeasurement}
-            onVerifyOne={handleVerifyOne}
-            onStartEdit={handleStartEdit}
-            hiddenOnMobile={mobileTab === 'document'}
-            continuing={continuing}
-            onConfirmAndContinue={handleConfirmAndContinue}
-          />
-        )}
-      </div>
-
-      <p className="ve-disclaimer">
-        <Info size={12} aria-hidden="true" />
-        <span>
-          Verification checks that the values LabLens transcribed match your original
-          report. The original file and its measurements are always preserved, and
-          unconfirmed results are excluded from analysis.
-        </span>
-      </p>
-        </>
-      )}
+      {inspectMeasurement ? (
+        <InspectionPanel
+          key={`${inspectMeasurement.id}:${inspectEdit ? 'edit' : 'view'}`}
+          measurement={inspectMeasurement}
+          extraction={extraction}
+          activePage={activePage}
+          onCorrect={handleCorrectSave}
+          onClose={handleCloseInspection}
+          initialEdit={inspectEdit}
+          savingCorrection={savingCorrection}
+          correctionError={correctionError}
+        />
+      ) : null}
     </PageContainer>
   )
 }

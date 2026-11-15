@@ -1,0 +1,932 @@
+{
+  "generated_at": "2026-11-15T04:05:42.099Z",
+  "frontend_url": "http://127.0.0.1:5174",
+  "api_url": "http://127.0.0.1:8001",
+  "report_id": "7e0b8403-6727-40bf-824b-d27a2e3b8485",
+  "checks": [
+    {
+      "name": "setup: fresh report has five measurements",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "setup: every fresh measurement is unverified",
+      "status": "passed",
+      "detail": "Glucose:extracted, HbA1c:extracted, Creatinine:extracted, Total Cholesterol:extracted, Triglycerides:extracted"
+    },
+    {
+      "name": "setup: required fixture measurements are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "1920px: grid has 3 columns",
+      "status": "passed",
+      "detail": "390.656px 390.672px 390.656px"
+    },
+    {
+      "name": "1920px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=1910 clientWidth=1920"
+    },
+    {
+      "name": "1920px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "1920px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: bar clears the app sidebar",
+      "status": "passed",
+      "detail": "bar.x=260 sidebar.right=260"
+    },
+    {
+      "name": "1920px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":483,\"y\":998,\"width\":1204,\"height\":68,\"bottom\":1066,\"right\":1687} toolbar={\"x\":483,\"y\":266,\"width\":1204,\"height\":57,\"bottom\":323,\"right\":1687}"
+    },
+    {
+      "name": "1920px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "1402..1674"
+    },
+    {
+      "name": "1920px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "1920px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1920px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=676 bar.y=984"
+    },
+    {
+      "name": "1920px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=713 bar.y=984"
+    },
+    {
+      "name": "1440px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "1440px: grid has 3 columns",
+      "status": "passed",
+      "detail": "360.656px 360.672px 360.656px"
+    },
+    {
+      "name": "1440px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=1430 clientWidth=1440"
+    },
+    {
+      "name": "1440px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "1440px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: bar clears the app sidebar",
+      "status": "passed",
+      "detail": "bar.x=260 sidebar.right=260"
+    },
+    {
+      "name": "1440px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":288,\"y\":818,\"width\":1114,\"height\":68,\"bottom\":886,\"right\":1402} toolbar={\"x\":288,\"y\":266,\"width\":1114,\"height\":57,\"bottom\":323,\"right\":1402}"
+    },
+    {
+      "name": "1440px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "1117..1389"
+    },
+    {
+      "name": "1440px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "1440px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1440px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=676 bar.y=804"
+    },
+    {
+      "name": "1440px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=713 bar.y=804"
+    },
+    {
+      "name": "1280px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "1280px: grid has 3 columns",
+      "status": "passed",
+      "detail": "307.328px 307.328px 307.344px"
+    },
+    {
+      "name": "1280px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=1270 clientWidth=1280"
+    },
+    {
+      "name": "1280px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "1280px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: bar clears the app sidebar",
+      "status": "passed",
+      "detail": "bar.x=260 sidebar.right=260"
+    },
+    {
+      "name": "1280px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":288,\"y\":818,\"width\":954,\"height\":68,\"bottom\":886,\"right\":1242} toolbar={\"x\":288,\"y\":266,\"width\":954,\"height\":57,\"bottom\":323,\"right\":1242}"
+    },
+    {
+      "name": "1280px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "957..1229"
+    },
+    {
+      "name": "1280px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "1280px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1280px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=676 bar.y=804"
+    },
+    {
+      "name": "1280px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=731 bar.y=804"
+    },
+    {
+      "name": "1024px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "1024px: grid has 2 columns",
+      "status": "passed",
+      "detail": "341px 341px"
+    },
+    {
+      "name": "1024px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=1014 clientWidth=1024"
+    },
+    {
+      "name": "1024px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "1024px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: bar clears the app sidebar",
+      "status": "passed",
+      "detail": "bar.x=260 sidebar.right=260"
+    },
+    {
+      "name": "1024px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":288,\"y\":818,\"width\":698,\"height\":68,\"bottom\":886,\"right\":986} toolbar={\"x\":288,\"y\":266,\"width\":698,\"height\":59,\"bottom\":325,\"right\":986}"
+    },
+    {
+      "name": "1024px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "701..973"
+    },
+    {
+      "name": "1024px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "1024px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1024px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=693 bar.y=804"
+    },
+    {
+      "name": "1024px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=748 bar.y=804"
+    },
+    {
+      "name": "768px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "768px: grid has 2 columns",
+      "status": "passed",
+      "detail": "343px 343px"
+    },
+    {
+      "name": "768px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=758 clientWidth=768"
+    },
+    {
+      "name": "768px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "768px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: bar sits above the mobile nav",
+      "status": "passed",
+      "detail": "bar.bottom=961 nav.y=961"
+    },
+    {
+      "name": "768px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":28,\"y\":881,\"width\":702,\"height\":68,\"bottom\":949,\"right\":730} toolbar={\"x\":28,\"y\":251,\"width\":702,\"height\":59,\"bottom\":310,\"right\":730}"
+    },
+    {
+      "name": "768px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "445..717"
+    },
+    {
+      "name": "768px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "768px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "768px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=742 bar.y=869"
+    },
+    {
+      "name": "768px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=798 bar.y=869"
+    },
+    {
+      "name": "390px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "390px: grid has 1 column",
+      "status": "passed",
+      "detail": "348px"
+    },
+    {
+      "name": "390px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=380 clientWidth=390"
+    },
+    {
+      "name": "390px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "390px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: bar sits above the mobile nav",
+      "status": "passed",
+      "detail": "bar.bottom=781 nav.y=781"
+    },
+    {
+      "name": "390px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":16,\"y\":652,\"width\":348,\"height\":119,\"bottom\":771,\"right\":364} toolbar={\"x\":16,\"y\":294,\"width\":348,\"height\":97,\"bottom\":391,\"right\":364}"
+    },
+    {
+      "name": "390px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "29..351"
+    },
+    {
+      "name": "390px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "390px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "390px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=513 bar.y=642"
+    },
+    {
+      "name": "390px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=586 bar.y=642"
+    },
+    {
+      "name": "360px: five cards render",
+      "status": "passed",
+      "detail": "count=5"
+    },
+    {
+      "name": "360px: grid has 1 column",
+      "status": "passed",
+      "detail": "318px"
+    },
+    {
+      "name": "360px: no document horizontal overflow",
+      "status": "passed",
+      "detail": "scrollWidth=350 clientWidth=360"
+    },
+    {
+      "name": "360px: no nested page scrollers",
+      "status": "passed",
+      "detail": "0"
+    },
+    {
+      "name": "360px: bar is the only sticky confirmation action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: bar sits above the mobile nav",
+      "status": "passed",
+      "detail": "bar.bottom=737 nav.y=737"
+    },
+    {
+      "name": "360px: bar aligns with the content column",
+      "status": "passed",
+      "detail": "barInner={\"x\":16,\"y\":608,\"width\":318,\"height\":119,\"bottom\":727,\"right\":334} toolbar={\"x\":16,\"y\":294,\"width\":318,\"height\":97,\"bottom\":391,\"right\":334}"
+    },
+    {
+      "name": "360px: confirmation CTA is fully inside the viewport",
+      "status": "passed",
+      "detail": "29..321"
+    },
+    {
+      "name": "360px: zero selection shows the disabled guidance label",
+      "status": "passed",
+      "detail": "Select at least one result to continue disabled=true"
+    },
+    {
+      "name": "360px: card values are prominent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "360px: reserved bottom space clears the last card",
+      "status": "passed",
+      "detail": "lastCard.bottom=451 bar.y=598"
+    },
+    {
+      "name": "360px: reserved bottom space clears the disclaimer",
+      "status": "passed",
+      "detail": "disclaimer.bottom=542 bar.y=598"
+    },
+    {
+      "name": "selection: zero-selection CTA is disabled",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: disabled guidance label stays readable",
+      "status": "passed",
+      "detail": "opacity=1 contrast=5.22"
+    },
+    {
+      "name": "selection: no per-card confirm controls",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: no legacy selection bar or footer confirm",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: exactly one confirm button exists",
+      "status": "passed",
+      "detail": "count=1"
+    },
+    {
+      "name": "selection: clicking the card body selects it",
+      "status": "passed",
+      "detail": "selected=1 checked=1"
+    },
+    {
+      "name": "selection: one selected shows singular copy",
+      "status": "passed",
+      "detail": "Confirm 1 result & continue"
+    },
+    {
+      "name": "selection: live count reads 1 selected",
+      "status": "passed",
+      "detail": "1 selected"
+    },
+    {
+      "name": "selection: a second card adds to the selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: two selected shows plural copy",
+      "status": "passed",
+      "detail": "Confirm 2 results & continue"
+    },
+    {
+      "name": "selection: live count reads 2 selected",
+      "status": "passed",
+      "detail": "2 selected"
+    },
+    {
+      "name": "selection: checkbox click toggles off independently",
+      "status": "passed",
+      "detail": "1 / Confirm 1 result & continue"
+    },
+    {
+      "name": "selection: reselecting restores two",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: clicking the card foot toggles selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "selection: clicking the card foot again deselects",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: card source action is contextual (revealed on hover)",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: modal names the measurement",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: source highlight renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: highlight legend renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: body scroll locks while open",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: zoom changes the rendered scale",
+      "status": "passed",
+      "detail": "24% -> 30%"
+    },
+    {
+      "name": "viewer: highlight stays aligned after zoom",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: reset restores the fitted frame and alignment",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: closing preserves scroll position",
+      "status": "passed",
+      "detail": "160 -> 160"
+    },
+    {
+      "name": "viewer: closing preserves selection",
+      "status": "passed",
+      "detail": "selected=2"
+    },
+    {
+      "name": "viewer: focus returns to the card source action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: toolbar action opens the report without a measurement highlight",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer: focus returns to the toolbar action",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer-390: modal fits the viewport",
+      "status": "passed",
+      "detail": "{\"x\":0,\"y\":50.640625,\"width\":390,\"height\":793.359375,\"bottom\":844,\"overflow\":-10,\"highlight\":1,\"navTopElement\":\"ve-source__legend\"}"
+    },
+    {
+      "name": "viewer-390: no horizontal overflow while open",
+      "status": "passed",
+      "detail": "-10"
+    },
+    {
+      "name": "viewer-390: highlight renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "viewer-390: modal covers the app nav",
+      "status": "passed",
+      "detail": "ve-source__legend"
+    },
+    {
+      "name": "scanned: multipage report renders its five cards",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: viewer opens on page 1 of 2",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: scanned page renders as an image",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: next page navigation reaches page 2",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: page 2 image request is the rendered page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: OCR text mode shows extracted text",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: visual mode restores the page image",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: card source action opens the measurement page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scanned: page-2 OCR measurement gets a source highlight",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Tab reaches a card checkbox",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: checkbox shows a visible focus ring",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Space toggles selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Tab moves from the checkbox to View in report",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Enter opens the original report",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Escape returns focus to the opener",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Tab reaches Edit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Enter opens result details",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "keyboard: Escape returns focus to Edit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "touch: contextual card actions are visible without hover",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "touch: tapping the card selects it",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "touch: View in report opens the viewer",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "touch: closing preserves the selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "confirm: only the two selected ids are submitted",
+      "status": "passed",
+      "detail": "625259ae-298d-4958-b5ef-605038b07850,0c18f4dc-057c-4097-a23a-0a40e84f897f"
+    },
+    {
+      "name": "confirm: exactly the selected measurements become verified",
+      "status": "passed",
+      "detail": "625259ae-298d-4958-b5ef-605038b07850,0c18f4dc-057c-4097-a23a-0a40e84f897f"
+    },
+    {
+      "name": "confirm: the three unselected measurements remain unverified",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "confirm: completion opens in the partial state",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion: partial stats are 2 confirmed / 0 corrected / 3 unverified",
+      "status": "passed",
+      "detail": "2 / 0 / 3"
+    },
+    {
+      "name": "completion: no sticky confirm bar is present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion: partial finish is gated on acknowledgement",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion: acknowledgement enables finish",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion: acknowledgement verifies nothing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "completion: returning restores the grid",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: editor shows the original extracted value",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: confirmed measurement enters the editor as confirmed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: empty value blocks saving",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: saved value updates the detail view",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: edited marker appears",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: status returns to needs review",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: backend reset verification status",
+      "status": "passed",
+      "detail": "needs_review"
+    },
+    {
+      "name": "correction: backend records the correction audit row",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: backend stores the corrected value",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: card no longer claims confirmation",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: card shows the edited marker",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "correction: card shows the corrected value",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "re-verify: corrected value can be selected again",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "re-verify: completion reports 2 confirmed / 1 corrected / 3 unverified",
+      "status": "passed",
+      "detail": "2 / 1 / 3"
+    },
+    {
+      "name": "full: three selected shows plural copy",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "full: completion headline reports the complete review",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "full: stats are 5 reviewed / 5 confirmed / 1 corrected",
+      "status": "passed",
+      "detail": "5 / 5 / 1"
+    },
+    {
+      "name": "full: continue to results is available",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "all-confirmed: bar reports every measurement confirmed",
+      "status": "passed",
+      "detail": "5 of 5 confirmed / Continue to your results / disabled=false"
+    },
+    {
+      "name": "all-confirmed: every card is confirmed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "all-confirmed: continue re-enters completion instead of dead-ending",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "handoff: completion navigates to the existing results page",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "finding: the RESULTS row is still present and reviewable",
+      "status": "passed",
+      "detail": "RESULTS 822"
+    },
+    {
+      "name": "finding: the row has no test code (analysis-unsupported)",
+      "status": "passed",
+      "detail": "null"
+    },
+    {
+      "name": "finding: the row appears as a normal card, not hidden or corrected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "finding: the row was not auto-corrected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "finding: analysis counts it as unsupported rather than using it",
+      "status": "passed",
+      "detail": "{\"total\":13,\"unsupported\":1,\"supported\":12}"
+    },
+    {
+      "name": "console: no page or console errors across the run",
+      "status": "passed",
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1920.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1280.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1024.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1024-full.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-768.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-768-full.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-390.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-390-full.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-360.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-360-full.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1024-selected.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-viewer-1024.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-viewer-390.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-390-selected.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-viewer-scanned-1024.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-390-touch.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-completion-partial-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-inspect-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-completion-full-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-1440-all-confirmed.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\after-results-1440.png",
+    "C:\\Users\\sureshr\\Documents\\Default Project\\LabLens\\artifacts\\qa\\full-product-audit\\screenshots\\phase9_12_1_final\\finding-results-822-card.png"
+  ],
+  "console_errors": [],
+  "passed": 179,
+  "failed": 0,
+  "finished_at": "2026-11-15T04:06:34.639Z"
+}

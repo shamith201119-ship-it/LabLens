@@ -5,13 +5,6 @@
 
 import type { Measurement } from './api'
 
-export type VerificationFilter =
-  | 'all'
-  | 'needs_review'
-  | 'out_of_range'
-  | 'confirmed'
-  | 'corrected'
-
 export interface ReviewSummary {
   total: number
   confirmed: number
@@ -26,11 +19,6 @@ export function isConfirmed(measurement: Measurement): boolean {
   return measurement.verification_status === 'verified'
 }
 
-export function isNeedsReview(measurement: Measurement): boolean {
-  return !isConfirmed(measurement)
-}
-
-/** True only when at least one correction-audit record exists for this measurement. */
 export function isCorrected(measurement: Measurement): boolean {
   return measurement.has_corrections === true
 }
@@ -80,52 +68,6 @@ export function displayName(measurement: Measurement): string {
     measurement.test_name_original ||
     'Unknown result'
   )
-}
-
-export function measurementPage(measurement: Measurement): number | null {
-  const page = measurement.page_number
-  return typeof page === 'number' && Number.isFinite(page) && page > 0 ? page : null
-}
-
-export function searchableText(measurement: Measurement): string {
-  return [
-    displayName(measurement),
-    measurement.test_name_original,
-    measurement.result_original,
-    measurement.unit_original,
-    measurement.reference_range_original,
-    measurement.page_number != null ? `p.${measurement.page_number}` : '',
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase()
-}
-
-export function applyFilter(
-  measurements: Measurement[],
-  filter: VerificationFilter,
-  query: string,
-): Measurement[] {
-  let result: Measurement[]
-  switch (filter) {
-    case 'needs_review':
-      result = measurements.filter(isNeedsReview)
-      break
-    case 'out_of_range':
-      result = measurements.filter(isOutOfRange)
-      break
-    case 'confirmed':
-      result = measurements.filter(isConfirmed)
-      break
-    case 'corrected':
-      result = measurements.filter(isCorrected)
-      break
-    default:
-      result = measurements
-  }
-  const needle = query.trim().toLowerCase()
-  if (!needle) return result
-  return result.filter((m) => searchableText(m).includes(needle))
 }
 
 export function summarize(measurements: Measurement[]): ReviewSummary {

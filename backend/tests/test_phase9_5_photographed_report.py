@@ -1,4 +1,4 @@
-"""Phase 9.5.4 integration test for the photographed laboratory report.
+﻿"""Phase 9.5.4 integration test for the photographed laboratory report.
 
 This test runs the real application path:
 
@@ -20,7 +20,7 @@ from PIL import Image
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 PROJECT_DIR = BACKEND_DIR.parent
-EVALUATOR_DIR = PROJECT_DIR / "artifacts" / "phase-8.1"
+EVALUATOR_DIR = BACKEND_DIR / "tests"
 for path in (str(BACKEND_DIR), str(EVALUATOR_DIR)):
     if path not in sys.path:
         sys.path.insert(0, path)
